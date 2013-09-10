@@ -1,0 +1,201 @@
+% Version control information:
+\svnidlong
+{$HeadURL: https://ejercicioscalculo.googlecode.com/svn/trunk/edo_separables.tex $}
+{$LastChangedDate: 2008-07-09 20:02:39 +0200 (mié, 09 jul 2008) $}
+{$LastChangedRevision: 9 $}
+{$LastChangedBy: asalber $}
+%\svnid{$Id: edo_separables.tex 9 2008-07-09 18:02:39Z asalber $
+%
+\newproblem{err-1}{gen}{}
+%ENUNCIADO
+{Si al medir el volumen de un objeto se obtiene como valor más probable $23618.87543$ cm$^3$ con un error de $302.432$
+cm$^3$, ¿cuál será la expresión correcta del resultado de dicha medida?     
+}
+%SOLUCIÓN
+{$23620\pm310$ cm$^3$.
+}
+%RESOLUCIÓN
+{Redondeando el error por exceso a la segunda cifra significativa tenemos $310$ cm$^3$, y redondeando la medida a la
+primera cifra afectada por el error, es decir a las decenas, tenemos $23620$ cm$^3$, luego la expresión se la medida
+será $23620\pm310$ cm$^3$.}
+
+
+\newproblem{err-2}{qui}{}
+%ENUNCIADO
+{Se ha medido el tiempo de caída de una esfera en un líquido cuatro veces, obteniéndose los valores: $30.5$; $29.6$;
+$30.1$; $30.8$. ¿Cuál será el resultado del experimento?}
+%SOLUCIÓN
+{$\bar t=20.25$ s y $s_{\bar t}=0.2598$, de manera que suponiendo que la incertidumbre en el aparato de medida es
+$0.1$ s, el tiempo de caída es $30.25\pm0.36$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-3}{far}{}
+%ENUNCIADO
+{En el análisis de la orina de una atleta, en un control antidopaje, se detectan $16.5 \pm 0.8$ $\mu$g de cafeína por
+cada cm$^3$ de orina. El resultado del contra-análisis es igual a $13.5 \pm 0.5$ $\mu$g de cafeína por cm$^3$. ¿Son
+ambos resultados coincidentes o necesariamente ha existido algún fallo en uno de ellos? Sabiendo que el límite máximo
+permitido es de $12$ $\mu$g de cafeína por cm$^3$, ¿ha dado o no positivo dicho atleta?
+}
+%SOLUCIÓN
+{Según el análisis la concentración de cafeina está en el intervalo $(14.1\,,\,18.9)$ $\mu$g/cm$^3$ con un $99.7\%$ de
+confianza y según el contra-análisis está en el intervalo $(12,15)$ $\mu$g/cm$^3$ con la misma confianza, luego como
+ambos intervalos se solapan se puede decir que son medidas coincidentes. Como ambos intervalos están por encima de 12
+$\mu$g/cm$^3$ si se puede decir que el atleta ha dado positivo.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-4}{gen}{}
+%ENUNCIADO
+{Mediante una cinta métrica dividida en milímetros se ha obtenido que la longitud de una mesa es $1.5250$ m y que tiene
+una anchura de $82.00$ cm. ¿Cuál es el área de dicha mesa?
+}
+%SOLUCIÓN
+{$12505\pm12$ cm$^2$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-5}{gen}{}
+%ENUNCIADO
+{Supongamos que nos piden calcular la densidad de una pieza homogénea de forma cónica sabiendo que su masa es $m=
+300.23\pm 0.05$ g, su altura $h=12.3 \pm 0.1$ cm, y el radio de la base $r=7.44 \pm 0.01$ cm. Teniendo en cuenta que el
+volumen de un cono es igual $\pi r^2 h/3$, calcular cuánto vale la densidad de la pieza cónica.
+}
+%SOLUCIÓN
+{$0.4211\pm0.0047$ g/cm$^3$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-6}{gen}{}
+%ENUNCIADO
+{Si suponemos dos cilindros concéntricos, cuyos radios son $r$ el interno y $R$ el externo, y los dos con altura $h$, y
+consideramos el volumen de la pieza que queda entre los dos cilindros, calcular el volumen de dicha pieza estimando
+correctamente el error cometido teniendo en cuenta que se han realizado 6 medidas diferentes de $r$, $R$ y $h$:
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+\mbox{Medida} & \mbox{R (mm)} & \mbox{r (mm)} & \mbox{h(cm)} \\
+\hline
+1 & 48.51 & 43.42 & 29.12 \\
+\hline
+2 & 47.39 & 42.94 & 29.14 \\
+\hline
+3 & 48.81 & 42.59 & 28.99 \\
+\hline
+4 & 47.52 & 43.11 & 29.13 \\
+\hline
+5 & 47.93 & 42.45 & 29.13 \\
+\hline
+6 & 47.88 & 42.11 & 29.06 \\
+\hline
+\end{array}
+\]
+}
+%SOLUCIÓN
+{$\bar R=48.0067$ mm y $s_{\bar R}=0.2264$ mm con lo que se obtiene la medida $R=48.01\pm 0.24$mm.\\
+$\bar r = 42.77$ mm y $s_{\bar r}=0.19471$ mm con lo que se obtiene la medida $r=42.77\pm 0.21$mm.\\
+$\bar h= 292.45$ mm y $s_{\bar h}=1.44839$ mm con lo que se obtiene la medida $h=292.5\pm 1.6$ mm.
+La medida indirecta del volumen es $440\pm 27$ cm$^3$. 
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-7}{fis}{}
+%ENUNCIADO
+{En una fuente se ha llenado completamente de agua un recipiente de base cuadrada de lado $l$ y altura $h$ en un tiempo
+$t$, y se quiere medir el caudal de agua $q$ que mana de la fuente ($q=(l^2h)/t$). Además, el experimento lo han
+realizado consecutivamente 4 alumnos obteniendo:
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+\mbox{Alumno} & l & h & t \\
+\hline
+1 & 220.4 \pm 0,1 \mbox{ mm} & 535.3 \pm 0.1 \mbox{ mm} & 314.6 \pm 0.1 \mbox{ s} \\
+\hline
+2 & 220.6 \pm 0.1 \mbox{ mm} & 535.2 \pm 0.1 \mbox{ mm} & 313.9 \pm 0.1 \mbox{ s} \\
+\hline
+3 & 220.8 \pm 0.1 \mbox{ mm} & 535.9 \pm 0.1 \mbox{ mm} & 314.2 \pm 0.1 \mbox{ s} \\
+\hline
+4 & 221.0 \pm 0.1 \mbox{ mm} & 535.6 \pm 0.1 \mbox{ mm} & 314.8 \pm 0.1 \mbox{ s} \\
+\hline
+\end{array}
+\]
+}
+%SOLUCIÓN
+{$q_1=82650\pm 120$ mm$^3$/s, $q_2=82970\pm 120$ mm$^3$/s, $q_3=83150\pm 120$ mm$^3$/s y $q_4=83010\pm 120$ mm$^3$/s.
+La medida final del caudal es $q=82969\pm 59$ mm$^3$/s.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-8}{gen}{*}
+%ENUNCIADO
+{El volumen de un cono es $V(r,h)=\frac{1}{3}\pi r^2 h$ donde $r$ es el radio de la base y $h$ la altura. Si se ha medido un cono y se ha
+obtenido un radio de 2 m y una altura de 1 m, se pide:
+\begin{enumerate}
+\item Calcular el gradiente del volumen del cono anterior. ¿Cómo se interpretaría?
+\item Calcular el hessiano del volumen del cono.
+\item Si el radio se ha medido una única vez con un error de $\pm 0,01$ m y la altura también una única vez con un error de $\pm 0,001$ m,
+dar la expresión de la medida del volumen con su error.
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $\grad V(r,h)=(\frac{2}{3}\pi r h,\frac{1}{3}\pi r^2)$, $\grad V(2,1) = (\frac{4}{3}\pi,\frac{4}{3}\pi)$.
+\item $H V(r,h)=\left(
+\begin{array}{cc}
+\frac{2}{3}\pi h & \frac{2}{3}\pi r\\
+\frac{2}{3}\pi r & 0
+\end{array}
+\right)$,
+$H V(2,1)=\left(
+\begin{array}{cc}
+\frac{2}{3}\pi & \frac{4}{3}\pi\\
+\frac{4}{3}\pi r & 0
+\end{array}
+\right)$
+y
+$|H V(2,1)| = -\frac{16}{9}\pi^2$.
+\item $V=4.189\pm 0.047$ $m^3$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{err-9}{gen}{*}
+%ENUNCIADO
+{Una magnitud física $m$, que se mide de forma indirecta, depende de otras dos $x$ e $y$ según la fórmula:
+\[
+m(x,y) = \sqrt{xy}\log _4 \left(\frac{x}{y}\right)
+\]
+Si se han medido directamente $x$ e $y$ con una imprecisión igual en ambos casos $\triangle x=\triangle y=0.1$, y después de un tratamiento
+estadístico de los datos se han obtenido las siguientes medias y errores típicos de las medias: $\bar{x}=10$, $\bar{y}=15$,
+$\sigma_{\bar{x}}=0,2$ y $\sigma_{\bar{y}}=0,3$, se pide:
+
+\begin{enumerate}
+\item Calcular el gradiente de la magnitud $m(x,y)$.
+\item ¿Cuánto valdría el error cometido en la medida de $m(x,y)$?
+\item ¿Cómo se expresaría el resultado obtenido para $m$?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $\grad m(x,y)=\left(\dfrac{\sqrt y}{\sqrt x \ln 4}\left(\dfrac{\ln x-\ln y}{2}+1\right), \dfrac{\sqrt x}{\sqrt y \ln
+4}\left(\dfrac{\ln x-\ln y}{2}-1\right) \right)$
+\item $\varepsilon = 0.35347$.
+\item $m=-3.58\pm 0.36$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}

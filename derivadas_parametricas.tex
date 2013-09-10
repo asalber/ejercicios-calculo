@@ -1,0 +1,359 @@
+% Version control information:
+%$HeadURL: https://ejercicioscalculo.googlecode.com/svn/trunk/derivadas_parametricas.tex $
+%$LastChangedDate: 2010-01-28 20:28:03 +0100 (jue, 28 ene 2010) $
+%$LastChangedRevision: 11 $
+%$LastChangedBy: asalber $
+
+\newproblem{derpar-1}{gen}{}
+%ENUNCIADO
+{Una partícula se mueve a lo largo de una curva $y=\cos(2x+1)$, siendo $x=t^2+1$ y $t$ el tiempo. ¿Con qué velocidad está desplazándose respecto a las direcciones vertical y horizontal cuando $t=2$?
+}
+%SOLUCIÓN
+{Velocidad horizontal: $\frac{dx}{dt} = 2t$ y en el instante $t=2$, $\frac{dx}{dt}(t=2)=4$.\\
+Velocidad vertical: $\frac{dy}{dt}=-\sen(2t^2+3)4t$ y en el instante $t=2$, $\frac{dy}{dt}=-8\sen 11$. 
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{derpar-2}{gen}{}
+%ENUNCIADO
+{Un punto se mueve en el plano siguiendo una trayectoria
+\[ \left\{
+\begin{array}{rcl}
+    x & = & \sen t,\\
+    y & = & t^2-1.
+\end{array} \right.\]
+Se pide:
+\begin{enumerate}
+    \item  Hallar la derivada de la función $y(x)$ (es decir,
+    $\dfrac{dy}{dx}$) para los puntos $t=0$ y $t=2$.
+
+    \item  Hallar la tangente a la trayectoria en el punto (0,-1).
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $\frac{dy}{dx} = \frac{2t}{\cos t}$. $\frac{y}{dx}(t=0) = 0$ y $\frac{dy}{dx}(t=2) = 4/\cos 2$.
+\item Tantenge: $y=-1$. 
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem*{derpar-3}{gen}{}
+%ENUNCIADO
+{Una partícula se mueve a lo largo de la curva
+\[ \left\{
+ \begin{array}{rcl}
+   x & = & 2\sen t,  \\
+   y & = & \sqrt{3}\cos t,
+ \end{array}\right.
+  \]
+donde $x$ e $y$ están medidos en metros y el tiempo $t$ en
+segundos.
+\begin{enumerate}
+   \item  Hallar la ecuación de la recta tangente a la trayectoria
+   en el punto (1,3/2).
+
+   \item  ¿Con qué velocidad se mueve la partícula respecto a
+   las direcciones vertical y horizontal en dicho punto?
+\end{enumerate}
+}
+
+
+\newproblem{derpar-4}{gen}{*}
+%ENUNCIADO
+{Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son
+\[
+\left\{
+  \begin{array}{ll}
+    x=v_0t \\
+    y=-\frac{1}{2}gt^2
+  \end{array}
+\right.
+\]
+donde $t$ es el tiempo contado a partir del instante en que el punto llega a la posición más alta, $v_0$ es la velocidad horizontal en el instante $t=0$ y $g=9.8$ m$^2$/s es la aceleración de la gravedad. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer $v_0$ para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de $v_0$ calculado.
+}
+%SOLUCION
+{
+Las velocidades serán iguales en el instante $ t=\frac{v_0}{9.8}$. Para que en dicho instante el punto haya recorrido 10  m horizontalmente, la velocidad inicial debería ser $v_0 = 31.3$ m/s.
+
+La ecuación de la recta tangente en dicho instante es $y =-x+50.14$.
+}
+%RESOLUCIÓN
+{La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente $x$) con respecto al tiempo, es decir,
+\[
+\frac{dx}{dt} = \frac{d}{dt}(v_0t)=v_0.
+\]
+Del mismo modo, la velocidad vertical es la derivada del espacio recorrido verticalmente (componente $y$) en relación al tiempo,
+\[
+\frac{dy}{dt} = \frac{d}{dt}(-\frac{1}{2}gt^2)=-gt
+\]
+Para ver en qué instante ambas magnitudes serán iguales, las igualamos y resolvemos la ecuación:
+\[
+|\frac{dx}{dt}|=|\frac{dy}{dt}| \Leftrightarrow v_0 = gt \Leftrightarrow t=\frac{v_0}{g}=\frac{v_0}{9.8}.
+\]
+
+Para que en dicho instante el punto haya recorrido 100 m horizontalmente, debe cumplirse que $x(v_0/9.8)=100$, de lo que se deduce:
+\[
+x(v_0/9.8)=v_0\frac{v_0}{9.8} = \frac{v_0^2}{9.8}=100 \Leftrightarrow v_0^2 = 980 \Leftrightarrow v_0 = +\sqrt{980}= 31.3.
+\]
+Por tanto, el instance en cuestión es $t=v_0/9.8= 31.3/9.8 = 3.19$.
+
+Por último, la ecuación de la recta tangente en dicho instante, para el valor de $v_0$ calculado es:
+\[
+y = y(3.19) + \frac{dy}{dx}(3.19) (x-x(3.19))
+\]
+Ya hemos visto que $x(3.19)=100$, y que en dicho instante la velocidad horizontal y vertical coinciden, de manera que
+\[
+\frac{dy}{dx}(3.19)=\frac{dy/dt}{dx/dt}=-1,
+\]
+de modo que sólo nos queda calcular el espacio vertical recorrido en dicho instante, que es
+\[
+y(3.19)=-\frac{1}{2}9.8\cdot 3.19^2= -49.86.
+\]
+Sustituyendo en la ecuación anterior llegamos a la recta tangente:
+\[
+y = -49.86-(x-100) \Leftrightarrow y=-x+50.14.
+\]
+}
+
+
+\newproblem{derpar-5}{gen}{*}
+%ENUNCIADO
+{Dada la función paramétrica
+\[
+\left(
+    x =\frac{(t-2)^2}{t^2+1},\, y=\dfrac{2t}{t^2+1}
+\right)
+\]
+Calcular los valores máximos y mínimos de $x$ y de $y$. ¿En qué instante la tasa de crecimiento de $y$ coincide con la de $x$?
+}
+%SOLUCIÓN
+{$\frac{dx}{dt}=\frac{4t^2-6t-4}{(t^2+1)^2}$. Puntos críticos: $t=-1/2$ (máximo) y $t=2$ (mínimo).\\
+$\frac{dy}{dt}=\frac{-2t^2+2}{(t^2+1)^2}$. Puntos críticos: $t=-1$ (mínimo) y $t=1$ (máximo).\\
+$\frac{dx}{dt}=\frac{dy}{dt}$ en los puntos $t=\frac{1-\sqrt 5}{2}$ y $t=\frac{1+\sqrt 5}{2}$.
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem*{derpar-6}{gen}{*}
+%ENUNCIADO
+{Una mosca se mueve en un plano siguiendo la trayectoria
+\[
+\left\{
+\begin{array}{lll}
+x & = & \sen t
+\; ,
+\\
+y & = & \cos t + t^2 - 1
+\; .
+\end{array}
+\right.
+\]
+Se pide
+\begin{enumerate}
+\item Hallar la derivada de la función $y(x)$, es decir $dy/dx$,
+en los puntos $t=0$ y $t=\pi/2$.
+\item Hallar la ecuación de la recta tangente y normal a la trayectoria
+en el punto $(x,y)=(0,0)$.
+\end{enumerate}
+}
+
+
+\newproblem*{derpar-7}{gen}{*}
+%ENUNCIADO
+{Dadas las siguientes ecuaciones paramétricas:
+\[
+\left\{
+\begin{array}{l}
+x(t)=e^{at}t \\
+y(t)=\ln t\cos (t-1)
+\end{array}
+\right.
+\] 
+calcular la ecuación de la recta tangente a la gráfica de $y$ como función de $x$ en el punto que corresponde a $t=1$.
+}
+
+
+\newproblem*{derpar-8}{gen}{*}
+%ENUNCIADO
+{La cantidad de árboles en un ecosistema, $a$, depende del tiempo según la expresión:
+\[
+a(t)=100\ln(t^2+1)
+\]
+Y la cantidad de un determinado parásito de los árboles, $p$, que también depende del tiempo, viene dada por:
+\[
+p(t) = \sqrt[3]{{t^2  + 2}}
+\]
+Y se pide:
+\begin{enumerate}
+\item Calcular el número de parásitos cuando el número de árboles sea 500.
+\item La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3.
+\end{enumerate}
+}
+
+
+\newproblem*{derpar-9}{gen}{*}
+%ENUNCIADO
+{Supongamos un ecosistema en el que hay una especie ``presa", $p$, y otra ``depredador", $d$, y que la cantidad de individuos de una y otra dependen del tiempo, en años, según las siguientes expresiones ($t>0$):
+\[
+\renewcommand{\arraystretch}{2.2}
+\begin{array}{*{20}c}
+   {p(t) = \dfrac{{\ln (t^2  + 1)}}{{t + 1}}}  \\
+   {d(t) = te^{ - 2t} }  \\
+\end{array}
+\]
+\begin{enumerate}
+\item Calcular el número de presas y depredadores para tiempos muy grandes.
+\item Calcular la derivada del número de presas con respecto a los depredadores cuando $d=2/e^4$.
+\end{enumerate}
+}
+
+
+\newproblem{derpar-10}{gen}{*}
+%ENUNCIADO
+{Un punto se mueve en el plano siguiendo una trayectoria 
+\[
+\begin{cases}
+x = \tg t,  \\ 
+y = t^2-2t+3. \\
+\end{cases}
+\]
+
+\begin{enumerate}
+\item  Hallar $\frac{\partial y}{\partial x}$ en $t=0$.
+\item  Hallar la tangente a la trayectoria en el punto $(0,3)$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $\dfrac{\partial y}{\partial x}(t) = \frac{2t-2}{1+\tg^2t}$ y $\dfrac{\partial y}{\partial x}(0) = -2$.
+\item $y = 3-2x$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{Se trata de la ecuación de una trayectoria en coordenadas paramétricas.
+\begin{enumerate}
+\item  Aplicando la regla de la cadena se tiene que 
+\[
+\dfrac{\partial y}{\partial t} = \dfrac{\partial y}{\partial x}\dfrac{\partial x}{\partial t},
+\] 
+en consecuencia,
+\[
+\dfrac{\partial y}{\partial x}(t) = \frac{\partial y/\partial t}{\partial x/\partial t}(t)=\frac{2t-2}{1+\tg^2t}.
+\]
+En el punto $t=0$ tendremos
+\[
+\dfrac{\partial y}{\partial x}(0) = \frac{-2}{1+\tg^20} = -2.
+\]
+
+\item  La ecuación de la recta tangente a la trayectoria en el punto $(x(t_0),y(t_0))$ correspondiente al instante $t_0,$ viene dada por la expresión
+\[
+y-y(t_0) = \dfrac{\partial y}{\partial x}(t_0)(x-x(t_0)).
+\]
+Como el punto $(0,3)$ se alcanza precisamente en el instante $t=0$ tenemos que la ecuación de la recta tangente a la trayectoria en dicho instante es:
+\[
+y-y(0) = \dfrac{\partial y}{\partial x}(0)(x-x(0)),
+\]
+es decir,
+\[
+y-3 = -2(x-0),
+\]
+y simplificando obtenemos:
+\[
+y = 3-2x.
+\]
+\end{enumerate}
+}
+
+
+
+\newproblem{derpar-11}{gen}{}
+%ENUNCIADO
+{Hallar las ecuaciones de la rectas tangente y normal a la curva $C$ en el punto $P$ en cada uno de los casos siguientes:
+\begin{enumerate}
+\item $C: y=x^2$, $P=(0,0)$
+\item $C: \begin{cases}
+x=2\cos t,\\
+y=2\sen t,
+\end{cases}
+$ $0\leq t\leq 2\pi$, $P=(0,2)$
+\item $C:x^2+y^2=1$, $P=(\sqrt{2}/2),\sqrt{2}/2)$
+\item $C:(x-1)^2+y^2=4$, $P=(3,0)$
+\item $C:x^2-y^2=1$, $P=(1,0)$
+\item $C:\begin{cases}
+x=e^t\cos t,\\
+y=e^t\sen t,
+\end{cases}
+$, $t\in \mathbb{R}$, $P=(1,0)$
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{derpar-12}{gen}{}
+%ENUNCIADO
+{Hallar al ecuación de la recta tangente y el plano normal a la línea
+\[
+C: 
+\begin{cases}
+x=\cos t \\
+y=\sen t\\
+z= t,
+\end{cases}
+\quad t\in \mathbb{R},
+\]
+en el punto $P=(1,0,0)$.
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{derpar-13}{gen}{}
+%ENUNCIADO
+{Una trayectoria pasa por el punto $(3,6,5)$ en el instante $t=0$ con velocidad $\mathbf{i}-\mathbf{k}$. 
+Hallar la ecuación del plano normal y de la recta tangente en ese instante.
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}
+
+
+\newproblem{derpar-14}{gen}{}
+%ENUNCIADO
+{Una partícula sigue la trayectoria
+\[
+\begin{cases}
+x=e^t,\\
+y=e^{-t},\\
+z=\cos t,
+\end{cases}
+\quad t\in \mathbb{R}
+\]
+hasta que se sale por la tangente en el instante $t=1$. ¿Dónde estará en el instante $t=3$?
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{
+}

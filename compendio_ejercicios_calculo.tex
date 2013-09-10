@@ -1,0 +1,166 @@
+% Desarrollado por Alfredo Sánchez Alberca (asalber@gmail.com)
+\documentclass[a4paper,titlepage]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{svn-multi}
+% Version control information:
+\svnidlong
+{$HeadURL: https://ejercicioscalculo.googlecode.com/svn/trunk/compendio_ejercicios_calculo.tex $}
+{$LastChangedDate: 2010-01-28 20:28:03 +0100 (jue, 28 ene 2010) $}
+{$LastChangedRevision: 11 $}
+{$LastChangedBy: asalber $}
+%\svnid{$Id: compendio_ejercicios_calculo.tex 11 2010-01-28 19:28:03Z asalber $}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{macros}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{probsoln-alf}
+%\usepackage{times}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfautor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de C\'alculo}} 
+\usepackage{url}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}} \rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Métodos Cuantitativos}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+\pdfinfo{/CreationDate (D:\svnpdfdate)}
+\svnRegisterAuthor{alf}{Alfredo Sánchez Alberca}
+
+\makeatletter
+\let\savees@listquot\es@listquot
+\def\es@listquot{\protect\savees@listquot}
+\makeatletter
+
+\reversemarginpar
+%\showshortanswers
+\showanswers
+%\PSNrandseed{2007}
+
+
+\begin{document}
+\sloppy
+
+\begin{titlepage}
+\vspace*{5cm}
+\begin{center}
+{\huge \bf COMPENDIO DE EJERCICIOS DE CÁLCULO\par}
+\vspace{0.5cm}
+{\large \noindent \textbf{Autores}: \\
+   Santiago Angulo Díaz-Parreño (\url{sangulo@ceu.es})\\
+   Anselmo Romero Limón (\url{arlimon@ceu.es})\\
+   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+}
+
+\vspace{1cm}
+ \includegraphics[scale=0.3]{img/logo_uspceu_01}
+\end{center}
+ \vfill
+ \flushleft\sffamily
+ Version control information:\\
+ Head URL: \url{\svnkw{HeadURL}}\\
+ Last changed date: \svndate\\
+ Last changes revision: \svnrev\\
+ Version: \svnFullRevision*{\svnrev}\\
+ Last changed by: \svnFullAuthor*{\svnauthor}\\
+\end{titlepage}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+
+\section{Domínios e Imágenes}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{dominios}
+\end{enumerate}
+
+\section{Límites}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{limites}
+\end{enumerate}
+
+\section{Continuidad}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{continuidad}
+\end{enumerate}
+
+\section{Derivadas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas}
+\end{enumerate}
+
+\section{Diferencial}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{diferencial}
+\end{enumerate}
+
+\section{Derivadas Implícitas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_implicitas}
+\end{enumerate}
+
+\section{Derivadas Paramétricas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_parametricas}
+\end{enumerate}
+
+\section{Teorema de Rolle y del Valor Medio}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{rolle_valor_medio}
+\end{enumerate}
+
+\section{Crecimiento, Concavidad y Extremos Relativos}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{extremos}
+\end{enumerate}
+
+\section{Polinomios de Taylor}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{taylor}
+\end{enumerate}
+
+\section{Derivadas Parciales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_parciales}
+\end{enumerate}
+
+\section{Integrales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{integrales}
+\end{enumerate}
+
+\section{Integrales Impropias}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{integrales_impropias}
+\end{enumerate}
+
+\section{Aplicaciones de las integrales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{integrales_aplicaciones}
+\end{enumerate}
+
+\section{Ecuaciones Diferenciales Ordinarias de Variables Separables}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{edo_separables}
+\end{enumerate}
+
+\section{Medida y Error}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{medida_error}
+\end{enumerate}
+
+\vspace{2cm}
+
+\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de
+exámenes de otros años.
+\end{document}

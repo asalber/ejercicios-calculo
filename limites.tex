@@ -1,0 +1,151 @@
+% Version control information:
+\svnidlong
+{$HeadURL: https://ejercicioscalculo.googlecode.com/svn/trunk/limites.tex $}
+{$LastChangedDate: 2008-07-16 03:41:23 +0200 (mié, 16 jul 2008) $}
+{$LastChangedRevision: 10 $}
+{$LastChangedBy: asalber $}
+%\svnid{$Id: limites.tex 10 2008-07-16 01:41:23Z asalber $
+%
+\newproblem*{lim-1}{gen}{}
+%ENUNCIADO
+{Dar ejemplo de funciones que cumplan las siguientes condiciones:
+\begin{enumerate}
+  \item $\lim_{x\rightarrow 0}f(x)=+\infty$ y $\lim_{x\rightarrow
+  \infty}f(x)=0$.
+
+  \item $\lim_{x\rightarrow 3^+}f(x)=+\infty$, $\lim_{x\rightarrow
+  3^-}f(x)=-\infty$ y $\lim_{x\rightarrow \infty}f(x)=1$.
+
+  \item $\lim_{x\rightarrow 0^+}f(x)=+\infty$ y $\lim_{x\rightarrow
+  \infty}f(x)=-\infty$.
+\end{enumerate}
+}
+
+
+\newproblem*{lim-2}{gen}{}
+%ENUNCIADO
+{Determinar el valor de $a$ para que exista $\lim_{x\rightarrow 1}f(x)$ sabiendo que
+\[ f(x)=\left\{
+  \begin{array}{lll}
+    x+1 & & \mbox{si }x\leq 1,\\
+    3-ax^2 & & \mbox{si } x>1.
+  \end{array}
+   \right.
+\]
+}
+
+
+\newproblem*{lim-3}{gen}{}
+%ENUNCIADO
+{Calcular los siguientes límites si existen:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item  $\displaystyle \lim_{x\rightarrow 1}\dfrac{x^3-3x+2}{x^4-4x+3}$.
+
+    \item  $\displaystyle \lim_{x\rightarrow a}\dfrac{\sen x-\sen a}{x-a}$.
+
+    \item $\displaystyle \lim_{x\rightarrow\infty}\dfrac{x^2-3x+2}{e^{2x}}$.
+
+    \item $\displaystyle \lim_{x\rightarrow\infty}\dfrac{\log(x^2-1)}{x+2}$.
+
+    \item $\displaystyle \lim_{x\rightarrow 1}\dfrac{\log(1/x)}{\tg(x+\dfrac{\pi}{2})}$.
+
+    \item $\displaystyle \lim_{x\rightarrow a}\dfrac{x^n-a^n}{x-a}\quad n\in \mathbb{N}$.
+
+    \item $ \displaystyle \lim_{x\rightarrow
+    1}\dfrac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1}\quad n,m \in \mathbb{Z}$.
+
+    \item $\displaystyle \lim_{x\rightarrow 0}\dfrac{\tg x-\sen x}{x^3}$.
+
+    \item $\displaystyle \lim_{x\rightarrow \pi/4}\dfrac{\sen x-\cos x}{1-\tg x}$.
+
+    \item $\displaystyle \lim_{x\rightarrow 0}x^2e^{1/x^2}$.
+
+    \item $\displaystyle \lim_{x\rightarrow \infty}\left(1+\dfrac{a}{x}\right)^x$.
+
+    \item $\displaystyle \lim_{x\rightarrow \infty} \sqrt[x]{x^2}$.
+
+    \item $\displaystyle \lim_{x\rightarrow 0}\left(\dfrac{1}{x}\right)^{\tg x}$.
+
+    \item $\displaystyle \lim_{x\rightarrow 0}(\cos x)^{1/\mbox{\footnotesize sen}\, x}$.
+
+    \item $\displaystyle \lim_{x\rightarrow 0}\dfrac{6}{4+e^{-1/x}}$.
+
+    \item $\displaystyle \lim_{x\rightarrow
+    \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)$.
+
+    \item $\displaystyle \lim_{x\rightarrow \pi/2}\sec x-\tg x$.
+\end{enumerate}
+\end{multicols}
+}
+
+
+\newproblem*{lim-4}{gen}{}
+%ENUNCIADO
+{Calcular los límites laterales de la función
+$f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}$ en el punto $x=1$.
+}
+
+
+\newproblem*{lim-5}{gen}{}
+%ENUNCIADO
+{Obtener las asíntotas de las siguientes funciones:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item  $f(x)=xe^{1/x}$.
+
+    \item  $g(x)=\log(x^2+3x+2)$.
+
+    \item  $j(x)=\dfrac{x^3}{(x+1)^2}$.
+    
+    \item  $h(x)=\cos x-\log(\cos x)$.
+\end{enumerate}
+\end{multicols}
+}
+
+
+\newproblem*{lim-6}{gen}{}
+%ENUNCIADO
+{Determinar el dominio y las asíntotas de la función:
+\[f(x)=\sqrt{\frac{x^3}{x-1}}.\]
+
+\noindent\textbf{Nota}: Calcular las asíntotas horizontales y oblicuas sólo para $x\rightarrow +\infty$.
+}
+
+
+\newproblem*{lim-7}{amb}{*}
+%ENUNCIADO
+{Se ha analizado la cantidad de un nutriente en suelo (mg/K), necesario para el crecimiento de las plantas, en función del tiempo (en días) desde que se procedió a su reposición mediante abonado, y viene dada por la siguiente función:
+\[
+\renewcommand{\arraystretch}{2.2}
+C(t) = \left\{ {\begin{array}{*{20}c}
+   {\dfrac{{a \cdot e^{ - \dfrac{1}{2}\cdot t} }}{{\sqrt {t + 1} }}} & {{\rm si}} & {0 \le t < 3}  \\
+   {\dfrac{{b\ln \left( {t^2  + 1} \right)}}{{t^2  + 1}}} & {{\rm si}} & {t \ge 3}  \\
+\end{array}} \right.
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular el valor de las constantes $a$ y $b$ sabiendo que la concentración en el instante inicial era de 50 mg/K, y que la función es continua en $t=3$ días.
+\item Teniendo en cuenta los valores de $a$ y $b$ obtenidos en el apartado anterior, ¿puede la función concentración ser derivable en $t=3$?
+\item ¿Qué valor tendrá la concentración del nutriente transcurridos muchos días desde el abonado?
+\end{enumerate}
+}
+
+
+\newproblem{lim-8}{gen}{*}
+%ENUNCIADO
+{Calcular $\displaystyle \lim\limits_{x\rightarrow 1}\left(\frac{1}{1-x}-\frac{3}{1-x^{3}}\right)$.
+}
+%SOLUCIÓN
+{-1.
+}
+%RESOLUCIÓN
+{Si sustituimos $x$ por $1$ en la expresión, obtenemos una indeterminación del tipo $\infty -\infty .$ Para resolverla sacamos común denominador y realizamos la resta: 
+\[
+\lim\limits_{x\rightarrow 1}\left( \frac{1}{1-x}-\frac{3}{1-x^{3}}\right) = \lim\limits_{x\rightarrow 1}\frac{-x^{3}+3x-2}{x^{4}-x^{3}-x+1}.
+\]
+Si ahora susitutimos $x$ por $1$ en la expresión obtenemos una indeterminación del tipo $\frac{0}{0}$. Para resolver esta indeterminación aplicamos la regla de L'Hôpital dos veces: 
+\[
+\lim\limits_{x\rightarrow 1}\frac{-x^{3}+3x-2}{x^{4}-x^{3}-x+1} \stackrel{\text{L}^{\prime }\text{H\^{o}pital}}{=} \lim\limits_{x\rightarrow 1}\frac{-3x^{2}+3}{4x^{3}-3x^{2}-1} \stackrel{\text{L}^{\prime }\text{Hôpital}}{=} \lim\limits_{x\rightarrow 1}\frac{-6x}{12x^{2}-6x}=\frac{-6}{6}=-1.
+\]
+}

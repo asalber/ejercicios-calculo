@@ -1,0 +1,195 @@
+\documentclass[a4paper,titlepage]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{svn-multi}
+% Version control information:
+\svnidlong
+{$HeadURL: http://172.20.100.115/svn/maths/ejercicios_estadistica/ejercicios_estadistica.tex $}
+{$LastChangedDate: 2007-10-01 16:04:26 +0200 (lun, 01 oct 2007) $}
+{$LastChangedRevision: 2 $}
+{$LastChangedBy: alf $}
+%\svnid{$Id: ejercicios_estadistica.tex 2 2007-10-01 14:04:26Z alf $}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{macros}
+%\usepackage[amsmath]{maxiplot}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
+\usepackage{pst-solides3d}
+\usepackage{enumitem}
+\usepackage{probsoln-alf}
+%\usepackage{times}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfautor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de C\'alculo}} 
+\usepackage{url}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}} \rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Métodos Cuantitativos}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+\pdfinfo{/CreationDate (D:\svnpdfdate)}
+\svnRegisterAuthor{alf}{Alfredo Sánchez Alberca}
+
+\makeatletter
+\let\savees@listquot\es@listquot
+\def\es@listquot{\protect\savees@listquot}
+\makeatletter
+
+\reversemarginpar
+\showshortanswers
+%\showanswers
+%\PSNrandseed{2007}
+
+
+\begin{document}
+\sloppy
+
+\title{\vskip 2cm
+\shadowbox{\Huge \textbf{\textsf{\quad \textcolor[rgb]{0.00,0.00,0.50}{EJERCICIOS DE CÁLCULO}\quad}}}\\
+   \vskip 1cm
+   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Asignatura: Matemáticas }}}\\
+   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Curso: 1º de Grado en Farmacia}}}
+   }
+\author{
+   Santiago Angulo Díaz-Parreño (\url{sangulo@ceu.es})
+   \and
+   José Rojo Montijano (\url{jrojo.eps@ceu.es})
+   \and
+   Anselmo Romero Limón (\url{arlimon@ceu.es})
+   \and
+   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+}
+\date{Curso 2011-2012\\[1cm]
+\includegraphics[scale=0.3]{img/logo_uspceu_01}}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\input{derivadas}
+\input{diferencial}
+\input{derivadas_implicitas}
+\input{derivadas_parametricas}
+\input{extremos}
+\input{taylor}
+\input{derivadas_parciales}
+%\input{integrales}
+%\input{integrales_impropias}
+%\input{integrales_aplicaciones}
+\input{edo_separables}
+\input{edo_homogeneas}
+\input{edo_lineales}
+\input{medida_error}
+
+
+\section{Derivadas y Diferenciales}
+\begin{enumerate}[leftmargin=*]
+\item \useproblem{der-1}
+\item \useproblem{der-6}
+\item \useproblem{der-7}
+\item \useproblem{der-8}
+\item \useproblem{der-9}
+\item \useproblem{der-10}
+\item \useproblem{der-12}
+\item \useproblem{der-13}
+\item \useproblem{der-21}
+\item \useproblem{dif-1}
+\item \useproblem{dif-2}
+\item \useproblem{derimp-1}
+\item \useproblem{derimp-8}
+\item \useproblem{derimp-2}
+\item \useproblem{derimp-3}
+\item \useproblem{derimp-5}
+\item \useproblem{derimp-6}
+\item \useproblem{derimp-11}
+\item \useproblem{derpar-1}
+\item \useproblem{derpar-2}
+\item \useproblem{derpar-4}
+\item \useproblem{derpar-5}
+\end{enumerate}
+
+\section{Aplicaciones de la Derivada}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{ext-1}
+\item \useproblem{ext-2}
+\item \useproblem{ext-3}
+\item \useproblem{ext-5}
+\item \useproblem{ext-7}
+\item \useproblem{tay-2}
+\item \useproblem{tay-3}
+\item \useproblem{tay-4}
+\item \useproblem{tay-6}
+\item \useproblem{tay-7}
+\item \useproblem{tay-8}
+\item \useproblem{tay-9}
+\item \useproblem{tay-10}
+\item \useproblem{tay-19}
+\end{enumerate}
+
+\section{Derivadas Parciales}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{par-1}
+\item \useproblem{par-18}
+\item \useproblem{par-2}
+\item \useproblem{par-3}
+\item \useproblem{par-5}
+\item \useproblem{par-6}
+\item \useproblem{par-9}
+\item \useproblem{par-11}
+\item \useproblem{par-14}
+\item \useproblem{par-15}
+\item \useproblem{par-28}
+\end{enumerate}
+
+\section{Ecuaciones Diferenciales}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{edosep-1}
+\item \useproblem{edosep-2}
+\item \useproblem{edosep-3}
+\item \useproblem{edosep-4}
+\item \useproblem{edosep-5}
+\item \useproblem{edosep-13}
+\item \useproblem{edosep-6}
+\item \useproblem{edosep-7}
+\item \useproblem{edosep-11}
+\item \useproblem{edosep-14}
+\item \useproblem{edosep-16}
+\item \useproblem{edosep-18}
+\item \useproblem{edosep-20}
+\item \useproblem{edosep-21}
+\item \useproblem{edosep-26}
+\item \useproblem{edohom-1}
+\item \useproblem{edolin-1}
+\item \useproblem{edolin-2}
+\end{enumerate}
+
+\section{Medida y Error}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{err-1}
+\item \useproblem{err-2}
+\item \useproblem{err-3}
+\item \useproblem{err-4}
+\item \useproblem{err-5}
+\item \useproblem{err-6}
+\item \useproblem{err-7}
+\item \useproblem{err-8}
+\item \useproblem{err-9}
+\end{enumerate}
+
+\vspace{2cm}
+
+\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de
+exámenes de otros años.
+
+\end{document}
