@@ -1,8 +1,4 @@
-%Version control information:
-%$HeadURL: https://ejercicioscalculo.googlecode.com/svn/trunk/taylor.tex $
-%$LastChangedDate: 2010-01-28 20:28:03 +0100 (jue, 28 ene 2010) $
-%$LastChangedRevision: 11 $
-%$LastChangedBy: asalber $
+% Autor: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \newproblem*{tay-1}{gen}{}
 %ENUNCIADO
@@ -860,57 +856,4 @@ Finalmente, para calular ahora el límite que nos piden, podemos sustituir $\sen
 \[
 \lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
 \]
-}
-
-
-\newproblem{tay-24}{gen}{}
-%ENUNCIADO
-{Obtener el desarrollo de Taylor de segundo orden de $f$ alrededor del punto $P$ en cada uno de los casos siguientes:
-\begin{enumerate}
-\item $f(x,y)=\sen(x+2y)$, $P=(0,0)$.
-\item $f(x,y)=e^x\cos y$, $P(0,0)$.
-\item $f(x,y)=\sen(xy)$, $P(1,\pi/2)$.
-\end{enumerate}
-}
-%SOLUCIÓN
-{\begin{enumerate}
-\item $P^2_{f,P}(x,y)= x+2y$.
-\item $P^2_{f,P}(x,y)= 1+x+\frac{x^2}{2}-\frac{xy}{2}$.
-\item $P^2_{f,P}(x,y)= 1+\frac{1}{2}\left(-\frac{\pi^2}{4}(x-1)^2-\pi(x-1)(y-\pi/2)-(y-\pi/2)^2\right)$.
-\end{enumerate}
-}
-%RESOLUCIÓN
-{
-}
-
-
-\newproblem{tay-25}{gen}{}
-%ENUNCIADO
-{Dada la función 
-\[
-f(x,y,z)=e^x\sqrt{y}z,
-\]
-estimar el valor de $f(0.01,24.8,1.02)$ mediante un desarrollo de Taylor lineal alrededor del punto $P=(0,25,1)$.
-}
-%SOLUCIÓN
-{$5.08$.
-}
-%RESOLUCIÓN
-{
-}
-
-
-\newproblem{tay-26}{gen}{}
-%ENUNCIADO
-{Hallar las aproximaciones lineal y cuadrática de la expresión
-\[
-\frac{(3.98-1)^2}{(5.97-3)^2}
-\]
-usando desarrollos de Taylor. Comparar el resultado con el valor exacto.
-}
-%SOLUCIÓN
-{La aproximación lineal es $1.00666666$ y la cuadrática $1.006744438$.
-}
-%RESOLUCIÓN
-{
 }
