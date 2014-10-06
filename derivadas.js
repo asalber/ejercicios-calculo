@@ -1,5 +1,3 @@
-% Autor: Alfredo Sánchez Alberca (asalber@ceu.es)
-
 \newproblem{der-1}{gen}{}
 %ENUNCIADO
 {Estudiar si es derivable la función $f(x)=\sqrt[3]{x-1}$ en el punto $x=1$.

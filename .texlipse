@@ -1,5 +1,5 @@
 #TeXlipse project settings
-#Tue Sep 10 19:57:52 CEST 2013
+#Tue Sep 16 11:22:30 CEST 2014
 markTmpDer=true
 builderNum=6
 outputDir=
@@ -7,8 +7,8 @@ makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=tmp
-mainTexFile=ejercicios_calculo_farmacia_2013-2014.tex
-outputFile=ejercicios_calculo_farmacia_2013-2014.pdf
+mainTexFile=ejercicios_calculo_farmacia_2014-2015.tex
+outputFile=ejercicios_calculo_farmacia_2014-2015.pdf
 langSpell=es
 markDer=true
 srcDir=

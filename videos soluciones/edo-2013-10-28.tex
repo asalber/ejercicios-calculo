@@ -1,0 +1,105 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Ecuaciones diferenciales}\\
+Titulaciones: & \structure{Farmacia y Medicina}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+Una droga se introduce en la sangre por vía intravenosa a un ritmo de 2mg/minuto. La droga se mezcla de
+manera uniforme con la sangre y el cuerpo absorbe de forma contínua un 5\% de la cantidad de la droga presente en el torrente
+sanguíneo. Suponiendo que en el instante en  que se comienza a administrar la droga, la concentración de dicha sustancia
+era nula en la sangre, ¿qué cantidad de droga habrá en sangre a los 2 minutos? 
+
+Si una concentración en sangre de más de 5 mg/litro puede ocasionar un infarto, ¿a partir de qué instante hay riesgo de
+infarto? Suponer un volumen sanguíneo de 5 litros.
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.7\textwidth}
+Una droga se introduce en la sangre por vía intravenosa a un ritmo de 2mg/minuto. La droga se mezcla de
+manera uniforme con la sangre y el cuerpo absorbe de forma contínua un 5\% de la cantidad de la droga presente en el torrente
+sanguíneo. Suponiendo que en el instante en  que se comienza a administrar la droga, la concentración de dicha sustancia
+era nula en la sangre, ¿qué cantidad de droga habrá en sangre a los 2 minutos? 
+\end{column}
+\begin{column}[T]{0.3\textwidth}
+\structure{Datos}\\
+$y(t)$= Cantidad de droga en sangre en el instante $t$\\
+$y(0)=0$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.7\textwidth}
+Si una concentración en sangre de más de 5 mg/litro puede ocasionar un infarto, ¿a partir de qué instante hay riesgo de
+infarto? Suponer un volumen sanguíneo de 5 litros.
+\end{column}
+\begin{column}[T]{0.3\textwidth}
+\structure{Datos}\\
+$y(t)=40-40e^{-0.05t}$\\
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

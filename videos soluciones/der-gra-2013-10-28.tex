@@ -1,0 +1,112 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Derivadas en $n$ variables: Gradiente y derivada direccional}\\
+Titulaciones: & \structure{Química}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+ La función 
+\[s(x,y,z)=\dfrac{\log(xy)}{z}\]
+expresa la concentración de una sustancia $s$ en función de
+las concentraciones de otras tres sustancias $x$, $y$, $z$ en una reacción química. Si en un determinado
+instante las concentraciones $x$, $y$ y $z$ valen 1, se pide:
+\begin{enumerate}
+\item ¿En qué dirección aumentará lo más rápidamente posible la concentración de $s$?
+\item Si empezamos a cambiar las concentraciones de $x$, $y$ y $z$ en la dirección del vector
+$(2,1,0)$, es decir, $x$ crece el doble de $y$, y $z$ se mantiene constante, ¿cuánto cambiará la concentración de $s$?
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\item ¿En qué dirección aumentará lo más rápidamente posible la concentración de $s$?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$s(x,y,z)=\dfrac{\log(xy)}{z}$\\
+Punto $P=(1,1,1)$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Si empezamos a cambiar las concentraciones de $x$, $y$ y $z$ en la dirección del vector
+$(2,1,0)$, es decir, $x$ crece el doble de $y$, y $z$ se mantiene constante, ¿cuánto cambiará la concentración de $s$?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$s(x,y,z)=\dfrac{\log(xy)}{z}$\\
+Punto $P=(1,1,1)$\\
+$\nabla s(1,1,1)=(1,1,0)$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

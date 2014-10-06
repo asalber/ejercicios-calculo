@@ -1,0 +1,117 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Ecuaciones Diferenciales de Primer Orden}\\
+Titulaciones: & \structure{Química, Biotecnología}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\begin{enumerate}
+\item En una reacción química, una sustancia $A$ se transforma en otra $B$ con una velocidad del doble de la
+cantidad de sustancia $A$. 
+Si en el instante inicial la cantidad de $A$ es de $5$ gr/dl, ¿qué cantidad de sustancia $A$ habrá a los
+2 segundos? 
+
+\item Si en esa misma reacción, la sustancia $B$, a su vez, se transforma en otra $C$ a una velocidad del triple de la
+cantidad de $B$, sabiendo que al comienzo de la reacción la cantidad de sustancia $B$ era nula, ¿qué cantidad de $B$
+habrá a los 2 segundos?
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\item En una reacción química, una sustancia $A$ se transforma en otra $B$ con una velocidad del doble de la
+cantidad de sustancia $A$. 
+Si en el instante inicial la cantidad de $A$ es de $5$ gr/dl, ¿qué cantidad de sustancia $A$ habrá a los
+2 segundos?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$A(t)=$ Cantidad de sustancia $A$ en el instante $t$\\
+$A(0)=5$ gr/dl
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Si en esa misma reacción, la sustancia $B$, a su vez, se transforma en otra $C$ a una velocidad del triple de la
+cantidad de $B$, sabiendo que al comienzo de la reacción la cantidad de sustancia $B$ era nula, ¿qué cantidad de $B$
+habrá a los 2 segundos?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$A(t)=$ Cantidad de sustancia $A$ en el instante $t$\\
+$A(t)=5e^{-2t}$\\
+$B(t)=$ Cantidad de sustancia $B$ en el instante $t$\\
+$B(0)=0$ gr/dl
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

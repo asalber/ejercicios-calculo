@@ -1,0 +1,105 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Ecuaciones Diferenciales de Primer Orden}\\
+Titulaciones: & \structure{Farmacia y Medicina}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+Una droga se absorbe por el organismo a un ritmo del tercio de la cantidad de droga presente. 
+Si la droga se administra cada 8 horas en dosis de 5 mg e inicialmente la concentración de droga en el organismo era nula.
+¿Qué cantidad de droga habrá en el organismo a las 4 horas de la dosis inicial? ¿Y a las 4 horas de la segunda dosis? 
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+Una droga se absorbe por el organismo a un ritmo del tercio de la cantidad de droga presente. 
+Si la droga se administra cada 8 horas en dosis de 5 mg e inicialmente la concentración de droga en el organismo era nula.
+¿Qué cantidad de droga habrá en el organismo a las 4 horas de la dosis inicial?
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$x(t)$= Cantidad de droga a las $t$ horas de la dosis inicial\\
+$x(0)= 5$ mg
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+¿Qué cantidad habrá a las 4 horas de la segunda dosis? 
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$x(t)$= Cantidad de droga a las $t$ horas de la dosis inicial\\
+Ecuación diferencial\\
+$x' = -\frac{1}{3}x$\\
+Solución general\\
+$x(t)=Ce^{-t/3}$\\
+Solución particular\\
+$x(t)=5e^{-t/3}$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

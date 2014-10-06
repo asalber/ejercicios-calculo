@@ -1,0 +1,100 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Derivadas de trayectorias}\\
+Titulaciones: & \structure{Todas}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+Una mosca se mueve por una habitación siguiendo la trayectoria $g(t)=(\log t, t, t^2)$. ¿Cón qué
+velocidad se mueve la mosca en el instante en que pasa por el punto $(0,1,1)$? Si en ese instante decide cambiar de
+trayectoria y sigue la trayectoria de la recta tangente a la trayectoria $C$ en ese punto, manteniendo uniforme su
+velocidad, ¿en qué posición estará en el instante $t=2$?
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+¿Cón qué velocidad se mueve la mosca en el instante en que pasa por el punto $P$?
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+Trayectoria $g(t)=(\log t, t, t^2)$\\
+Punto $P=(0,1,1)$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+Si en ese instante decide cambiar de trayectoria y sigue la trayectoria de la recta tangente a la trayectoria $g(t)$ en el punto $P$, manteniendo uniforme su velocidad, ¿en qué posición estará en el instante $t=2$?
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+Trayectoria $g(t)=(\log t, t, t^2)$\\
+Punto $P=(0,1,1)$\\
+Velocidad $g'(1)=(1,1,2)$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
