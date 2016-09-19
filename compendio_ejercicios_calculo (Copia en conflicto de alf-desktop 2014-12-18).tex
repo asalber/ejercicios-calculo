@@ -1,0 +1,186 @@
+% Autor: Alfredo Sánchez Alberca (asalber@gmail.com)
+
+\documentclass[a4paper,titlepage,dvips]{article}
+%===============================================
+%PAQUETES
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{macros}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{probsoln-alf}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de C\'alculo}} 
+\usepackage{url}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}} \rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Matemática Aplicada y Estadística}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+\makeatletter
+\let\savees@listquot\es@listquot
+\def\es@listquot{\protect\savees@listquot}
+\makeatletter
+
+\reversemarginpar
+\showshortanswers
+\showanswers
+%\PSNrandseed{2007}
+
+
+\begin{document}
+\sloppy
+
+\begin{titlepage}
+\vspace*{5cm}
+\begin{center}
+{\huge \bf COMPENDIO DE EJERCICIOS DE CÁLCULO\par}
+\vspace{0.5cm}
+{\large \noindent \textbf{Autores}: \\
+   Santiago Angulo Díaz-Parreño (\url{sangulo@ceu.es})\\
+   Eduardo López Ramírez (\url{elopez@ceu.es})\\
+   José Rojo Montijano (\url{jrojo.eps@ceu.es})\\
+   Anselmo Romero Limón (\url{arlimon@ceu.es})\\
+   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+}
+
+\vspace{1cm}
+ \includegraphics[scale=0.3]{img/logo_uspceu_01}
+\end{center}
+\end{titlepage}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+
+\section{Domínios e imágenes}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{dominios}
+\end{enumerate}
+
+\section{Límites}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{limites}
+\end{enumerate}
+
+\section{Continuidad}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{continuidad}
+\end{enumerate}
+
+\section{Derivadas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas}
+\end{enumerate}
+
+\section{Diferencial}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{diferencial}
+\end{enumerate}
+
+\section{Derivadas paramétricas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_parametricas}
+\end{enumerate}
+
+\section{Trayectorias}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_trayectorias}
+\end{enumerate}
+
+\section{Teorema de Rolle y del valor medio}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{rolle_valor_medio}
+\end{enumerate}
+
+\section{Crecimiento, concavidad y extremos relativos}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{extremos}
+\end{enumerate}
+
+\section{Polinomios de Taylor}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{taylor}
+\end{enumerate}
+
+\section{Derivadas parciales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_parciales}
+\end{enumerate}
+
+\section{Superficies}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_superficies}
+\end{enumerate}
+
+\section{Derivadas implícitas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_implicitas}
+\end{enumerate}
+
+\section{Derivadas implícitas en varias variables}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{derivadas_implicitas_n_variables}
+\end{enumerate}
+
+\section{Extremos en varias variables}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{extremos_n_variables}
+\end{enumerate}
+
+\section{Polinomios de Taylor en varias variables}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{taylor_n_variables}
+\end{enumerate}
+
+\section{Integrales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{integrales}
+\end{enumerate}
+
+\section{Integrales impropias}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{integrales_impropias}
+\end{enumerate}
+
+\section{Aplicaciones de las integrales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{integrales_aplicaciones}
+\end{enumerate}
+
+\section{Ecuaciones diferenciales ordinarias de variables separables}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{edo_separables}
+\end{enumerate}
+
+\section{Ecuaciones diferenciales ordinarias homogéneas}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{edo_homogeneas}
+\end{enumerate}
+
+\section{Ecuaciones diferenciales ordinarias lineales}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{edo_lineales}
+\end{enumerate}
+
+\section{Medida y error}
+\begin{enumerate}[leftmargin=*]
+\selectallproblems{medida_error}
+\end{enumerate}
+
+\vspace{2cm}
+
+\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de
+exámenes de otros años.
+\end{document}

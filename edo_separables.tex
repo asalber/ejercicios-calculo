@@ -89,10 +89,12 @@ una temperatura normal de $37^\circ C$, ¿a qué hora fue asesinado?}
 \newproblem{edosep-6}{qui}{*}
 %ENUNCIADO
 {Sea la siguiente ecuación diferencial que relaciona la temperatura y el tiempo en un determinado sistema físico:
-$x't^2  - x't + x' - 2xt + x = 0$, siendo $x$ la temperatura expresada en Kelvins y $t$ el tiempo en segundos. 
+\[
+x't^2-x't+x'-2xt+x=0,
+\]
+siendo $x$ la temperatura expresada en Kelvins y $t$ el tiempo en segundos. 
 
-Sabiendo que la temperatura en el instante inicial del experimento es 100 K, calcular la temperatura en función del
-tiempo, y dar la temperatura del sistema físico tres segundos después de comenzar el experimento.  }
+Sabiendo que la temperatura en el instante inicial del experimento es 100 K, calcular la temperatura en función del tiempo, y dar la temperatura del sistema físico tres segundos después de comenzar el experimento.}
 %SOLUCIÓN
 {$x(t)=100(t^2-t+1)$ y la temperatura del sistema a los tres segundos de comenzar el experimento es $x(3)=700$ K.
 }
@@ -538,16 +540,12 @@ cuerpo y $k$ es una constante positiva que depende del paciente. Se pide calcula
 {La temperatura $T$ de una habitación en un día de invierno varía con el tiempo de acuerdo a la ecuación:
 \[
 \frac{dT}{dt}=
-\left\{
-  \begin{array}{ll}
-    40-T, & \hbox{si la calefacción está encendida;} \\
-    -T, & \hbox{si la calefacción está apagada.}
-  \end{array}
-\right.
+\begin{cases}
+40-T, & \mbox{si la calefacción está encendida;} \\
+-T, & \mbox{si la calefacción está apagada.}
+\end{cases}
 \]
-Suponiendo que la temperatura del aula es de 5ºC  a las 9:00 de la mañana, y que a esa hora se enciende la
-calefacción, pero que debido a una avería la calefacción permanece apagada de 11:00 a 12:00, ¿qué temperatura habrá en
-la habitación a las 13:00?}
+Suponiendo que la temperatura del aula es de 5ºC  a las 9:00 de la mañana, y que a esa hora se enciende la calefacción, pero que debido a una avería la calefacción permanece apagada de 11:00 a 12:00, ¿qué temperatura habrá en la habitación a las 13:00?}
 %SOLUCIÓN
 {De 9 a 11 la temperatura es $T(t)=-35e^{-t}+40$ y la temperatura a las $11$ será de $35.263$ºC.\\
 De 11 a 12 la temperatura es $T(t)=35.263e^{-t}$ y la temperatura a las $12$ será de $12.973$ºC.\\

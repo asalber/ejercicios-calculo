@@ -39,7 +39,7 @@ $|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
 {Obtener la fórmula de Taylor de segundo orden de la función $f(x)=\sqrt[3]{x}$ en un entorno del punto $x=1$.
 }
 %SOLUCIÓN
-{$P^2_{f,1}(x) = 1+\frac{1}{3}(x-1)-\frac{2}{18}(x-1)^2$. 
+{$P^2_{f,1}(x) = 1+\frac{1}{3}(x-1)-\frac{2}{18}(x-1)^2$.
 }
 %RESOLUCIÓN
 {
@@ -48,10 +48,10 @@ $|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
 
 \newproblem{tay-4}{gen}{}
 %ENUNCIADO
-{Calcular el polinomio de McLaurin de tercer grado para la función $f(x)=\arcsen x$.
+{Calcular el polinomio de Maclaurin de tercer grado para la función $f(x)=\arcsen x$.
 }
 %SOLUCIÓN
-{$P^3_{f,0}(x) = x+\frac{1}{6}x^3$. 
+{$P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
 }
 %RESOLUCIÓN
 {
@@ -69,7 +69,7 @@ $|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
 {Dadas las funciones
 $f(x)=e^x$ y $g(x)=\cos x$, se pide:
 \begin{enumerate}
-   \item  Calcular los polinomios de McLaurin de segundo grado para $f$
+   \item  Calcular los polinomios de Maclaurin de segundo grado para $f$
    y $g$.
 
    \item  Utilizar los polinomios anteriores para calcular
@@ -79,7 +79,7 @@ $f(x)=e^x$ y $g(x)=\cos x$, se pide:
 %SOLUCIÓN
 {\begin{enumerate}
 \item $P^2_{f,0}(x) = 1+x+\frac{1}{2}x^2$ y $P^2_{g,0}(x) = 1-\frac{1}{2}x^2$.
-\item $\lim_{x\rightarrow 0}\frac{e^x-\cos x}{x} = \lim_{x\rightarrow 0}\frac{x+x^2}{x} = 1$. 
+\item $\lim_{x\rightarrow 0}\frac{e^x-\cos x}{x} = \lim_{x\rightarrow 0}\frac{x+x^2}{x} = 1$.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -94,7 +94,7 @@ $f(x)=e^x$ y $g(x)=\cos x$, se pide:
 C(t) = \frac{1}{{1 + e^{-2t}}}
 \]
 \begin{enumerate}
-\item Calcular el polinomio de Mc Laurin de orden 3.
+\item Calcular el polinomio de Maclaurin de orden 3.
 
 \item Utilizando el polinomio anterior, calcular aproximadamente la concentración del fármaco transcurridos 15 minutos.
 \end{enumerate}
@@ -109,9 +109,9 @@ C(t) = \frac{1}{{1 + e^{-2t}}}
 %RESOLUCIÓN
 {\begin{enumerate}
 \item
-La fórmula del polinomio de Mc Laurin de orden 3 para la función $C(t)$ es:
+La fórmula del polinomio de Maclaurin de orden 3 para la función $C(t)$ es:
 \begin{equation}
-\label{e:mclaurin}
+\label{e:Maclaurin}
 P_{C,0}^3(t)=C(0)+\frac{dC}{dt}(0)t+\frac{d^2C}{dt^2}(0)\frac{t^2}{2!}+\frac{d^3C}{dt^3}(0)\frac{t^3}{3!}
 \end{equation}
 Necesitamos calcular las tres primeras derivadas:
@@ -142,7 +142,7 @@ C(0)&= \frac{1}{1+e^{-2\cdot 0}}=\frac{1}{2},\\
 \frac{d^3C}{dt^3}(0)&=\frac{(8e^{-2\cdot 0}-32e^{-4\cdot 0}+8e^{-6\cdot 0})}{(1+e^{-2\cdot 0})^4}=\frac{8-32+8}{16}=-1.
 \end{align*}
 
-Y por último, sustituyendo en la ecuación \ref{e:mclaurin} llegamos al polinomio
+Y por último, sustituyendo en la ecuación \ref{e:Maclaurin} llegamos al polinomio
 \[
 P_{C,0}^3(t)=\frac{1}{2}+\frac{1}{2}t+0\frac{t^2}{2!}-1\frac{t^3}{3!}=\frac{1}{2}+\frac{1}{2}t-\frac{1}{6}t^3.
 \]
@@ -157,7 +157,7 @@ C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0
 
 \newproblem{tay-8}{gen}{*}
 %ENUNCIADO
-{Obtener el desarrollo en serie de Taylor hasta orden tres en el punto $1$ de la función 
+{Obtener el desarrollo en serie de Taylor hasta orden tres en el punto $1$ de la función
 \[f(x) = \ln\sqrt{\dfrac{x^2+1}{2}}.\]
 Utilizar el polinomio obtenido calcular una aproximación de $\ln\sqrt{1.22}$ y acotar el error cometido.
 }
@@ -176,7 +176,7 @@ $|R^3_{f,1}(1.2)|\leq 1.25\cdot 10^{-4}$.
 %ENUNCIADO
 {Dada la función $f(x)=\arctg(x/2)$ se pide:
 \begin{enumerate}
-\item Calcular el polinomio de Mc Laurin de orden 3.
+\item Calcular el polinomio de Maclaurin de orden 3.
 \item Utilizar el polinomio anterior para aproximar $\arctg 0.05$.
 \item Dar una cota del error cometido.
 \end{enumerate}
@@ -197,8 +197,8 @@ $|R^3_{f,1}(1.2)|\leq 1.25\cdot 10^{-4}$.
 %ENUNCIADO
 {Dada la función $f(x)=\dfrac{1}{1-x}$ con $x\neq 1$, se pide:
 \begin{enumerate}
-\item Calcular el polinomio de Mc Laurin de $f$ de grado 4.
-\item Calcular el polinomio de Mc Laurin de $f$ de grado $n$.
+\item Calcular el polinomio de Maclaurin de $f$ de grado 4.
+\item Calcular el polinomio de Maclaurin de $f$ de grado $n$.
 \item Calcular el resto de Lagrange para el polinomio de grado $n$ en el punto $x=0.03$.
 \item ¿Hasta qué grado tendríamos que llegar para conseguir una aproximación de $f(0.03)$ con un error menor de $10^{-10}$?
 \end{enumerate}
@@ -253,7 +253,7 @@ Y como valor de $a$ (punto en el que centramos el polinomio de
 Taylor) podemos tomar 0, ya que está lo suficientemente próximo a
 $0.2$ como para que la aproximación sea buena, además de simplificar
 notablemente los cálculos. Es decir, vamos a calcular el polinomio
-de Mc Laurin.
+de Maclaurin.
 
 Entre las múltiples expresiones para la derivada de la tangente
 (como cociente de senos y cosenos, con la secante y también con la
@@ -377,7 +377,7 @@ Con ello, la cota para el error cometido vale:
 %ENUNCIADO
 {Dada  la función $f(x) = 2\sqrt[3]{{1 + x}}$, se pide:
 \begin{enumerate}
-\item Hallar el polinomio de Mc Laurin de tercer grado de la función. 
+\item Hallar el polinomio de Maclaurin de tercer grado de la función.
 \item Utilizar el polinomio obtenido en el apartado anterior para calcular un valor aproximado de $\sqrt[3]{9}$.
 \item Dar una cota del error cometido.
 \end{enumerate}
@@ -391,12 +391,12 @@ Con ello, la cota para el error cometido vale:
 }
 %RESOLUCIÓN
 {\begin{enumerate}
-\item   La fórmula del polinomio de Mc Laurin de orden $3$ para la 
+\item   La fórmula del polinomio de Maclaurin de orden $3$ para la
     función $f$ es
 \begin{equation}
-    P_{3,f,0} (x)= f(0)+ 
+    P_{3,f,0} (x)= f(0)+
     f'(0)x+\frac{f''(0)}{2!}x^2+\frac{f'''(0)}{3!}x^3,
-    \label{McLaurin}
+    \label{Maclaurin}
 \end{equation}
 de modo que tenemos que calcular hasta la tercera derivada de $f$ en el 0.
 \[ \renewcommand{\arraystretch}{2}
@@ -405,23 +405,23 @@ de modo que tenemos que calcular hasta la tercera derivada de $f$ en el 0.
         f'(x)=2\dfrac{1}{3}(1+x)^{-2/3}=\dfrac{2}{3}(1+x)^{-2/3}, &  & f'(0)=\dfrac{2}{3}(1+0)^{-2/3}=\dfrac{2}{3},\\
         f''(x)=\dfrac{2}{3}\dfrac{-2}{3}(1+x)^{-5/3}=\dfrac{-4}{9}(1+x)^{-5/3}, &  & f''(0)=\dfrac{-4}{9}(1+0)^{-5/3}=\dfrac{-4}{9},\\
         f'''(x)=\dfrac{-4}{9}\dfrac{-5}{3}(1+x)^{-8/3}=\dfrac{20}{27}(1+x)^{-8/3}, &  & f'''(0)=\dfrac{20}{27}(1+0)^{-8/3}=\dfrac{20}{27},
-     \end{array}  
+     \end{array}
 \]
-Sustituyendo estos valores en la ecuación \ref{McLaurin}, 
+Sustituyendo estos valores en la ecuación \ref{Maclaurin},
 obtenemos el polinomio que nos piden
-\[ 
+\[
 P(3,f,0)(x)= 2+\frac{2}{3}x+\frac{-4/9}{2}x^2+\frac{20/27}{6}x^3=
-2+\frac{2}{3}x-\frac{2}{9}x^2+\frac{10}{81}x^3.      
-\]    
+2+\frac{2}{3}x-\frac{2}{9}x^2+\frac{10}{81}x^3.
+\]
 
-\item Primero averiguamos en qué punto la función vale $\sqrt[3]{9}$. 
+\item Primero averiguamos en qué punto la función vale $\sqrt[3]{9}$.
 \[
 f(x)=2\sqrt[3]{1+x}=\sqrt[3]{9} \Leftrightarrow (2\sqrt[3]{1+x})^3=(\sqrt[3]{9})^3 \Leftrightarrow
 2^3(1+x)=9 \Leftrightarrow 8+8x=9 \Leftrightarrow x=\frac{1}{8}=0.125.
 \]
 Calculando el polinomio anterior en este punto tenemos
-\[ 
-\sqrt[3]{9}\approx P(3,f,0)(0.125)= 2+\frac{2}{3}0.125-\frac{2}{9}0.125^2+\frac{10}{81}0.125^3=2.080102258.      
+\[
+\sqrt[3]{9}\approx P(3,f,0)(0.125)= 2+\frac{2}{3}0.125-\frac{2}{9}0.125^2+\frac{10}{81}0.125^3=2.080102258.
 \]
 
 \item El error cometido en la aproximación anterior nos lo da el resto de Taylor, que en la forma
@@ -461,10 +461,10 @@ $t=0$. Así pues, tenemos la siguiente cota
 }
 %RESOLUCIÓN
 {\begin{enumerate}
-\item   La fórmula del polinomio de Mc Laurin de orden $3$ para la función $f$ es
+\item   La fórmula del polinomio de Maclaurin de orden $3$ para la función $f$ es
 \begin{equation}
 P_{3,f,0} (x)= f(0)+ f'(0)x+\frac{f''(0)}{2!}x^2+\frac{f'''(0)}{3!}x^3,
-\label{McLaurin}
+\label{Maclaurin}
 \end{equation}
 de modo que tenemos que calcular hasta la tercera derivada de $f$ en el 0.
 \[ \renewcommand{\arraystretch}{2}
@@ -473,22 +473,22 @@ de modo que tenemos que calcular hasta la tercera derivada de $f$ en el 0.
         f'(x)=2\dfrac{-1}{2}(3x+1)^{-3/2}3=-3(3x+1)^{-3/2}, &  f'(0)=-3(3\cdot 0+1)^{-3/2}=-3,\\
         f''(x)=-3\dfrac{-3}{2}(3x+1)^{-5/2}3=\dfrac{27}{2}(3x+1)^{-5/2}, &  f''(0)=\dfrac{27}{2}(3\cdot 0+1)^{-5/2}=\dfrac{27}{2},\\
         f'''(x)=\dfrac{27}{2}\dfrac{-5}{2}(3x+1)^{-7/2}3=\dfrac{-405}{4}(3x+1)^{-7/2}, & f'''(0)=\dfrac{-405}{4}(3\cdot 0+1)^{-7/2}=\dfrac{-405}{4},
-     \end{array}  
+     \end{array}
 \]
-Sustituyendo estos valores en la ecuación \ref{McLaurin}, obtenemos el polinomio que nos piden
-\[ 
+Sustituyendo estos valores en la ecuación \ref{Maclaurin}, obtenemos el polinomio que nos piden
+\[
 P(3,f,0)(x)= 2-3x+\frac{27/4}{2!}x^2-\frac{405/24}{3!}x^3=
-2-3x+\frac{27}{4}x^2-\frac{135}{8}x^3.      
-\]    
+2-3x+\frac{27}{4}x^2-\frac{135}{8}x^3.
+\]
 
-\item Primero averiguamos en qué punto la función vale $2/1.3$. 
+\item Primero averiguamos en qué punto la función vale $2/1.3$.
 \[
 f(x)=\frac{2}{\sqrt{3x+1}}=\frac{2}{1.3} \Leftrightarrow \sqrt{3x+1}=1.3 \Leftrightarrow
 3x+1=1.3^2=1.69 \Leftrightarrow x=\frac{0.69}{3}=0.23.
 \]
 Calculando el polinomio anterior en este punto tenemos
-\[ 
-\frac{2}{1.3}\approx P(3,f,0)(0.23)= 2-3\cdot 0.23+\frac{27}{4}0.23^2-\frac{135}{8}0.23^3=1.461756910.      
+\[
+\frac{2}{1.3}\approx P(3,f,0)(0.23)= 2-3\cdot 0.23+\frac{27}{4}0.23^2-\frac{135}{8}0.23^3=1.461756910.
 \]
 \end{enumerate}
 }
@@ -501,7 +501,7 @@ Calculando el polinomio anterior en este punto tenemos
 f(x) = 2\sqrt[4]{{1 + x}}
 \]
 \begin{enumerate}
-\item Calcular su desarrollo de Mc Laurin de orden 3.
+\item Calcular su desarrollo de Maclaurin de orden 3.
 \item Utilizar el desarrollo anterior para calcular de forma aproximada: $\sqrt[4]{{16,16}}$.
 \item Acotar el error cometido con la aproximación anterior.
 \end{enumerate}
@@ -536,9 +536,9 @@ Calcular:
 
 \newproblem*{tay-17}{gen}{*}
 %ENUNCIADO
-{Teniendo en cuenta que $\sen (2x)=2\sen x \cos x$ y los desarrollos de McLarin de las funciones $\sen x$ y $\cos x$, ¿cuál será el desarrollo de Mc Laurin de orden 3 para la función $\sen (2x)$?
+{Teniendo en cuenta que $\sen (2x)=2\sen x \cos x$ y los desarrollos de McLarin de las funciones $\sen x$ y $\cos x$, ¿cuál será el desarrollo de Maclaurin de orden 3 para la función $\sen (2x)$?
 
-Calcular directamente el desarrollo de Mc Laurin de orden 3 de la función $\sen (2x)$ para comprobar el resultado obtenido en el apartado anterior.
+Calcular directamente el desarrollo de Maclaurin de orden 3 de la función $\sen (2x)$ para comprobar el resultado obtenido en el apartado anterior.
 }
 
 
@@ -550,7 +550,7 @@ Calcular directamente el desarrollo de Mc Laurin de orden 3 de la función $\sen
 \]
 para todo $x$ si $p$ es un entero no negativo.
 \begin{enumerate}
-\item Demostrar dicha fórmula hasta el término en $x^4$ mediante el desarrollo de Mc Laurin de orden 4.
+\item Demostrar dicha fórmula hasta el término en $x^4$ mediante el desarrollo de Maclaurin de orden 4.
 \item Utilizar el resultado anterior para calcular de forma aproximada el valor de: $0.9^6$.
 \end{enumerate}
 }
@@ -564,7 +564,7 @@ C(t) = \ln \left( {\frac{{t^2  + 2t + 1}}{{2t + 1}}} \right)
 \]
 Se pide:
 \begin{enumerate}
-\item Calcular el polinomio de Mc Laurin de orden 3 de $C$.
+\item Calcular el polinomio de Maclaurin de orden 3 de $C$.
 \item Utilizar el polinomio anterior para dar el valor aproximado de la concentración al cabo de 15 minutos.
 \item Calcular el polinomio de Taylor, centrado en 0, de orden 2 para la función:
 \[
@@ -580,11 +580,11 @@ f(t) = 2\ln (t + 1) - \ln (2t + 1)
 \end{enumerate}}
 %RESOLUCIÓN
 {\begin{enumerate}
-\item La ecuación del polinomio de Mc Laurin de orden 3 de $C$ es 
+\item La ecuación del polinomio de Maclaurin de orden 3 de $C$ es
 \begin{equation}
 P_{C,0}^3(t) = C(0)+ C'(0)t + \frac{C''(0)}{2}t^2 + \frac{C'''(0)}{3!}t^3.
 \end{equation}
-Necesitamos calcular las 3 primeras derivadas, pero antes conviene simplificar la función 
+Necesitamos calcular las 3 primeras derivadas, pero antes conviene simplificar la función
 \begin{align*}
 C(t)&= \ln\left(\frac{t^2+2t+1}{2t+2}\right)= \ln(t^2+2t+1)-\ln(2t+1) =\\
 &= \ln((t+1)^2) -\ln(2t+1) = 2\ln(t+1)-\ln(2t+1),\\
@@ -599,7 +599,7 @@ C'(0)&= \frac{2}{1}-\frac{2}{1}= 0,\\
 C''(0)&= \frac{-2}{1^2}+\frac{4}{1^2} = 2,\\
 C'''(t)&= \frac{4}{1^3}-\frac{16}{1^3} = -12.
 \end{align*}
-Y sustituyendo en la ecuación anterior llegamos al polinomio 
+Y sustituyendo en la ecuación anterior llegamos al polinomio
 \[
 P_{C,0}^3(t) = \frac{2}{2}t^2 - \frac{12}{3!}t^3 = t^2-2t^3.
 \]
@@ -609,7 +609,7 @@ P_{C,0}^3(t) = \frac{2}{2}t^2 - \frac{12}{3!}t^3 = t^2-2t^3.
 P_{C,0}^3(0.25) = 0.25^2-2\cdot 0.25^3 = 0.03125.
 \]
 
-\item Según hemos podido comprobar al simplificar $C(t)$ resulta que $C(t)$ y $f(t)$ son la misma función, así que el polinomio de Mc Laurin de orden 2 es el mismo que el calculado en el primer apartado pero considerando sólo hasta el término de grado 2, es decir,
+\item Según hemos podido comprobar al simplificar $C(t)$ resulta que $C(t)$ y $f(t)$ son la misma función, así que el polinomio de Maclaurin de orden 2 es el mismo que el calculado en el primer apartado pero considerando sólo hasta el término de grado 2, es decir,
 \[
 P_{f,0}^2(t) = t^2.
 \]
@@ -621,7 +621,7 @@ P_{f,0}^2(t) = t^2.
 %ENUNCIADO
 {Dada la función $\dfrac{\sen x+\cos x}{2}$:
 \begin{enumerate}
-\item  Utilizar el polinomio de Mc Laurin de grado 3 para aproximar $\frac{\sen 1+\cos 1}{2}$.
+\item  Utilizar el polinomio de Maclaurin de grado 3 para aproximar $\frac{\sen 1+\cos 1}{2}$.
 \item  Utilizar el polinomio de Taylor de grado 2 en el punto $x_0 = \pi/2$ para aproximar $\frac{\sen 1+\cos 1}{2}$.
 \item  Dar la cota de error cometida en ambas aproximaciones y decir cual es mejor.
 \end{enumerate}
@@ -635,19 +635,19 @@ P_{f,0}^2(t) = t^2.
 }
 %RESOLUCIÓN
 {\begin{enumerate}
-\item  El polinomio de Mc Laurin de grado 3 para $f(x)$ viene dado por la fórmula siguiente: 
+\item  El polinomio de Maclaurin de grado 3 para $f(x)$ viene dado por la fórmula siguiente:
 \[
-P_0^3(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^2+\frac{f^{\prime \prime \prime }(0)}{3!}x^3. 
+P_0^3(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^2+\frac{f^{\prime \prime \prime }(0)}{3!}x^3.
 \]
 
-Calculamos las tres primeras derivadas de $f(x)$: 
+Calculamos las tres primeras derivadas de $f(x)$:
 \begin{align*}
 f^{\prime }(x) &= \frac{\cos x-\sen x}{2}, \\
 f^{\prime \prime }(x) &= \frac{-\ sen x-\cos x}{2}, \\
 f^{\prime \prime \prime }(x) &= \frac{-\cos x+\sen x}{2}.
 \end{align*}
 
-Particularizando en $x=0$ tenemos: 
+Particularizando en $x=0$ tenemos:
 \begin{align*}
 f(0) &= \frac{\sen 0+\cos 0}2=\frac{1}{2}, \\
 f^{\prime }(0) &= \frac{\cos 0-\sen 0}{2}=\frac{1}{2}, \\
@@ -655,64 +655,64 @@ f^{\prime \prime }(0) &= \frac{-\sen 0-\cos 0}{2}=-\frac{1}{2}, \\
 f^{\prime \prime \prime }(0) &= \frac{-\cos 0+\sen 0}{2}=-\frac{1}{2}.
 \end{align*}
 
-Por tanto, el polinomio de Mc Laurin que nos interesa es: 
+Por tanto, el polinomio de Maclaurin que nos interesa es:
 \[
 P_0^3(x)=\frac{1}{2}+\frac{1}{2}x-\frac{1}{4}x^2-\frac{1}{12}x^3.
 \]
 
-Para aproximar $f(1)=\frac{\sen 1+\cos 1}{2}$, tenemos que tomar $x=1$, y en ese punto, la aproximación que da el polinomio es: 
+Para aproximar $f(1)=\frac{\sen 1+\cos 1}{2}$, tenemos que tomar $x=1$, y en ese punto, la aproximación que da el polinomio es:
 \[
 P_0^3(1)=\frac{1}{2}+\frac{1}{2}-\frac{1}{4}-\frac{1}{12}=\frac{2}{3}.
 \]
 
-\item  El polinomio de Taylor de grado 2 en el punto $x_0=\pi/2$ para $f(x)$ viene dado por la fórmula siguiente: 
+\item  El polinomio de Taylor de grado 2 en el punto $x_0=\pi/2$ para $f(x)$ viene dado por la fórmula siguiente:
 \[
-P_{\pi /2}^2(x)=f(\pi /2)+f^{\prime }(\pi /2)(x-\pi /2)+\frac{f^{\prime\prime }(\pi /2)}{2!}(x-\pi /2)^2. 
+P_{\pi /2}^2(x)=f(\pi /2)+f^{\prime }(\pi /2)(x-\pi /2)+\frac{f^{\prime\prime }(\pi /2)}{2!}(x-\pi /2)^2.
 \]
 
-Particularizando en $x=\pi/2$ hasta la segunda derivada tenemos: 
+Particularizando en $x=\pi/2$ hasta la segunda derivada tenemos:
 \begin{align*}
 f(\pi /2) &= \frac{\sen\pi/2+\cos \pi /2}{2} = \frac{1}{2} \\
 f^{\prime }(\pi/2) &= \frac{\cos \pi /2-\sen\pi/2}{2} = -\frac{1}{2}, \\
 f^{\prime \prime}(\pi/2) &= \frac{-\sen\pi/2-\cos\pi/2}{2} = -\frac{1}{2}.
 \end{align*}
 
-Por tanto, el polinomio de Taylor que nos interesa es: 
+Por tanto, el polinomio de Taylor que nos interesa es:
 \[
-P_{\pi/2}^2(x)=\frac{1}{2}-\frac{1}{2}(x-\pi/2)-\frac{1}{4}(x-\pi/2)^2, 
+P_{\pi/2}^2(x)=\frac{1}{2}-\frac{1}{2}(x-\pi/2)-\frac{1}{4}(x-\pi/2)^2,
 \]
 
-y, de nuevo, tomando $x=1$, la aproximación que da este polinomio para $f(1)=\frac{\sen 1+\cos 1}2$ es: 
+y, de nuevo, tomando $x=1$, la aproximación que da este polinomio para $f(1)=\frac{\sen 1+\cos 1}2$ es:
 \[
-P_{\pi/2}^2(1)=\frac 12-\frac{1}{2}(1-\pi/2)-\frac{1}{4}(1-\pi/2)^2 = 0.70395. 
+P_{\pi/2}^2(1)=\frac 12-\frac{1}{2}(1-\pi/2)-\frac{1}{4}(1-\pi/2)^2 = 0.70395.
 \]
 
-\item  El error cometido en las aproximaciones se puede calcular mediante el resto de Lagrange. Para el polinomio de Mc Laurin anterior, dicho resto se puede calcular con la fórmula siguiente: 
+\item  El error cometido en las aproximaciones se puede calcular mediante el resto de Lagrange. Para el polinomio de Maclaurin anterior, dicho resto se puede calcular con la fórmula siguiente:
 \[
-R_0^3(x) = \frac{f^{iv}(c)}{4!}x^4\qquad \mbox{con }c\in (0,x). 
+R_0^3(x) = \frac{f^{iv}(c)}{4!}x^4\qquad \mbox{con }c\in (0,x).
 \]
 
-Como la cuarta derivada de $f(x)$ coincide con $f(x)$, entonces particularizando el resto en $x=1$, tenemos: 
+Como la cuarta derivada de $f(x)$ coincide con $f(x)$, entonces particularizando el resto en $x=1$, tenemos:
 \[
-R_0^3(1)=\frac{\sen c+\cos c}{2\cdot 4!}1^4 = \frac{\sen c+\cos c}{48} \qquad \text{con }c\in (0,1), 
+R_0^3(1)=\frac{\sen c+\cos c}{2\cdot 4!}1^4 = \frac{\sen c+\cos c}{48} \qquad \text{con }c\in (0,1),
 \]
-y puesto que tanto el seno como el coseno no pueden tomar valores mayores que 1, tenemos que $|\sen c+\cos c|\leq 2$, y obtenemos la siguiente cota de error para la primera aproximaci\'{o}n: 
+y puesto que tanto el seno como el coseno no pueden tomar valores mayores que 1, tenemos que $|\sen c+\cos c|\leq 2$, y obtenemos la siguiente cota de error para la primera aproximaci\'{o}n:
 \[
-|R_0^3(1)|\leq |\frac{2}{48}|=0.04166. 
-\]
-
-Para el polinomio de Taylor, el resto de Lagrange tiene la forma siguiente: 
-\[
-R_{\pi/2}^2(x)=\frac{f^{\prime \prime \prime }(c)}{3!}(x-\pi/2)^3\qquad \mbox{con }c\in (x,\pi /2). 
+|R_0^3(1)|\leq |\frac{2}{48}|=0.04166.
 \]
 
-Como antes, particularizando en $x=1$ tenemos: 
+Para el polinomio de Taylor, el resto de Lagrange tiene la forma siguiente:
 \[
-R_{\pi/2}^2(1)=\frac{-\cos c+\sen c}{2\cdot 3!}(1-\pi/2)^3 \qquad \mbox{con }c\in (1,\pi /2), 
+R_{\pi/2}^2(x)=\frac{f^{\prime \prime \prime }(c)}{3!}(x-\pi/2)^3\qquad \mbox{con }c\in (x,\pi /2).
 \]
-y como $|\sen c+\cos c|\leq 2,$ obtenemos la siguiente cota de error para la segunda aproximación: 
+
+Como antes, particularizando en $x=1$ tenemos:
 \[
-|R_{\pi/2}^2(1)|\leq |\frac{2}{2\cdot 3!}(1-\pi/2)^3|=0.03099. 
+R_{\pi/2}^2(1)=\frac{-\cos c+\sen c}{2\cdot 3!}(1-\pi/2)^3 \qquad \mbox{con }c\in (1,\pi /2),
+\]
+y como $|\sen c+\cos c|\leq 2,$ obtenemos la siguiente cota de error para la segunda aproximación:
+\[
+|R_{\pi/2}^2(1)|\leq |\frac{2}{2\cdot 3!}(1-\pi/2)^3|=0.03099.
 \]
 
 Podemos concluir que la segunda aproximación es mejor que la primera.
@@ -722,14 +722,14 @@ Podemos concluir que la segunda aproximación es mejor que la primera.
 
 \newproblem{tay-21}{gen}{*}
 %ENUNCIADO
-{Calcular el polinomio de Mc Laurin de orden 4 de la función $\cos\frac{x}{3}$, y utilizarlo para aproximar $\cos\frac{\pi}{4}$, dando una
+{Calcular el polinomio de Maclaurin de orden 4 de la función $\cos\frac{x}{3}$, y utilizarlo para aproximar $\cos\frac{\pi}{4}$, dando una
 cota del error cometido.
 }
 %SOLUCIÓN
 {$P_0^4(x)=1-\dfrac{1}{18}x^2+\dfrac{1}{1944}x^4$, $P_0^4\left(\dfrac{3\pi }{4}\right) = 0.7074292$ y la cota del error cometido es $\left|R_0^4\left(\dfrac{3\pi}{4}\right)\right| \leq 0.00249.$
 }
 %RESOLUCIÓN
-{Llamando $f(x)=\cos\dfrac{x}{3}$, el polinomio que se nos pide viene dado por la fórmula siguiente: 
+{Llamando $f(x)=\cos\dfrac{x}{3}$, el polinomio que se nos pide viene dado por la fórmula siguiente:
 \[
 P_0^4(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^2+\frac{f^{\prime \prime \prime }(0)}{3!}x^3+\frac{f^{\text{iv}}(0)}{4!}x^4.
 \]
@@ -743,15 +743,15 @@ f^{\prime \prime \prime}(x)=\dfrac{1}{27}\sen\dfrac{x}{3} & &  f^{\prime \prime 
 f^{iv}(x)=\dfrac{1}{81}\cos\dfrac{x}{3} & & f^{iv}(0)=\dfrac{1}{81}
 \end{array}
 \]
-Sustituyendo estas derivadas en la fórmula anterior obtenemos el polinomio que buscamos: 
+Sustituyendo estas derivadas en la fórmula anterior obtenemos el polinomio que buscamos:
 \[
 P_0^4(x)=1-\dfrac{1}{18}x^2+\frac{1}{1944}x^4.
 \]
-Para aproximar ahora $\cos\frac{\pi}{4}$ utilizando este polinomio, tenemos que calcular el valor del polinomio para un $x$ tal que $f(x)=\cos\frac{\pi}{4},$ es decir, un $x$ tal que $\cos\frac{x}{3}=\cos\frac{\pi}{4},$ de lo que se deduce $x=\frac{3\pi}{4}$. La aproximación que da el polinomio en este punto es 
+Para aproximar ahora $\cos\frac{\pi}{4}$ utilizando este polinomio, tenemos que calcular el valor del polinomio para un $x$ tal que $f(x)=\cos\frac{\pi}{4},$ es decir, un $x$ tal que $\cos\frac{x}{3}=\cos\frac{\pi}{4},$ de lo que se deduce $x=\frac{3\pi}{4}$. La aproximación que da el polinomio en este punto es
 \[
 P_0^4\left(\dfrac{3\pi }{4}\right)=1-\dfrac{1}{18}\left(\dfrac{3\pi}{4}\right)^2+\frac{1}{1944}\left(\dfrac{3\pi}{4}\right)^4=0.7074292
 \]
-Finalmente, el error cometido en esta aproximación lo da el resto de Langrange que se obtiene con la fórmula 
+Finalmente, el error cometido en esta aproximación lo da el resto de Langrange que se obtiene con la fórmula
 \[
 R_0^4\left(\dfrac{3\pi}{4}\right)=\frac{f^{v}(t)}{5!}\left(\dfrac{3\pi}{4}\right)^5\quad \text{con }t\in \left(0,\frac{3\pi}{4}\right).
 \]
@@ -759,11 +759,11 @@ Calculando la quinta derivada de $f(t),$
 \[
 f^{v}(t)=-\dfrac{1}{243}\sen\dfrac{t}{3},
 \]
-y sustitutyendo en la fórmula anterior, obtenemos el error cometido: 
+y sustitutyendo en la fórmula anterior, obtenemos el error cometido:
 \[
 R_0^4\left(\dfrac{3\pi}{4}\right)=-\dfrac{\sen(t/3)}{29160}\left(\dfrac{3\pi}{4}\right)^5\quad \text{con }t\in \left(0,\frac{3\pi}{4}\right).
 \]
-Este error puede acotarse fácilemente aprovechando que $\left|\sen(t/3)\right| \leq 1,$ con lo que llegamos a la cota 
+Este error puede acotarse fácilemente aprovechando que $\left|\sen(t/3)\right| \leq 1,$ con lo que llegamos a la cota
 \[
 \left|R_0^4\left(\dfrac{3\pi}{4}\right)\right| \leq \left|-\dfrac{1}{29160}\left(\dfrac{3\pi}{4}\right)^5\right| = 0.00249.
 \]
@@ -778,7 +778,7 @@ Este error puede acotarse fácilemente aprovechando que $\left|\sen(t/3)\right| 
 {$P_{0}^{3}(x)=1+\dfrac{3}{5}x-\dfrac{3}{25}x^{2}+\dfrac{7}{125}x^{3}$ y $0.98^{3/5}\approx P_{0}^{3}(-0.02)= 0.9879515521$.
 }
 %RESOLUCIÓN
-{Llamando $f(x)=(1+x)^{3/5}$, el polinomio que se nos pide viene dado por la fórmula siguiente: 
+{Llamando $f(x)=(1+x)^{3/5}$, el polinomio que se nos pide viene dado por la fórmula siguiente:
 \[
 P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
 \]
@@ -794,12 +794,12 @@ f^{\prime \prime \prime}(x)=\dfrac{42}{125}(1+x)^{-12/5} & & f^{\prime \prime \p
 \end{array}
 \]
 
-Sustituyendo estas derivadas en la fórmula anterior obtenemos el polinomio que buscamos: 
+Sustituyendo estas derivadas en la fórmula anterior obtenemos el polinomio que buscamos:
 \[
 P_{0}^{3}(x)=1+\dfrac{3}{5}x-\dfrac{3}{25}x^{2}+\frac{7}{125}x^{3}.
 \]
 
-Para aproximar $0.98^{3/5}$ usando este polinomio, tenemos que calcular el valor del polinomio para un $x$ tal que $f(x)=0.98^{3/5}$, es decir, un $x$ tal que $0.98^{3/5}=(1+x)^{3/5}$, de lo que se deduce que $x=-0.02$. La aproximación que da el polinomio en este punto es 
+Para aproximar $0.98^{3/5}$ usando este polinomio, tenemos que calcular el valor del polinomio para un $x$ tal que $f(x)=0.98^{3/5}$, es decir, un $x$ tal que $0.98^{3/5}=(1+x)^{3/5}$, de lo que se deduce que $x=-0.02$. La aproximación que da el polinomio en este punto es
 \[
 P_{0}^{3}(-0.02)=1+\dfrac{3}{5}(-0.02)-\dfrac{3}{25}(-0.02)^{2}+\frac{7}{125}(-0.02)^{3}=0.9879515521.
 \]
@@ -808,7 +808,7 @@ P_{0}^{3}(-0.02)=1+\dfrac{3}{5}(-0.02)-\dfrac{3}{25}(-0.02)^{2}+\frac{7}{125}(-0
 
 \newproblem{tay-23}{gen}{*}
 %ENUNCIADO
-{Obtener polinomio de Mc Laurin de grado 3 de las funciones $\sen x$ y $\tg x$, y utilizar los polinomios anteriores para calcular
+{Obtener polinomio de Maclaurin de grado 3 de las funciones $\sen x$ y $\tg x$, y utilizar los polinomios anteriores para calcular
 \[
 \lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x}
 \]
@@ -819,7 +819,7 @@ $Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}$ 
 $\lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} =2$.
 }
 %RESOLUCIÓN
-{La formula general para calcular el polinomio de Mc Laurin de grado 3 de una función $f(x)$ es:
+{La formula general para calcular el polinomio de Maclaurin de grado 3 de una función $f(x)$ es:
 \[
 P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
 \]

@@ -4,13 +4,13 @@
 %ENUNCIADO
 {La figura adjunta es la de la derivada de una función.  Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y convexidad).
 \[
-\scalebox{0.8}{\input{img/grafica-ext-1}}
+\input{img/grafica-ext-1}
 \]
 }
 %SOLUCIÓN
 {Crecimiento: Decreciente en $(-\infty,a)$ y $(c,e)$, y creciente en $(a,c)$ y $(e,\infty)$.\\
 Extremos: Mínimos en $x=a$ y $x=e$, y máximo en $x=c$.\\
-Concavidad: Cóncava en $(-\infty,b)$ y $(d,\infty)$, y convexa en $(b,d)$. 
+Concavidad: Cóncava en $(-\infty,b)$ y $(d,\infty)$, y convexa en $(b,d)$.
 }
 %RESOLUCIÓN
 {
@@ -75,7 +75,7 @@ instante habrá $10.429$ millones de m$^3$.
 \newproblem{ext-6}{far}{*}
 %ENUNCIADO
 {Se está estudiando fabricar unas cápsulas de cuerpo cilíndrico terminadas en sus extremos por dos semiesferas. El volumen de la cápsula debe ser $0.8$ cm$^3$ y se quiere que la superficie sea mínima. ¿Cuáles deben ser las dimensiones del radio y de la longitud de la parte cilíndrica? Comentar el resultado obtenido.
-\begin{quote} 
+\begin{quote}
     \textbf{Nota}:\\
     Volumen del cilindro $V=\pi r^2 h$\\
     Superficie lateral del cilindro $S=2\pi r h$\\
@@ -87,14 +87,14 @@ instante habrá $10.429$ millones de m$^3$.
 {$r = 0.5759$ y $h=0$.
 }
 %RESOLUCIÓN
-{La capsula está formada por un cilindro de radio $r$ y altura $h$ mas una esfera (2 semiesferas) de radio $r$, 
+{La capsula está formada por un cilindro de radio $r$ y altura $h$ mas una esfera (2 semiesferas) de radio $r$,
 \[
 \includegraphics[scale=0.4]{img/capsula-ext-6}
 \]
 así que su volumen es
 \[
 V(r,h) = \pi r^2 h + \frac{4}{3}\pi r^3,
-\]  
+\]
 y su superficie
 \[
 S(r,h) = 2\pi r h +4 \pi r^2.
@@ -115,11 +115,11 @@ y por tanto la altura será
 \[
 h = \frac{0.8-4/3\pi r^3}{\pi r^2} = \frac{0.8-4/3\pi 0.5759^3}{\pi 0.5759^2} = 0.
 \]
-Esto quiere decir, que realmente no habría cilindro, y por tanto para que la supercie sea mínima la cápsula debería tener forma de esfera. 
+Esto quiere decir, que realmente no habría cilindro, y por tanto para que la supercie sea mínima la cápsula debería tener forma de esfera.
 
 Sólo falta comprobar que el punto anterior es realmente un punto de mínimo. Para ello podemos utilizar la segunda derivada
 \[
-\frac{d^2S}{dr^2} = \frac{d}{dr}\left(-\frac{1.6}{r^2}+\frac{8}{3}\pi r\right) = \frac{1.6\cdot 2r}{r^4}+\frac{8}{3}\pi = \frac{3.2}{r^3}+\frac{8}{3}\pi. 
+\frac{d^2S}{dr^2} = \frac{d}{dr}\left(-\frac{1.6}{r^2}+\frac{8}{3}\pi r\right) = \frac{1.6\cdot 2r}{r^4}+\frac{8}{3}\pi = \frac{3.2}{r^3}+\frac{8}{3}\pi.
 \]
 y sustituyendo en el punto anterior tenemos
 \[
@@ -175,7 +175,7 @@ v(x) = 4(3-x)(5-x).
 %ENUNCIADO
 {La cantidad de trigo en una cosecha $C$ depende del nivel de nitrógeno en el suelo $n$ según la ecuación
 \[
-C(n) = \frac{n}{1+n^2},\quad n\geq 0. 
+C(n) = \frac{n}{1+n^2},\quad n\geq 0.
 \]
 ¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?
 }
@@ -189,12 +189,12 @@ C(n) = \frac{n}{1+n^2},\quad n\geq 0.
 
 \newproblem{ext-10}{amb}{}
 %ENUNCIADO
-{Existen organismos que se reproducen una sóla vez en su vida como por ejemplo los salmones. 
+{Existen organismos que se reproducen una sóla vez en su vida como por ejemplo los salmones.
 En este tipo de especies, la velocidad de incremento per cápita $v$, que mide la capacidad reproductiva, depende de la edad $x$ según la ecuación
 \[
 v(x) = \frac{\log(p(x)h(x))}{x},
-\] 
-donde $p(x)$ es la probabilidad de sobrevivir hasta la edad $x$ y $h(x)$ es el número de nacimientos de hembras a la edad $x$. 
+\]
+donde $p(x)$ es la probabilidad de sobrevivir hasta la edad $x$ y $h(x)$ es el número de nacimientos de hembras a la edad $x$.
 Calcular la edad óptima de reproducción, es decir, el valor que maximice $v$, para $p(x)=e^{-0.1x}$ y $h(x)=4x^{0.9}$.}
 %SOLUCIÓN
 {$x=0.58$ años.
@@ -210,8 +210,8 @@ Calcular la edad óptima de reproducción, es decir, el valor que maximice $v$, 
 \[
 S(x) = x(C-x),
 \]
-siendo $C$ la cantidad máxima del fármaco que puede suministrarse, que depende de cada individuo. 
-Hallar la dosis $x$ para la que la sensibilidad es máxima. 
+siendo $C$ la cantidad máxima del fármaco que puede suministrarse, que depende de cada individuo.
+Hallar la dosis $x$ para la que la sensibilidad es máxima.
 }
 %SOLUCIÓNsensibilidad
 {$x=C/2$.

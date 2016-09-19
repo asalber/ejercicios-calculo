@@ -5,12 +5,12 @@
 {Estudiar si es derivable la función $f(x)=\sqrt[3]{x-1}$ en el punto $x=1$.
 }
 %SOLUCIÓN
-{La función no es derivable ya que $f'(1)=\lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \infty$. 
+{La función no es derivable ya que $f'(1)=\lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \infty$.
 }
 %RESOLUCIÓN
 {Aplicando la definición de derivada, tenemos:
 \begin{align*}
-f'(1) = \lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{1+h-1}-\sqrt[3]{1-1}}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{h}}{h} = \lim_{h\rightarrow 0} h^{-2/3} = \infty. 
+f'(1) = \lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{1+h-1}-\sqrt[3]{1-1}}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{h}}{h} = \lim_{h\rightarrow 0} h^{-2/3} = \infty.
 \end{align*}
 Así pues, la función no es derivable en $x=1$.
 }
@@ -102,10 +102,10 @@ g'(x)=
 \[
 |x^2-2| = 0 \Leftrightarrow x^2 = 2 \Leftrightarrow x = \pm \sqrt 2.
 \]
-Si estudiamos el signo en los intervalos definidos por las raíces, podemos comprobar fácilmente sin más que calcular la función en cualquier punto de los intervalos que $x^2-2$ es negativa en el intervalo $(-\sqrt 2, \sqrt 2)$ y positiva en el resto de su dominio.  
+Si estudiamos el signo en los intervalos definidos por las raíces, podemos comprobar fácilmente sin más que calcular la función en cualquier punto de los intervalos que $x^2-2$ es negativa en el intervalo $(-\sqrt 2, \sqrt 2)$ y positiva en el resto de su dominio.
 Por tanto, podemos expresar el valor absoluto de la siguiente manera:
 \[
-|x^2-2| = 
+|x^2-2| =
 \begin{cases}
 x^2-2 & \mbox{si $x< -\sqrt{2}$,} \\
 -x^2+2 & \mbox{si $-\sqrt 2 \leq x \leq \sqrt 2$,}\\
@@ -114,7 +114,7 @@ x^2-2 & \mbox{si $x > \sqrt 2$.}
 \]
 y entonces, la función original puede expresarse como:
 \[
-g(x) = 
+g(x) =
 \begin{cases}
 2x+x^2-2 & \mbox{si $x< -\sqrt{2}$,} \\
 2x-x^2+2 & \mbox{si $-\sqrt 2 \leq x \leq \sqrt 2$,}\\
@@ -168,7 +168,7 @@ donde $a$ y $b$ son constantes.
 %SOLUCIÓN
 {\begin{enumerate}
 \item La función es continua en todo el dominio si $a=-3$ y $b=-1$.
-\item No existe ningún valor de $a$ y $b$ con los que la función sea derivable en todo el dominio.   
+\item No existe ningún valor de $a$ y $b$ con los que la función sea derivable en todo el dominio.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -179,7 +179,7 @@ donde $a$ y $b$ son constantes.
 \newproblem{der-8}{gen}{*}
 %ENUNCIADO
 {Dada la función
-\[ 
+\[
 f(x)=
 \begin{cases}
 \sen^2x & \mbox{si $x\leq 0$},  \\
@@ -197,7 +197,7 @@ con $a$, $b$ y $c$ constantes, ¿existe algún valor de las constantes de manera
 
 Las funciones $\sen 2x$, $ax^2+b$ y $\ln x$ son todas contínuas en sus dominios, por tanto, basta con estudiar los puntos donde cambia la definici\'{o}n de la funci\'{o}n.
 
-En el punto $x=0$ tenemos: 
+En el punto $x=0$ tenemos:
 \begin{align*}
 \lim_{x\rightarrow 0^{-}}f(x) &= \lim_{x\rightarrow 0^{-}}\sen^2x=\sen^20=0, \\
 \lim_{x\rightarrow 0^{+}}f(x) &= \lim_{x\rightarrow 0^{+}}ax^2+b=a0^2+b=b, \\
@@ -206,7 +206,7 @@ f(0) &= \sen^20=0.
 
 Luego la función será contínua en $x=0$ si y sólo si $b=0$.
 
-En el punto $x=c$ tenemos: 
+En el punto $x=c$ tenemos:
 \begin{align*}
 \lim_{x\rightarrow c^{-}}f(x) &= \lim_{x\rightarrow c^{-}}ax^2+b=ac^2+b, \\
 \lim_{x\rightarrow c^{+}}f(x) &= \lim_{x\rightarrow c^{+}}\ln x=\ln c, \\
@@ -215,17 +215,17 @@ f(c) &= ac^2+b.
 
 Luego la función será contínua en $x=c$ si y sólo si $ac^2+b=\ln c$.
 
-Por consiguiente, para que la función sea contínua en todo su dominio deben cumplirse las dos ecuaciones siguientes: 
+Por consiguiente, para que la función sea contínua en todo su dominio deben cumplirse las dos ecuaciones siguientes:
 \[
 \begin{cases}
-b=0 \\ 
+b=0 \\
 ac^2+b = \ln c
 \end{cases}
 \]
 
 Con la derivabilidad ocurre lo mismo pues las funciones $\sen 2x$ , $ax^2+b$ y $\ln x$ son derivables en su dominio y basta con estudiar la existencia de la derivada en los puntos donde cambia la definición de la función.
 
-En el punto $x=0$ (imponemos $b=0$ pues de lo contrario la función no sería continua en este punto y tampoco derivable) tenemos: 
+En el punto $x=0$ (imponemos $b=0$ pues de lo contrario la función no sería continua en este punto y tampoco derivable) tenemos:
 \begin{align*}
 \lim_{h\rightarrow 0^{-}}\frac{f(0+h)-f(0)}{h} &= \lim_{h\rightarrow 0^{-}}\frac{\sen^2(0+h)-\sen^20}{h} = \lim_{h\rightarrow 0^{-}}\frac{\sen^2h}{h}\stackrel{\text{L}^{\prime }\text{H\^{o}pital}}{=}\lim_{h\rightarrow 0^{-}}\frac{2\sen h\cos h}{1}=0, \\
 \lim_{h\rightarrow 0^{+}}\frac{f(0+h)-f(0)}{h} &= \lim_{h\rightarrow 0^{-}}\frac{a(0+h)^2-\sen^20}{h}=\lim_{h\rightarrow 0^{-}}\frac{ah^2}h\stackrel{\text{L}^{\prime }\text{H\^{o}pital}}{=}\lim_{h\rightarrow 0^{-}}\frac{2ah}{1}=0.
@@ -233,7 +233,7 @@ En el punto $x=0$ (imponemos $b=0$ pues de lo contrario la función no sería co
 
 Luego la función es derivable en $x=0$ si y sólo si $b=0$.
 
-En el punto $x=c$ tenemos: 
+En el punto $x=c$ tenemos:
 \begin{align*}
 \lim_{h\rightarrow 0^{-}}\frac{f(c+h)-f(c)}{h} &= \lim_{h\rightarrow 0^{-}}\frac{a(c+h)^2+b-(ac^2+b)}{h} = \lim_{h\rightarrow 0^{-}}\frac{ac^2+ah^2+2ach+b-ac^2-b}{h}= \\
 &= \lim_{h\rightarrow 0^{-}}\frac{ah^2+2ach}{h} = \lim_{h\rightarrow 0^{-}}ah+2ac=2ac, \\
@@ -242,26 +242,26 @@ En el punto $x=c$ tenemos:
 
 Observese que el último límite conduce a una indeterminación porque se debe cumplir $ac^2+b=\ln c,$ para que la función sea continua en dicho punto. Luego para que la función sea derivable en $x=c$, además de la condición de continuidad, se debe cumplir $2ac = \frac{1}{c}$.
 
-Así pues, para que la función sea continua y derivable en todo su dominio deben cumplirse las tres ecuaciones siguientes: 
+Así pues, para que la función sea continua y derivable en todo su dominio deben cumplirse las tres ecuaciones siguientes:
 \[
 \begin{cases}
-b=0 \\ 
+b=0 \\
 ac^2+b = \ln c\\
 2ac = \frac 1c
 \end{cases}
 \]
 
-Resolviendo el sistema llegamos a: 
+Resolviendo el sistema llegamos a:
 \[
 \renewcommand{\arraystretch}{2.5}
 \begin{array}{c}
 \displaystyle
-a = \frac{1}{2c^2} \Longrightarrow \ln c = ac^2+b = \frac{1}{2c^2}c^2 = \frac{1}{2} \Longrightarrow c = e^{1/2}, \\ 
+a = \frac{1}{2c^2} \Longrightarrow \ln c = ac^2+b = \frac{1}{2c^2}c^2 = \frac{1}{2} \Longrightarrow c = e^{1/2}, \\
 \displaystyle a = \frac{1}{2(e^{1/2})^2} = \frac{1}{2e},
 \end{array}
 \]
 
-y los valores de las constantes que hacen que la función sea continua y derivable en todo su dominio son: 
+y los valores de las constantes que hacen que la función sea continua y derivable en todo su dominio son:
 \begin{align*}
 a &= \frac{1}{2e},\\
 b &= 0, \\
@@ -302,7 +302,7 @@ c &= e^{1/2}.
 \begin{enumerate}
 \item  $y=x^{\sen x},\quad x_{0}=\pi/2$.
 %\item  $y=(3-x^2)^4\sqrt[3]{5x-4},\quad x_{0}=1$.
-\item  $y=\log \sqrt{\dfrac{1+x}{1-x}}, \quad x_{0}=0$.
+\item  $y=\log \sqrt{\frac{1+x}{1-x}}, \quad x_{0}=0$.
 \end{enumerate}
 \end{multicols}
 }
@@ -362,7 +362,7 @@ la recta tangente a $g$ en dicho punto sean paralelas? }
 \frac{-\cos x + \sen x}{2} & \mbox{si $x=4k+3$.}\\
 \end{cases}$
 \item Descomponiendo en fracciones simples, $h^{(n}(x) = \frac{3(-1)^n n!}{(x-1)^{n+1}} + \frac{(-1)^n n!}{(x+2)^{n+1}} + \frac{5(-1)^n n!}{(x-3)^{n+1}}$.
-\item $j^{(n}(x) = \frac{(-1)^n \prod_{i=1}^{n}2i-1}{2^n}(1+x)^{-\frac{2n+1}{2}}$. 
+\item $j^{(n}(x) = \frac{(-1)^n \prod_{i=1}^{n}2i-1}{2^n}(1+x)^{-\frac{2n+1}{2}}$.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -453,7 +453,7 @@ c = \frac{1}{\pi^{2}} \qquad \mbox{y} \qquad d=\frac{-2}{\pi}.
 %ENUNCIADO
 {Se  considera la función $f:\mathbb{R}\to\mathbb{R}$ definida por:
 \[\renewcommand{\arraystretch}{2}
-f(x) = 
+f(x) =
 \begin{cases}
 \dfrac{x^2  + 1}{x - 1} & \mbox{si $x \leq 0$,} \\
 \dfrac{ax + b}{x^2  + 2x + 1} & \mbox{si $x>0$.} \\
@@ -512,8 +512,8 @@ f'(x)=\left\{%
 \dfrac{x^2-2x-1}{(x-1)^2}, & \hbox{si $x<0$;} \\
 \dfrac{-2x^2+2x+4}{(x^2+2x+1)^2}, & \hbox{si $x>0$.} \\
 \end{array}%
-\right. 
-\] 
+\right.
+\]
 Por último estudiamos la derivabilidad en $x=0$ mirando la derivada por la izquierda y por la derecha:
 \begin{align*}
 f'^-(0)=\lim_{x\rightarrow 0^-}f'(x)&=\lim_{x\rightarrow 0^-}\frac{x^2-2x-1}{(x-1)^2}=\frac{0^2-2\cdot 0-1}{(0-1)^2}=-1,\\
@@ -522,7 +522,7 @@ f'^+(0)=\lim_{x\rightarrow 0^+}f'(x)&=\lim_{x\rightarrow 0^+}\frac{-2x^2+2x+4}{(
 y como no coinciden, la función es derivable en en todo $\mathbb{R}$ excepto en el 0, y su derivada es la anterior.
 
 \begin{itemize}
-\item Asíntotas Verticales. Puesto que la función está definida en todo $\mathbb{R}$ y además es continua, no existen puntos en los que la función tienda a $\pm\infty$, de modo que no hay asíntotas verticales. 
+\item Asíntotas Verticales. Puesto que la función está definida en todo $\mathbb{R}$ y además es continua, no existen puntos en los que la función tienda a $\pm\infty$, de modo que no hay asíntotas verticales.
 
 \item Asíntotas Horizontales. Para las asíntotas horizontales estudiamos la tendencia de $f$ en $\pm\infty$:
 \begin{align*}
@@ -532,7 +532,7 @@ y como no coinciden, la función es derivable en en todo $\mathbb{R}$ excepto en
 \begin{quote}
 \footnotesize
 (1) Indeterminación del tipo $0/0$. Aplicamos la regla de L'Hôpital.
-\end{quote}    
+\end{quote}
 Así pues, la recta $y=0$ es asíntota horizontal por la derecha. Por la izquierda no hay asíntota horizontal.
 
 \item Asíntotas oblicuas. Estudiamos la existencia de asíntotas oblicuas sólo por la izquierda porque por la derecha no puede existir asíntota oblicua al haber asíntota horizontal.
@@ -542,7 +542,7 @@ Así pues, la recta $y=0$ es asíntota horizontal por la derecha. Por la izquier
 \begin{quote}
 \footnotesize
 (1) Indeterminación del tipo $0/0$. Aplicamos la regla de L'Hôpital.
-\end{quote} 
+\end{quote}
 Así pues, existe asíntota oblicua con pendiente 1. El término independiente nos lo da el siguiente límite
 \begin{align*}
 \lim_{x\rightarrow -\infty}f(x)-x&=\lim_{x\rightarrow -\infty}\frac{x^2+1}{x-1}-x=\lim_{x\rightarrow -\infty}\frac{x^2+1-x^2+x}{x-1}=\\
@@ -551,7 +551,7 @@ Así pues, existe asíntota oblicua con pendiente 1. El término independiente n
 \begin{quote}
 \footnotesize
 (1) Indeterminación del tipo $0/0$. Aplicamos la regla de L'Hôpital.
-\end{quote} 
+\end{quote}
 de manera que la ecuación de la asíntota oblicua es $y=x+1$.
 \end{itemize}
 \end{enumerate}
@@ -577,7 +577,7 @@ f(x)=
 %SOLUCIÓN
 {\begin{enumerate}
 \item En $x=1$ la función presenta una discontinuidad de 1ª especie de salto finito.
-\item La dervidad por la izquierda en $x=1$ vale $f'^-(1)=0$ y no existe la derivada por la derecha en dicho punto. 
+\item La dervidad por la izquierda en $x=1$ vale $f'^-(1)=0$ y no existe la derivada por la derecha en dicho punto.
 \end{enumerate}
 }
 %RESOLUCIÓN
@@ -599,9 +599,9 @@ que es una indeterminación. Aplicando la regla de L'Hôpital tenemos
 \begin{align*}
 f'^-(1)&= \lim_{h\rightarrow 0^-}\frac{(1/h)'}{\left(1-2^{\frac{1+h}{-h}}\right)'} = \lim_{h\rightarrow 0^-}\frac{-1/h^2}{-2^{\frac{1+h}{-h}}\log 2 \left(\frac{-h+1+h}{h^2}\right)} = \lim_{h\rightarrow 0^-}\frac{-1/h^2}{-2^{\frac{1+h}{-h}}\log 2 \left(\frac{1}{h^2}\right)} \\
 &= \lim_{h\rightarrow 0^-}\frac{1}{2^{\frac{1+h}{-h}}\log 2 } =\frac{1}{2^{+\infty}\log 2}=\frac{1}{+\infty}=0,\\
-f'^+(1)&= \lim_{h\rightarrow 0^+}\frac{f(1+h)-f(1)}{h}= 
+f'^+(1)&= \lim_{h\rightarrow 0^+}\frac{f(1+h)-f(1)}{h}=
 \lim_{h\rightarrow 0^+}\frac{\frac{1}{1-2^{\frac{1+h}{1-(1+h)}}}-0}{h} =
-\lim_{h\rightarrow 0^+}\frac{\frac{1}{1-2^{\frac{1+h}{-h}}}-0}{h} = 
+\lim_{h\rightarrow 0^+}\frac{\frac{1}{1-2^{\frac{1+h}{-h}}}-0}{h} =
 \frac{\frac{1}{1-2^{\frac{1+0}{0^-}}}}{0^+} = \\
 &= \frac{\frac{1}{1-2^{-\infty}}}{0^+} =
 \frac{\frac{1}{1-0}}{0^+}=\frac{1}{0^+}=+\infty.
@@ -626,7 +626,7 @@ En consecuencia, existe derivada por la izquierda pero no por la derecha.
 \item $y=\log_7(x^2+2x+1)$
 \item $y=\sqrt[4]{x^2-3x}$
 \item $y=\sqrt{x-1}-\sqrt{x+1}$
-\item $y=(\log x+\sqrt{x})^3$  
+\item $y=(\log x+\sqrt{x})^3$
 \item $y=\dfrac{\log x}{e^x}$
 \item $y=\log \sqrt{\dfrac{x}{x-2}}$
 \item $y=\sen^2(x^2+3x)$
@@ -670,7 +670,7 @@ En consecuencia, existe derivada por la izquierda pero no por la derecha.
 
 \newproblem*{der-20}{gen}{*}
 %ENUNCIADO
-{Sea 
+{Sea
 \[
 f(x)=
 \begin{cases}
@@ -688,7 +688,7 @@ Calcular $a$ y $b$ para que la función sea continua y derivable en en cualquier
 \[
 f(x)= \frac{x^2+2x+3}{x+2}.
 \]
-Apoyándose en el cálculo anterior, dar la expresión de la derivada de orden 20 de $f$. 
+Apoyándose en el cálculo anterior, dar la expresión de la derivada de orden 20 de $f$.
 }
 %SOLUCIÓN
 {$f^{(n}(x) = (-1)^n 3n!(x+2)^{-n+1}-$ y $f^{(20}(x) = 3\cdot 20!(x+2)^{-21}$.
@@ -702,9 +702,9 @@ Apoyándose en el cálculo anterior, dar la expresión de la derivada de orden 2
 %ENUNCIADO
 {Analizar la continuidad y la derivabilidad de la siguiente función
 \[
-f(x)= 
+f(x)=
 \begin{cases}
--1-\dfrac{x^{2}}{\left| x\right| } & \mbox{si $x<0$}, \\ 
+-1-\dfrac{x^{2}}{\left| x\right| } & \mbox{si $x<0$}, \\
 -2+e^{-x} & \mbox{si $x\geq 0$}.
 \end{cases}
 \]
@@ -716,27 +716,27 @@ f(x)=
 Si se cambia $e^{-x}$ por $e^{x}$ la función pasa a ser derivable en todo $\mathbb{R}$.
 }
 %RESOLUCIÓN
-{Antes de estudiar la continuidad nos interesa eliminar el valor absoluto que aparece en la primera rama de deficinición de la función. Si observamos la definición de la función, la primera rama de definición es para los negativos ($x<0$); en consecuencia, como el argumento del valor absoluto es precisamente $x$, lo que hará el valor absoluto será cambiar de signo el valor de $x$. Por lo tanto, podemos sustituir $\left|x\right|$ por $-x$ en la primera rama de definición y de esta forma la función quedaría definida como sigue: 
+{Antes de estudiar la continuidad nos interesa eliminar el valor absoluto que aparece en la primera rama de deficinición de la función. Si observamos la definición de la función, la primera rama de definición es para los negativos ($x<0$); en consecuencia, como el argumento del valor absoluto es precisamente $x$, lo que hará el valor absoluto será cambiar de signo el valor de $x$. Por lo tanto, podemos sustituir $\left|x\right|$ por $-x$ en la primera rama de definición y de esta forma la función quedaría definida como sigue:
 \[
-f(x)= 
+f(x)=
 \begin{cases}
--1+\dfrac{x^{2}}{x} & \mbox{si $x<0$}, \\ 
+-1+\dfrac{x^{2}}{x} & \mbox{si $x<0$}, \\
 -2+e^{-x} & \mbox{si $x\geq 0$}.
 \end{cases}
 \]
 
 Por otro lado, el cociente $\dfrac{x^{2}}{x}$ de la primera rama también puede simplificarse ya que en dicha rama no está incluido el 0 que sería el único valor que anularía el cociente. Es decir, tras simplificar, la función con la que tenemos que trabajar es
 \[
-f(x)= 
+f(x)=
 \begin{cases}
--1+x & \mbox{si $x<0$}, \\ 
+-1+x & \mbox{si $x<0$}, \\
 -2+e^{-x} & \mbox{si $x\geq 0$}.
 \end{cases}
 \]
 
 Para estudiar la continuidad, comprobamos que la primera rama contiene un polinomio que es continuo en todo su dominio, mientras que la segunda rama contiene una función exponencial compuesta con una suma, y también es continua en todo su dominio. En consecuencia, el único punto en el que queda por estudiar la continuidad es en el cambia la definición de la función, es decir, en el 0.
 
-Para estudiar la continuidad en el 0, calculamos los límites por la izquierda y por la derecha: 
+Para estudiar la continuidad en el 0, calculamos los límites por la izquierda y por la derecha:
 \begin{align*}
 \lim_{x\rightarrow 0^{-}}f(x) &= \lim_{x\rightarrow 0^{-}}-1+x=-1, \\
 \lim_{x\rightarrow 0^{+}}f(x) &= \lim_{x\rightarrow 0^{+}}-2+e^{-x}=-2+1=-1.
@@ -745,15 +745,15 @@ Como ambos límites coinciden y además $f(0)=-2+e^{-0}=-2+1=-1,$ también coinc
 
 Para estudiar la derivabilidad, comprobamos que el polinomio de la primera rama es derivable en todo su dominio y su derivada vale 1. Del mismo modo la función de la segunda rama también es derivable en todo su dominio y su derivada vale $-e^{-x}$. De nuevo, el único punto que queda por estudiar es el 0.
 
-Para estudiar la derivabilidad en el 0 tomamos la función derivada 
+Para estudiar la derivabilidad en el 0 tomamos la función derivada
 \[
 f^{\prime }(x)=
 \begin{cases}
-1 & \mbox{si $x<0$}, \\ 
+1 & \mbox{si $x<0$}, \\
 -e^{-x} & \mbox{si $x>0$},
 \end{cases}
 \]
-y calculamos los límites laterales en el 0: 
+y calculamos los límites laterales en el 0:
 \begin{align*}
 \lim_{x\rightarrow 0^{-}}f^{\prime }(x) &= \lim_{x\rightarrow 0^{-}}1=1, \\
 \lim_{x\rightarrow 0^{+}}f^{\prime }(x) &= \lim_{x\rightarrow 0^{+}}-e^{-x}=-1.
@@ -764,11 +764,11 @@ Por último, si cambiamos $e^{-x}$ por $e^{x}$ en la definición de la función,
 \[
 \lim_{x\rightarrow 0^{+}}f(x) = \lim_{x\rightarrow 0^{+}}-2+e^{x}=-2+1=-1.
 \]
-Sin embargo, la función derivada sí cambiaría: 
+Sin embargo, la función derivada sí cambiaría:
 \[
-f^{\prime }(x)= 
+f^{\prime }(x)=
 \begin{cases}
-1 & \mbox{si $x<0$}, \\ 
+1 & \mbox{si $x<0$}, \\
 e^{x} & \mbox{si $x>0$}.
 \end{cases}
 \]
@@ -777,11 +777,11 @@ Y ahora, al calcular el límite por la derecha en el 0 tendríamos
 \lim_{x\rightarrow 0^{+}}f^{\prime }(x) = \lim_{x\rightarrow 0^{+}}e^{x}=1.
 \]
 que coincide con el límite por la izquierda. Así pues, la función sería derivable en el 0 y, por lo tanto, en todo $\mathbb{R}$.
-Además, la función derivada sería 
+Además, la función derivada sería
 \[
-f^{\prime }(x)= 
+f^{\prime }(x)=
 \begin{cases}
-1 & \mbox{si $x<0$}, \\ 
+1 & \mbox{si $x<0$}, \\
 e^{x} & \mbox{si $x\geq 0$}.
 \end{cases}
 \]
@@ -790,7 +790,7 @@ e^{x} & \mbox{si $x\geq 0$}.
 
 \newproblem{der-23}{gen}{}
 %ENUNCIADO
-{Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. 
+{Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s.
 ¿Con qué velocidad varía el volumen en ese instante? \\
 Nota: El volumen de una esfera es $V=\frac{4}{3}\pi r^3$.
 }
@@ -807,12 +807,12 @@ Nota: El volumen de una esfera es $V=\frac{4}{3}\pi r^3$.
 {En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
 \[
 C(x) = a E(x)^b
-\] 
-donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1. 
+\]
+donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
 Esta ecuación se conoce como \emph{ecuación alométrica}.
-¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo? 
+¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
 ¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
-¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos? 
+¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
 }
 %SOLUCIÓN
 {$800\pi$ cm$^3$/s.
@@ -829,7 +829,7 @@ Esta ecuación se conoce como \emph{ecuación alométrica}.
 e(t) = 4t^3 -2t +1.
 \]
 Calcular su velocidad y aceleración en cualquier instante.\\
-Nota: La aceleración es la tasa de variación instantánea de la velocidad.  
+Nota: La aceleración es la tasa de variación instantánea de la velocidad.
 }
 %SOLUCIÓN
 {Velocidad $v(t)=12t^2-2$ y aceleración $a(t)=24t$.
@@ -841,18 +841,18 @@ Nota: La aceleración es la tasa de variación instantánea de la velocidad.
 
 \newproblem{der-26}{gen}{}
 %ENUNCIADO
-{El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación 
+{El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación
 \[
 e(t) =v_0t-\frac{1}{2}gt^2
 \]
-donde $v_0$ es la velocidad inicial con que se lanza el objeto, $g=9.81$ m/s$^2$ es la constante gravitatoria de la Tierra y $t$ es el tiempo transcurrido desde que el objeto se lanza. 
+donde $v_0$ es la velocidad inicial con que se lanza el objeto, $g=9.81$ m/s$^2$ es la constante gravitatoria de la Tierra y $t$ es el tiempo transcurrido desde que el objeto se lanza.
 Se pide:
-\begin{enumerate} 
-\item Calcular la velocidad y la aceleración en cualquier instante. 
+\begin{enumerate}
+\item Calcular la velocidad y la aceleración en cualquier instante.
 \item Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese
 momento?
 \item ¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?
-\end{enumerate} 
+\end{enumerate}
 }
 %SOLUCIÓN
 {\begin{enumerate}
@@ -868,11 +868,11 @@ momento?
 
 \newproblem{der-27}{qui}{}
 %ENUNCIADO
-{Una pipeta cilíndrica de radio 5 mm almacena una solución. 
-Si la pipeta empieza a vaciarse a razón de $0.5$ ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?   
+{Una pipeta cilíndrica de radio 5 mm almacena una solución.
+Si la pipeta empieza a vaciarse a razón de $0.5$ ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?
 }
 %SOLUCIÓN
-{$-6.37$ mm/s. 
+{$-6.37$ mm/s.
 }
 %RESOLUCIÓN
 {
@@ -885,10 +885,10 @@ Si la pipeta empieza a vaciarse a razón de $0.5$ ml por segundo, ¿a qué veloc
 \[
 m(t) = m_0e^{-kt},
 \]
-donde $m(t)$ es la cantidad de materia en el instante $t$, $m_0$ es la cantidad inicial de materia, $k$ es una constante conocidad como \emph{constante de desintegración} y $t$ es el tiempo.
+donde $m(t)$ es la cantidad de materia en el instante $t$, $m_0$ es la cantidad inicial de materia, $k$ es una constante conocida como \emph{constante de desintegración} y $t$ es el tiempo.
 Calcular la velocidad de desintegración en cualquier instante $t$. Si para un material concreto $k=0.002$, ¿cuál es el periodo de
 semidesintegración del material?\\
-Nota: El \emph{periodo de semidesintegración} de un material radioactivo es el tiempo que trasncurre hasta que la masa se reduce a la mitad de su valor incial.
+Nota: El \emph{periodo de semidesintegración} de un material radioactivo es el tiempo que transcurre hasta que la masa se reduce a la mitad de su valor inicial.
 }
 %SOLUCIÓN
 {Velocidad de desintegración: $-km_0e^{-kt}$.\\
@@ -902,10 +902,10 @@ Periodo de semidesintegración: 346.57 años.
 \newproblem{der-29}{med}{}
 %ENUNCIADO
 {Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 $\mu$ con un error de 0.2 $\mu$.
-¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? 
+¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula?
 En general, si al medir el radio se comete siempre un error relativo del 2\%? ¿Cómo afecta esto al error de la medida de la superficie
 de la célula?\\
-Nota: La superficie de una esfera es $S=4\pi r^2$. Utilizar la aproximación lineal, es decir, la recta tangente de esta función.    
+Nota: La superficie de una esfera es $S=4\pi r^2$. Utilizar la aproximación lineal, es decir, la recta tangente de esta función.
 }
 %SOLUCIÓN
 {Para un error en el radio de $0.2$ $\mu$ el error aproximado en la superficie es $8\pi$ $\mu^2$, y para un error relativo del $2\%$
@@ -921,8 +921,8 @@ el error aproximado en la superficie es del $4\%$.}
 \[
 v(r) = cr^2,
 \]
-donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es una constante. 
-Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad? 
+donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es una constante.
+Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad?
 }
 %SOLUCIÓN
 {$10\%$.
@@ -953,11 +953,11 @@ forma que $\dfrac{dr}{dt}=\dfrac{dh}{dt}= 1$ cm/s. Hallar de forma aproximada la
 v(n) = \frac{an}{k+n},	\quad n\geq 0,
 \]
 donde $a$ y $k$ son constantes positivas.
-Estudiar el crecimiento de esta función e interpretarlo. 
+Estudiar el crecimiento de esta función e interpretarlo.
 }
 %SOLUCIÓN
 {La velocidad de crecimiento aumenta a medida que aumenta $n$ pero cada vez con menos fuerza, de manera que cuando $n\rightarrow \infty$ la
-vvelocidad de crecimiento sería nula. }
+velocidad de crecimiento sería nula. }
 %RESOLUCIÓN
 {
 }
@@ -967,9 +967,10 @@ vvelocidad de crecimiento sería nula. }
 %ENUNCIADO
 {El pH de una solución mide la concentración de iones de hidrógeno (H$^+$) y se define como
 \[
-\mbox{pH} = -\log(\mbox{H}^+).
+\mbox{pH} = -\log_{10}(\mbox{H}^+).
 \]
-Estudiar el crecimiento del pH en función de la concentración de H$^+$.
+Calcular la derivada del pH en función de la concentración de H$^+$.
+¿Cómo es el crecimiento del pH?
 }
 %SOLUCIÓN
 {El pH decrece a medida que aumenta la concentración de H$^+$.
@@ -979,3 +980,33 @@ Estudiar el crecimiento del pH en función de la concentración de H$^+$.
 }
 
 
+\newproblem{der-34}{gen}{}
+%ENUNCIADO
+{Calcular la derivada de la función $f(x)=x^3-2x^2+1$ para $x=-1$, $x=0$ y $x=1$ e interpretarla.
+Calcular la recta tangente a $f$ en cada uno de los puntos anteriores.
+}
+%SOLUCIÓN
+{$f'(-1)=7$, $f'(0)=0$ y $f'(1)=-1$.\\
+Recta tangente en $x=-1$: $y=-2+7(x+1)$.\\
+Recta tangente en $x=0$: $y=1$.\\
+Recta tangente en $x=1$: $y=-(x-1)$.
+}
+%RESOLUCIÓN
+{
+}
+
+\newproblem{der-35}{qui}{*}
+%ENUNCIADO
+{
+En una reacción química, la concentración de una sustancia $c$ depende de la concentración de otras dos sustancias $a$ y $b$
+según la ecuación $c=\sqrt[3]{ab^2}$.
+Si en un determinado instante $t_0$ en el que la concentración de $a=b=2$ mg/mm$^3$ se empieza a aumentar la concentración de $a$ a razón de $0.2$ mg$\cdot$ mm$^{-3}$/s y la de $b$ a razón de $0.4$ mg$\cdot$ mm$^{-3}$/s, ¿con qué velocidad cambia la concentración de $c$?
+¿Cuál será la concentración aproximada de $c$ a los 2 segundos?
+}
+%SOLUCIÓN
+{$c'(t_0)=48$ mg$\cdot$mm$^{-3}$/s.\\
+$c(t_0+2)\approx 192$  mg$\cdot$mm$^{-3}$.
+}
+%RESOLUCIÓN
+{
+}

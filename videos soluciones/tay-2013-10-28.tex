@@ -15,6 +15,18 @@
 %\usepackage{url}
 \usepackage{textcomp}
 
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227} 
+\definecolor{greenceu}{RGB}{194,205,24} 
+\definecolor{redceu}{RGB}{238,50,36} 
+\definecolor{purpleceu}{RGB}{169,78,145} 
+\definecolor{greyceu}{RGB}{117,117,97} 
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246} 
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
 %---------------------------------------------------------------------------
 % FONTS
 %---------------------------------------------------------------------------
@@ -33,7 +45,7 @@
 \begin{document}
 %---------------------------------------------------------------------SLIDE----
 \begin{frame}[c]
-\vspace{2cm}
+\vspace{1.5cm}
 
 \begin{center}
 \structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
@@ -60,6 +72,7 @@ Alfredo Sánchez Alberca (\texttt{asalber@ceu.es})
 
 %---------------------------------------------------------------------SLIDE----
 \begin{frame}[c]
+\Large
 La ecuación $e^{xyz}+z=1+e$ define implícitamente a $z$ como función de $x$ e $y$, $z=g(x,y)$ alrededor
 del punto $(1,1,1)$. Usar el polinomio de Taylor de primer grado, centrado en el punto $(1,1)$, para estimar el valor
 del número $g(1.01,\,0.99)$.

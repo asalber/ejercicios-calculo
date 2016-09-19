@@ -23,3 +23,5 @@
 *.out
 *.synctex.gz
 tmp/*
+/ejercicios_calculo_farmacia_2014-2015.pdf
+/tmp/

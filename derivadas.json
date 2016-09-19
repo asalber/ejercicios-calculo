@@ -1,0 +1,17 @@
+{id: "derivada1-1",
+topic: "Derivadas de funciones de una variable",
+area: [],
+difficulty: 2,
+question:
+"Estudiar si es derivable la función $f(x)=\sqrt[3]{x-1}$ en el punto $x=1$.",
+
+shortsol:
+"La función no es derivable ya que $f'(1)=\lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \infty$. ",
+
+solution:
+"Aplicando la definición de derivada, tenemos:
+\begin{align*}
+f'(1) = \lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{1+h-1}-\sqrt[3]{1-1}}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{h}}{h} = \lim_{h\rightarrow 0} h^{-2/3} = \infty. 
+\end{align*}
+Así pues, la función no es derivable en $x=1$."
+}

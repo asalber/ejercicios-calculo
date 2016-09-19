@@ -1,200 +1,787 @@
-% Author Alfredo S�nchez Alberca (asalber@ceu.es)
+% Author Alfredo Sánchez Alberca (asalber@ceu.es)
 
-\documentclass[a4paper,titlepage,dvips]{article}
+\documentclass[a4paper,titlepage]{article}
 %===============================================
 \usepackage[spanish]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{macros}
-%\usepackage[amsmath]{maxiplot}
-\usepackage{graphicx}
-\usepackage{eurosym}
-\usepackage{multicol}
-\usepackage{fancybox}
-\usepackage[usenames,dvipsnames]{pstricks}
-\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
-\usepackage{pst-solides3d}
-\usepackage{enumitem}
-\usepackage{probsoln-alf}
-%\usepackage{times}
-\usepackage[colorlinks=true]{hyperref}
-\hypersetup{pdfauthor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de C\'alculo}} 
-\usepackage{url}
+\usepackage[utf8]{inputenc}
 \usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+
+% COLORS
+\usepackage[table]{xcolor}
+\definecolor{color1}{RGB}{5,161,230} % Light blue
+\definecolor{color2}{RGB}{238,50,36} % Red 
+\definecolor{color3}{RGB}{0,205,0} % Light Green
+\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+\definecolor{blueceu}{RGB}{5,161,230} % Blue color of CEU logo
+\definecolor{greenceu}{RGB}{185,209,16} % Green color of CEU logo
+\definecolor{redceu}{RGB}{238,50,36} % Red color of CEU logo
+\definecolor{grayceu}{RGB}{111,107,83} % Gray color of CEU logo
+\definecolor{chaptergrey}{RGB}{5,161,230} % Blue color of CEU logo
+
+% MATH
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arctg}{arctg}
+
+% GRAPHICS
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\usepackage{multicol}
+\usepackage[inline]{enumitem}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-
-\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}}
-\rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Matemática Aplicada y Estadística}}}}
+\lhead{\textsc{\textcolor{blueceu}{CEU San Pablo University}}}
+\rhead{\textsl{\textsf{\textcolor{blueceu}{Department of Applied Math and Statistics}}}}
 \renewcommand{\headrulewidth}{0pt}
+
+\usepackage{booktabs}
+
+
+% SECTIONS
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\Large\bfseries\color{color1}}
+
+
+% SOLUTIONS
+\newif\ifsolution
+% \solutiontrue  % Comment to hide solutions
+
+\newtheoremstyle{solution} % Theorem style name
+{-5pt} % Space above
+{7pt} % Space below
+{\normalfont} % Body font
+{-28pt} % Indent amount
+{\bf} % Theorem head font
+{\kern-11.5pt} % Punctuation after theorem head
+{19pt} % Space after theorem head
+{\begin{tikzpicture}
+\draw (0,0) node [fill=color2, xshift=4mm, inner
+sep=2pt]{\includegraphics[scale=0.3]{img/bulb}};
+\end{tikzpicture}}
+
+\theoremstyle{solution}
+\newtheorem{solutionT}{Solution}
+
+\RequirePackage[framemethod=default]{mdframed}
+
+% Solution box
+\newmdenv[skipabove=7pt,
+skipbelow=10pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=color2,
+backgroundcolor=black!5,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=4pt,
+innerbottommargin=5pt,
+leftmargin=0pt,
+rightmargin=0pt,
+linewidth=4pt]{solBox}
+
+\usepackage{comment}
+\ifsolution
+  \newenvironment{sol}{\ifsolution\begin{solBox}\begin{solutionT}}{\end{solutionT}\end{solBox}\fi}
+\else
+  \excludecomment{sol}
+\fi
+
+% PDF
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo Sánchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de Estad\'istica} }
+\usepackage{url}
+
 \renewcommand{\floatpagefraction}{.8}
 \renewcommand{\textfraction}{.1}
-
-\makeatletter
-\let\savees@listquot\es@listquot
-\def\es@listquot{\protect\savees@listquot}
-\makeatletter
-
-\reversemarginpar
-\showshortanswers
-%\showanswers
-%\PSNrandseed{2007}
 
 
 \begin{document}
 \sloppy
 
 \title{\vskip 2cm
-\shadowbox{\Huge \textbf{\textsf{\quad \textcolor[rgb]{0.00,0.00,0.50}{EJERCICIOS DE CÁLCULO}\quad}}}\\
+\Huge \textbf{\textsf{\quad \textcolor{blueceu}{EXERCISES OF CALCULUS}\quad}}\\
    \vskip 1cm
-   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Asignatura: Matemáticas }}}\\
-   {\Large \textsf{\textcolor[rgb]{0.50,0.00,0.25}{Curso: 1º de Grado en Farmacia}}}
-   }
-\author{
-   Eduardo López Ramírez (\url{elopez@ceu.es})
-   \and
-   José Rojo Montijano (\url{jrojo.eps@ceu.es})
-   \and
-   Anselmo Romero Limón (\url{arlimon@ceu.es})
-   \and
-   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+\Large \sffamily
+\begin{tabular}{rl}
+\textcolor{blueceu}{Subject:} & Maths\\
+\textcolor{blueceu}{Course:} & $1^{st}$\\
+\textcolor{blueceu}{Degree:} &  Pharmacy\\
+\textcolor{blueceu}{Year:} & 2015-2016\\
+\textcolor{blueceu}{Authors:} & Pablo Ares Gastesi (\url{pablo.aresgastesi@ceu.es})\\
+& Jos\'e Rojo Montijano (\url{jrojo.eps@ceu.es})\\
+& Anselmo Romero Lim\'on (\url{arlimon@ceu.es})\\
+& Alfredo S\'anchez Alberca (\url{asalber@ceu.es})
+\end{tabular}
 }
-\date{Curso 2014-2015\\[1cm]
-\includegraphics[scale=0.3]{img/logo_uspceu_01}}
+
+\author{}
+\date{\includegraphics[scale=0.3]{img/logo_uspceu_01}}
 
 \maketitle
+\newpage
 \tableofcontents
 \newpage
 
-\input{derivadas}
-\input{diferencial}
-\input{derivadas_implicitas}
-\input{derivadas_parametricas}
-\input{derivadas_trayectorias}
-\input{extremos}
-\input{taylor}
-\input{derivadas_parciales}
-\input{derivadas_superficies}
-\input{derivadas_implicitas_n_variables}
-\input{extremos_n_variables}
-\input{taylor_n_variables}
-%\input{integrales}
-%\input{integrales_impropias}
-%\input{integrales_aplicaciones}
-\input{edo_separables}
-\input{edo_homogeneas}
-\input{edo_lineales}
-%\input{medida_error}
-
-
-\section{Cálculo diferencial en una variable}
+\section{Cálculo diferencial en 1 variable}
 \begin{enumerate}[leftmargin=*]
-\item \useproblem{der-9}
-\item \useproblem{der-10}
-\item \useproblem{der-12}
-\item \useproblem{der-23}
-\item \useproblem{der-27}
-\item \useproblem{der-28}
-\item \useproblem{der-25}
-\item \useproblem{der-26}
-\item \useproblem{der-31}
-\item \useproblem{der-29}
-\item \useproblem{der-30}
-\item \useproblem{der-33}
-\item \useproblem{der-32}
-\item \useproblem{derpar-1}
-\item \useproblem{derpar-2}
-\item \useproblem{derpar-4}
-\item \useproblem{derpar-5}
-\item \useproblem{derpar-11}
-\item \useproblem{derpar-12}
-\item \useproblem{derpar-13}
-\item \useproblem{derpar-14}
-\item \useproblem{ext-1}
-\item \useproblem{ext-2}
-\item \useproblem{ext-12}
-\item \useproblem{ext-8}
-\item \useproblem{ext-9}
-\item \useproblem{ext-3}
-\item \useproblem{ext-5}
-\item \useproblem{ext-7}
-\item \useproblem{ext-10}
+\item Calcular la derivada de la función $f(x)=x^3-2x^2+1$ para $x=-1$, $x=0$ y $x=1$ e interpretarla.
+Calcular la recta tangente a $f$ en cada uno de los puntos anteriores.
+
+\item El pH de una solución mide la concentración de iones de hidrógeno (H$^+$) y se define como
+\[
+\mbox{pH} = -\log(\mbox{H}^+).
+\]
+Calcular la derivada del pH en función de la concentración de H$^+$. 
+¿Cómo es el crecimiento del pH?
+
+\item La velocidad de crecimiento $v$ de una planta depende de la cantidad de nitrógeno disponible $n$ según la ecuación
+\[
+v(n) = \frac{an}{k+n},	\quad n\geq 0,
+\]
+donde $a$ y $k$ son constantes positivas.
+Estudiar el crecimiento de esta función e interpretarlo. 
+
+\item Para cada una de las siguientes curvas, hallar las ecuación de la recta tangente en el punto $x_{0}$ indicado.
+\begin{multicols}{2}
+\begin{enumerate}
+\item  $y=x^{\sen x},\quad x_{0}=\pi/2$.
+%\item  $y=(3-x^2)^4\sqrt[3]{5x-4},\quad x_{0}=1$.
+\item  $y=\log \sqrt{\dfrac{1+x}{1-x}}, \quad x_{0}=0$.
+\end{enumerate}
+\end{multicols}
+
+\item Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. 
+¿Con qué velocidad varía el volumen en ese instante? \\
+Nota: El volumen de una esfera es $V=\frac{4}{3}\pi r^3$.
+
+\item Una pipeta cilíndrica de radio 5 mm almacena una solución. 
+Si la pipeta empieza a vaciarse a razón de $0.5$ ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?   
+
+\item La función que explica la desintegración radioactiva es
+\[
+m(t) = m_0e^{-kt},
+\]
+donde $m(t)$ es la cantidad de materia en el instante $t$, $m_0$ es la cantidad inicial de materia, $k$ es una constante conocida como \emph{constante de desintegración} y $t$ es el tiempo.
+Calcular la velocidad de desintegración en cualquier instante $t$. Si para un material concreto $k=0.002$, ¿cuál es el periodo de semidesintegración del material?\\
+Nota: El \emph{periodo de semidesintegración} de un material radioactivo es el tiempo que transcurre hasta que la masa se reduce a la mitad de su valor inicial.
+
+\item La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación
+\[
+e(t) = 4t^3 -2t +1.
+\]
+Calcular su velocidad y aceleración en cualquier instante.\\
+Nota: La aceleración es la tasa de variación instantánea de la velocidad.  
+
+\item El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación 
+\[
+e(t) =v_0t-\frac{1}{2}gt^2
+\]
+donde $v_0$ es la velocidad inicial con que se lanza el objeto, $g=9.81$ m/s$^2$ es la constante gravitatoria de la Tierra y $t$ es el tiempo transcurrido desde que el objeto se lanza. 
+Se pide:
+\begin{enumerate} 
+\item Calcular la velocidad y la aceleración en cualquier instante. 
+\item Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese
+momento?
+\item ¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?
+\end{enumerate} 
+
+\item Un cilindro de 4 cm de radio ($r$) y 3 cm de altura ($h$) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que $\dfrac{dr}{dt}=\dfrac{dh}{dt}= 1$ cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.
+
+\item Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 $\mu$ con un error de 0.2 $\mu$.
+¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? 
+En general, si al medir el radio se comete siempre un error relativo del 2\%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?\\
+Nota: La superficie de una esfera es $S=4\pi r^2$. Utilizar la aproximación lineal, es decir, la recta tangente de esta función.
+
+\item En una reacción química, la concentración de una sustancia $c$ depende de la concentración de otras dos sustancias $a$ y $b$
+según la ecuación $c=\sqrt[3]{ab^2}$.
+Si en un determinado instante en el que la concentración de $a=b=2$ mg/mm$^3$ se empieza a aumentar la concentración de $a$ a razón de $0.2$ mg$\cdot$ mm$^{-3}$/s y la de $b$ a razón de $0.4$ mg$\cdot$ mm$^{-3}$/s, ¿con qué velocidad cambia la concentración de $c$?
+¿Cuál será la concentración aproximada de $c$ a los 2 segundos?
+
+\item La velocidad de la sangre que fluye por una arteria está dada por la ley de Poiseuille
+\[
+v(r) = cr^2,
+\]
+donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es una constante. 
+Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad?
+
+\item Una partícula se mueve a lo largo de una curva $y=\cos(2x+1)$, siendo $x=t^2+1$ y $t$ el tiempo. 
+¿Con qué velocidad está desplazándose respecto a las direcciones vertical y horizontal cuando $t=2$?
+
+\item Un punto se mueve en el plano siguiendo una trayectoria
+\[ 
+\begin{cases}
+x= \sen t,\\
+y = t^2-1,
+\end{cases}
+\quad t\in \mathbb{R}.
+\]
+Se pide:
+\begin{enumerate}
+\item  Hallar la derivada de la función $y(x)$ (es decir, $\dfrac{dy}{dx}$) para los puntos $t=0$ y $t=2$.
+\item  Hallar la tangente a la trayectoria en el punto $(0,-1)$.
+\end{enumerate}
+
+\item Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son
+\[
+\begin{cases}
+x=v_0t \\
+y=-\frac{1}{2}gt^2
+\end{cases}
+\]
+donde $t\in \mathbb{R}^{+}$ es el tiempo contado a partir del instante en que el punto llega a la posición más alta, $v_0$ es la velocidad horizontal en el instante $t=0$ y $g=9.8$ m$^2$/s es la aceleración de la gravedad. 
+¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer $v_0$ para que en dicho instante el punto haya recorrido 100 m horizontalmente? 
+Calcular la ecuación de la recta tangente en dicho instante con el valor de $v_0$ calculado.
+
+\item Dada la función paramétrica
+\[
+\left(
+x =\frac{(t-2)^2}{t^2+1},\, y=\frac{2t}{t^2+1}
+\right)\quad t\in \mathbb{R}.
+\]
+Calcular los valores máximos y mínimos de $x$ y de $y$. 
+¿En qué instante la tasa de crecimiento de $y$ coincide con la de $x$?
+
+\item Hallar las ecuaciones de la rectas tangente y normal a la curva $C$ en el punto $P$ en cada uno de los casos siguientes:
+\begin{enumerate}
+\item $C: y=x^2$, $P=(0,0)$
+\item $C: \begin{cases}
+x=2\cos t,\\
+y=2\sen t,
+\end{cases}
+$ $0\leq t\leq 2\pi$, $P=(0,2)$
+\item $C:x^2+y^2=1$, $P=(\sqrt{2}/2),\sqrt{2}/2)$
+\item $C:(x-1)^2+y^2=4$, $P=(3,0)$
+\item $C:x^2-y^2=1$, $P=(1,0)$
+\item $C:\begin{cases}
+x=e^t\cos t,\\
+y=e^t\sen t,
+\end{cases}
+$, $t\in \mathbb{R}$, $P=(1,0)$
+\end{enumerate}
+
+\item Hallar al ecuación de la recta tangente y el plano normal a la línea
+\[
+C: 
+\begin{cases}
+x=\cos t \\
+y=\sen t\\
+z= t,
+\end{cases}
+\quad t\in \mathbb{R},
+\]
+en el punto $P=(1,0,0)$.
+
+\item Una trayectoria pasa por el punto $(3,6,5)$ en el instante $t=0$ con velocidad $\mathbf{i}-\mathbf{k}$. 
+Hallar la ecuación del plano normal y de la recta tangente en ese instante.
+
+\item Una partícula sigue la trayectoria
+\[
+\begin{cases}
+x=e^t,\\
+y=e^{-t},\\
+z=\cos t,
+\end{cases}
+\quad t\in \mathbb{R}
+\]
+hasta que se sale por la tangente en el instante $t=0$. ¿Dónde estará en el instante $t=3$?
+
+\item La siguiente gráfica es la de la derivada de una función $f(x)$.
+Estudiar el comportamiento de $f$ (crecimiento, decrecimiento, extremos, concavidad y convexidad).
+\[
+\input{img/grafica-ext-1}
+\]
+
+\item Hallar $a$, $b$ y $c$ en la función  $f(x)=x^3+bx^2+cx+d$ para que tenga un punto de inflexión en $x=3$, pase por el punto $(1,0)$ y alcance un máximo en $x=1$.
+
+\item La sensibilidad de $S$ de un organismo ante un fármaco depende de la dosis $x$ suministrada según la relación
+\[
+S(x) = x(C-x),
+\]
+siendo $C$ la cantidad máxima del fármaco que puede suministrarse, que depende de cada individuo. 
+Hallar la dosis $x$ para la que la sensibilidad es máxima.
+
+\item La velocidad $v$ de una reacción irreversible $A+B\rightarrow AB$ es función de la concentración $x$ del producto $AB$ y puede expresarse según la ecuación
+\[
+v(x) = 4(3-x)(5-x).
+\]
+¿Qué valor de $x$ maximiza la velocidad de reacción?
+
+\item La cantidad de trigo en una cosecha $C$ depende del nivel de nitrógeno en el suelo $n$ según la ecuación
+\[
+C(n) = \frac{n}{1+n^2},\quad n\geq 0. 
+\]
+¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?
+
+\item Se ha diseñado un envoltorio cilíndrico para unas cápsulas. Si el contenido de las cápsulas debe ser de $0.15$ ml, hallar las dimensiones del cilindro para que el material empleado en el envoltorio sea mínimo.
+
+\item Mediante simulación por ordenador se ha podido cuantificar la cantidad de agua almacenada en un acuífero en función del tiempo, $m(t)$, en millones de metros cúbicos, y el tiempo $t$ en años transcurridos desde el instante en el que se ha hecho la simulación, teniendo en cuenta que la ecuación sólo tiene sentido para los $t$ mayores que 0:
+\[
+m(t) = 10 + \frac{{\sqrt t }} {{e^t }}
+\]
+\begin{enumerate}
+\item En el límite, cuando $t$ tiende a infinito, qué cantidad de agua almacenada habrá en el acuífero?
+\item Mediante derivadas, calcular el valor del tiempo en el que el agua almacenada ser máxima y cuál es su cantidad de agua correspondiente en millones de metros cúbicos.
+\end{enumerate}
+
+\item Sea $f(x)$ una función cuya derivada vale:
+\[
+f'(x) = \frac{(2-x) e^{-\frac{x^2}{2}+2x-2}}{\sqrt{2\pi}}
+\]
+Se pide:
+\begin{enumerate}
+\item Estudiar el crecimiento de $f$.
+\item Calcular los valores de $x$ en los que $f$ tiene extremos relativos.
+\item Estudiar la concavidad de $f$.
+\item Calcular los valores de $x$ en los que $f$ tiene puntos de inflexión.
+\end{enumerate}
+
+\item Existen organismos que se reproducen una sola vez en su vida como por ejemplo los salmones. 
+En este tipo de especies, la velocidad de incremento per cápita $v$, que mide la capacidad reproductiva, depende de la edad $x$ según la ecuación
+\[
+v(x) = \frac{\log(p(x)h(x))}{x},
+\] 
+donde $p(x)$ es la probabilidad de sobrevivir hasta la edad $x$ y $h(x)$ es el número de nacimientos de hembras a la edad $x$. 
+Calcular la edad óptima de reproducción, es decir, el valor que maximice $v$, para $p(x)=e^{-0.1x}$ y $h(x)=4x^{0.9}$.
+
+\item Dada la función $f(x)=\sen x$, se pide:
+\begin{enumerate}
+\item Obtener el polinomio de Taylor de tercer grado de $f$ en el punto $x=\pi/6$ y usarlo para aproximar $\sen\dfrac{1}{2}$ dando una cota del error cometido.
+\item Dar una aproximación de $\sen\dfrac{1}{2}$ usando un el polinomio de Taylor de quinto grado en el punto $x=0$, acotando el error cometido.
+\end{enumerate}
+
+\item Obtener la fórmula de Taylor de segundo orden de la función $f(x)=\sqrt[3]{x}$ en un entorno del punto $x=1$.
+
+\item Calcular el polinomio de Maclaurin de tercer grado para la función $f(x)=\arcsen x$.
+
+\item Dada la función $f(x)=\sqrt{x+1}$ se pide:
+\begin{enumerate}
+\item  El polinomio de Taylor de cuarto grado de $f$ en $x=0$.
+\item  Calcular un valor aproximado de $\sqrt{1.02}$ utilizando un polinomio de segundo grado y otro utilizando un polinomio de cuarto grado.
+\end{enumerate}
+
 \end{enumerate}
 
 
-\section{Cálculo diferencial en varias variables}
-\begin{enumerate}[leftmargin=*,resume]
-\item \useproblem{par-1}
-\item \useproblem{par-32}
-\item \useproblem{par-33}
-\item \useproblem{par-34}
-\item \useproblem{par-3}
-\item \useproblem{par-5}
-\item \useproblem{par-4}
-\item \useproblem{par-35}
-\item \useproblem{par-37}
-\item \useproblem{par-38}
-\item \useproblem{par-39}
-\item \useproblem{par-36}
-\item \useproblem{par-25}
-\item \useproblem{dertray-1}
-\item \useproblem{dersup-1}
-\item \useproblem{derimp-1}
-\item \useproblem{derimp-2}
-\item \useproblem{derimp-3}
-\item \useproblem{derimp-13}
-\item \useproblem{derimp-14}
-\item \useproblem{derimpn-1}
-\item \useproblem{derimpn-2}
-\item \useproblem{par-40}
-\item \useproblem{par-41}
-\item \useproblem{par-42}
-\item \useproblem{par-43}
-\item \useproblem{par-2}
-\item \useproblem{par-11}
-\item \useproblem{par-15}
-\item \useproblem{par-28}
-\item \useproblem{par-44}
-\item \useproblem{tayn-2}
-\item \useproblem{tayn-3}
-\item \useproblem{tayn-4}
-\item \useproblem{tayn-1}
-\item \useproblem{par-26}
-\item \useproblem{extn-3}
-\item \useproblem{extn-4}
-\item \useproblem{extn-1}
-\item \useproblem{extn-2}
+\section{Calculo diferencial en $n$ variables}
+
+\begin{enumerate}[resume, leftmargin=*]
+\item Calcular las siguientes derivadas parciales:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\dfrac{\partial}{\partial x}\ln \dfrac{x}{y}$.
+\item $\dfrac{\partial}{\partial v}\dfrac{nRT}{v}$.
+\end{enumerate}
+\end{multicols}
+
+\item La asimilación de CO$_2$ de una planta depende de la temperatura ambiente (t) y de la intensidad de la luz (l), según la función 
+\[
+f(t,l) = ctl^2,
+\]
+donde $c$ es una constante. 
+Estudiar cómo evoluciona la asimilación de CO$_2$ para distintas intensidades de luz, cuando se mantiene la temperatura constante. 
+Estudiar también cómo evoluciona para distintas temperaturas cuando se mantiene la intensidad de la luz constante.   
+
+\item La abundancia de una determinada especie de planta depende del nivel de nitrógeno en el suelo y del nivel de perturbaciones, de manera que un incremento del nivel de nitrógeno tiene un efecto negativo en la abundancia de esta especie, y un aumento de las perturbaciones también tiene un efecto negativo.
+Si en un momento dado comienza a aumentar el nivel de nitrógeno en el suelo y también las perturbaciones debidas al pastoreo, ¿cómo se verá afectada la abundancia de la especie?
+
+\item La velocidad de crecimiento de un organismo depende de la disponibilidad de alimento y del número de competidores en busca de alimento. 
+¿Cómo se verá afectada la velocidad de crecimiento si la disponibilidad de alimento aumenta con el tiempo y el número de competidores disminuye?
+
+\item Calcular el gradiente de la función
+\[
+f(x,y,z)=\log \frac{\sqrt{x}}{yz}+\arcsen (xz).
+\]
+
+\item Dada la función
+\[
+f(x,y,z)=\log \sqrt{xy-\frac{z^2}{xy}}
+\]
+\begin{enumerate}
+\item Hallar el vector gradiente.
+\item Hallar un punto en el que el vector gradiente sea paralelo a la bisectriz del plano $XY$, y calcular el vector gradiente en dicho punto.
 \end{enumerate}
 
-\section{Ecuaciones Diferenciales}
-\begin{enumerate}[leftmargin=*,resume]
-\item \useproblem{edosep-1}
-\item \useproblem{edosep-2}
-\item \useproblem{edosep-3}
-\item \useproblem{edosep-4}
-\item \useproblem{edosep-13}
-\item \useproblem{edosep-6}
-\item \useproblem{edosep-7}
-\item \useproblem{edosep-11}
-\item \useproblem{edosep-14}
-\item \useproblem{edosep-16}
-\item \useproblem{edosep-18}
-\item \useproblem{edosep-19}
-\item \useproblem{edosep-29}
-\item \useproblem{edosep-20}
-\item \useproblem{edosep-21}
-\item \useproblem{edosep-27}
-\item \useproblem{edosep-31}
-\item \useproblem{edolin-1}
-\item \useproblem{edolin-2}
-\item \useproblem{edosep-32}
-\item \useproblem{edolin-3}
+\item Una nave espacial está en problemas cerca del sol.
+Se encuentra en la posición $(1,1,1)$ y la temperatura de la nave cuando está en la posición $(x,y,z)$ viene dada por
+$T(x,y,z)=\mbox{e}^{-x^2-2y^2-3z^2}$ donde $x,y,z$ se miden en metros.
+¿En qué dirección debe moverse la nave para que la temperatura decrezca lo más rápidamente posible?
+
+\item Un organismo se mueve sobre una superficie inclinada siguiendo la línea de máxima pendiente descendiente. 
+Si la expresión de la superficie es 
+\[
+f(x,y) = x^2-y^2,
+\]
+calcule la dirección en la que se moverá el organismo en el punto $(2,3)$.
+
+\item Obtener los puntos críticos de $z=f(x,y)$ para:
+\begin{enumerate}
+\item $f(x,y)=x^2+y^2$.
+\item $f(x,y)=x^2y+y^2x$.
+\item $f(x,y)=x^2-2xy+2y^2$.
 \end{enumerate}
 
-\vspace{2cm}
+\item La superficie de una montaña tiene la forma
+\[
+S:z=a-bx^2-cy^2,
+\]
+donde $a$, $b$ y $c$ son constantes, $x$ es la coordenada Este-Oeste e $y$ la coordenada Norte-Sur en el mapa, y $z$ la altura sobre el nivel del mar en metros. 
+En el punto $P=(1,1)$ del mapa, ¿en qué dirección crece más rápidamente la altura?
 
-\textsc{Nota}: Los problemas marcados con una estrella ($\bigstar$) son problemas de exámenes de otros años.
+\item Hallar las direcciones de máximo y mínimo crecimiento de las siguientes funciones en el punto $P$:
+\begin{enumerate}
+\item $f(x,y)=x^2+xy+y^2$, $P=(-1,1)$.
+\item $f(x,y)=x^2y+e^{xy}\sen y$, $P=(1,0)$.
+\item $f(x,y,z)=\log(xy)+\log(yz)+\log(xz)$, $P=(1,1,1)$.
+\item $f(x,y,z)=\log(x^2+y^2-1)+y+6z$, $P=(1,1,0)$.
+\end{enumerate}
+
+\item Si $f(x,y,z)=x^3y^2z$ y $g(t)=(e^t,\cos t,\sen t)$, calcular $(f\circ g)'(t)$.
+
+\item La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección
+en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este
+comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de
+una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la
+concentración de AMP cíclico en un punto de coordenadas $(x,y,z)$ es:
+\[
+C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+\]
+y se sitúa una ameba de moho del cieno en el punto $(-1,0,1)$, ¿en qué dirección se moverá la ameba?
+
+\item La presión en la posición $(x,y,z)$ de un espacio es 
+\[
+f(x,y,z)= x^2+y^2-z^3
+\]
+y la trayectoria de un observador $A$ es 
+\[
+\begin{cases}
+x=t\\
+y=1\\
+z=1/t
+\end{cases}
+t>0.
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular la ecuación de la recta tangente a la trayectoria de $A$ en el punto $(1,1,1)$.
+\item ¿Es la dirección de esta trayectoria al pasar por el punto $(1,1,1)$ aquella en la que el crecimiento de $g$
+es máximo? 
+Justificar la respuesta. 
+\end{enumerate}
+
+\item Obtener la ecuación del plano tangente y de la recta normal a la superficie 
+\[
+S:xyz=8
+\]
+en el punto $P=(4,-2,-1)$.
+
+\item Derivar implícitamente las siguientes expresiones tomando $y$ como función de $x$:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x^3-3xy^2+y^3=1$.
+\item $y=\dfrac{\sen(x+y)}{x^2+y^2}$.
+\end{enumerate}
+\end{multicols}
+
+\item Dada la función $xy+e^x-\log y=0$, calcular las ecuaciones de las rectas tangente y normal a ella en $x=0$.
+
+\item Suponiendo que la temperatura, $T$ en grados centígrados, y el volumen, $V$ en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:
+\[
+T^2 \left( {V^2  - \pi ^2 } \right) - V\cos \left( {TV} \right) = 0
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular la derivada del volumen con respecto a la temperatura en el momento en el que el volumen es de $\pi$ m$^3$ y la temperatura es medio grado centígrado.
+
+\item ¿Cuál sería la ecuación de la recta tangente a la gráfica de la función que daría el volumen en función de la temperatura en el mismo punto del apartado anterior?
+\item Suponiendo que tanto la temperatura como el volumen son, a su vez, funciones de la presión, qué ecuación ligaría la derivada de la temperatura con respecto a la presión con la derivada del volumen con respecto a la presión.
+\end{enumerate}
+
+\item Hallar la recta tangente y la recta normal a la línea $C$ en el punto $P$ en cada uno de los casos siguientes:
+\begin{enumerate}
+\item $\displaystyle C:\frac{x^2}{9}-\frac{y^2}{4}=1$, $P=(-3,0)$.
+\item $C:x^3-y^5+xy^2 = 8$, $P=(2,0)$.
+\item $C:x=y^2$, $P=(0,0)$.
+\item $C:x^{2/3}+y^{2/3}=1$, $P=(\sqrt2/4,\sqrt2/4)$.
+\end{enumerate}
+
+\item Hallar la ecuación del plano tangente y de la recta normal a la superficie $S$ en el punto $P$ en cada uno de los siguientes casos:
+\begin{enumerate}
+\item $S:x-y+z=1$, $P=(0,0,1)$.
+\item $S:x^2+y^2+z^2=1$, $P=(0,1,0)$.
+\item $S:z=\log(x^2+y^2)$, $P=(1,0,0)$.
+\item $S:z=e^{-(x^2+y^2)}$, $P=(0,0,1)$.
+\item $S:z=e^{x+y}\sen x$, $P=(\pi,0,0)$.
+\end{enumerate}
+
+\item Calcular la ecuación del plano tangente a la superficie $xy+8z=0$ paralelo al plano tangente al elipsoide $x^2+2y^2+4z^2=7$
+en el punto $P=(1, 1, 1)$.
+
+\item Suponiendo que $z$ es función de $x$ e $y$ ($z=f(x,y)$), a partir de la ecuación $F(x,y,z)=0$, deducir que 
+\[
+\frac{\partial z}{\partial x} = \frac{-\dfrac{\partial F}{\partial x}}{\dfrac{\partial F}{\partial z}}
+\quad \mbox{y} \quad
+\frac{\partial z}{\partial y} = \frac{-\dfrac{\partial F}{\partial y}}{\dfrac{\partial F}{\partial z}}.
+\]
+
+Aplicarlo para obtener $\dfrac{\partial f}{\partial x}(2,1)$, sabiendo que $x^2yz=4$ y que $f(2,1)=1$.
+
+\item La ecuación 
+\[
+x\log y+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
+\] 
+define a $z$ como función de $x$ e $y$ alrededor del punto $(2,1,-1)$. 
+Calcular el vector gradiente de $z$ en ese punto e interpretarlo.
+
+\item ¿En qué direcciones se anulará la derivada direccional de la función
+\[
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}
+\]
+en el punto $P=(1,1)$?
+
+\item ¿Existe alguna dirección en la que la derivada direccional en el punto $P=(1,2)$ de la función 
+\[
+f(x,y) = x^2-3xy+4y^2
+\]
+valga 14?
+
+\item La derivada direccional de una función $f$ en un punto $P$ es máxima en la dirección del vector $(1,1,-1)$ y su valor es $2\sqrt{3}$.
+¿Cuánto vale la derivada direccional de $f$ en $P$ en la dirección del vector $(1,1,0)$?
+
+\item Dado el campo escalar 
+\[
+f(x,y,z) = x^2-y^2+xyz^3-zx
+\]
+en el punto $P=(1,2,3)$, se pide:
+\begin{enumerate}
+\item Calcular la derivada direccional de $f$ en $P$ a lo largo del vector unitario $\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)$.
+\item ¿En qué dirección es máxima la derivada direccional de $f$ en $P$? Obtener el valor de dicha derivada direccional.
+\end{enumerate} 
+
+\item Calcular el vector gradiente y la matriz Hessiana de las siguientes funciones:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $e^{x^2+y^2+z^2}$
+\item $\sen((x^2-y^2)z)$
+\end{enumerate}
+\end{multicols}
+
+\item La siguiente función determina la temperatura en cada punto del plano real:
+\[
+f(x,y)=e^{x+2y}\cos(x^2+y^2).
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular el gradiente de $f$.
+\item Si estamos situados en el origen de coordenadas, ¿en qué dirección aumentará más rápidamente la temperatura? ¿Y si estuviésemos en el punto $(0,1)$?
+\item Calcular la matriz Hessiana y el Hessiano de $f$ en el origen de coordenadas.
+\end{enumerate}
+
+\item La relación que modeliza el potencial eléctrico $V$ de un punto del plano en función de su distancia, es $V=\log D$, donde $D=\sqrt{x^2+y^2}$.
+Se pide:
+\begin{enumerate}
+\item Calcular el gradiente de $V$.
+\item Hallar la dirección de máxima variación del potencial eléctrico en el punto $(x,y)=(\sqrt{3},\sqrt{3})$.
+\item Calcular la matriz Hessiana y el Hessiano de $V$ en el punto anterior.
+\item Si nos movemos a lo largo de la curva $y=x+1$, cuál será el mínimo potencial alcanzado?
+\end{enumerate}
+
+\item Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a $x$ metros de su extremo izquierdo y en el instante $t$ minutos, su temperatura en grados centígrados esta dada por $H(x,t) = 100e^{-0.1t}\sen(\pi xt)$ con $0\leq x \leq 1$. 
+\begin{enumerate}
+\item Calcular $\dfrac{\partial H}{\partial x}(0.2, 1)$ y $\dfrac{\partial H}{\partial x}(0.8, 1).$ ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.  
+\item Calcular la matriz hessiana de $H$. 
+\end{enumerate}
+
+\item Si suponemos que el rendimiento de una cosecha, $R$, depende de las concentraciones de nitrógeno, $n$, y fósforo, $p$, presentes en el suelo según la función:
+\[
+R(n,p)=n\cdot p\cdot e^{-(n+p)}
+\]
+\begin{enumerate}
+\item Calcular todas las derivadas parciales de primer y segundo orden de la función $R(n,p)$.
+\item Teniendo en cuenta que una condición necesaria para que una función de varias variables presente un máximo en un punto es que todas las derivadas parciales de primer orden se anulen en dicho punto, ¿cuánto deben valer las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?
+\end{enumerate}
+
+\item Estudiar los extremos y los puntos de silla de $f$ en los siguientes casos:
+\begin{enumerate}
+\item $f(x,y) = x^2+y^2$.
+\item $f(x,y) = x^2-y^2$.
+\item $f(x,y) = x^2-2xy+2y^2$.
+\item $f(x,y) = \log(x^2+y^2+1)$.
+\end{enumerate}
+
+\item La función 
+\[
+f(x,y) = \frac{x^3}{3}-x-\left(\frac{y^3}{3}-y\right)
+\]
+tiene un máximo, un mínimo y dos puntos de silla.
+Encontrarlos.
+
+\item Hallar los extremos relativos y los puntos de silla de la función:
+\[
+f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2),
+\]
+con $a\neq 0$.
+
+\item Dado el campo escalar
+\[
+h(x,y) = xy+\frac{xy^2}{2}-2x^2,
+\]
+determinar sus extremos relativos y sus puntos de silla.
+
+\item Dada la función $f(x, y) = \dfrac{ax^3}{3} + \dfrac{by^3}{3}-4ax-4by$ con $a,b>0$ dos parámetros, estudiar la existencia de extremos relativos y puntos de silla de $f$.
+
+\end{enumerate}
+
+
+\section{Ecuaciones diferenciales ordinarias}
+
+\begin{enumerate}[resume, leftmargin=*]
+\item Integrar las siguientes ecuaciones de variables separables:
+\begin{enumerate}
+\item $x\sqrt{1-y^2}+y\sqrt{1-x^2}y'=0$ con la condición inicial $y(0)=1$.
+\item $(1+e^x)yy'=e^y$ con la condición inicial $y(0)=0$.
+\item e$^y(1+x^2)y'-2x(1+\mbox{e}^y)=0$.
+\item $y-xy'=a(1+x^2y')$.
+\end{enumerate}
+
+\item La desintegración radioactiva está regida por la ecuación diferencial
+\[
+\frac{\partial x}{\partial t}+ax=0,
+\]
+donde $x$ es la masa, $t$ el tiempo y $a$ es una constante positiva.
+La vida media $T$ es el tiempo durante el cual la masa se desintegra a la mitad de su valor inicial. Expresar $T$ en función de $a$ y evaluar $a$ para el isótopo de uranio $U^{238}$, para el cual $T=4'5\cdot10^9$ años. 
+
+\item El azúcar se disuelve en el agua con una velocidad proporcional a la cantidad que queda por disolver. 
+Si inicialmente había 13.6 kg de azúcar y al cabo de 4 horas quedan sin disolver 4.5 kg, ¿cuánto tardará en disolverse el 95\% del azúcar contando desde el instante inicial?
+
+\item Una reacción química sigue la siguiente ecuación diferencial
+\[
+y'-2y=4,
+\]
+donde $y=f(t)$ es la concentración de oxígeno en el instante $t$ (medido en segundos).
+Si la concentración de oxígeno al comienzo de la reacción era nula, ¿cuál será la concentración (mg/lt) a los 3 segundos? ¿En qué instante la
+concentración de oxígeno será de 200 mg/lt?
+
+\item Un depósito contiene 5 kg de sal disueltos en 500 litros de agua en el instante en que comienza entrar una solución salina con 0.4 kg de sal por litro a razón de 10 litros por minuto.
+Si la mezcla se mantiene uniforme mediante agitación y sale la misma cantidad de litros que entra, ¿cuánta sal quedará en el depósito después de 5 minutos?
+¿Y después de 1 hora?   
+
+\noindent\textbf{Nota:} La tasa de variación de la cantidad de sal en el tanque es la diferencia entre la cantidad de sal que entra y la que sale del tanque en cada instante.
+
+\item Sea la siguiente ecuación diferencial que relaciona la temperatura y el tiempo en un determinado sistema físico:
+\[
+x't^2-x't+x'-2xt+x=0,
+\]
+siendo $x$ la temperatura expresada en Kelvins y $t$ el tiempo en segundos. 
+
+Sabiendo que la temperatura en el instante inicial del experimento es 100 K, calcular la temperatura en función del tiempo, y dar la temperatura del sistema físico tres segundos después de comenzar el experimento.
+
+\item Se tiene un medicamento en un frigorífico a 2ºC, y se debe administrar a 15ºC.
+A las 9 h se saca el medicamento del frigorífico y se coloca en una habitación que se encuentra a 22ºC.
+A las 10 h se observa que el medicamento está a 10ºC.
+Suponiendo que la velocidad de calentamiento es proporcional a la diferencia entre la temperatura del medicamento y la del ambiente, ¿en qué hora se deberá administrar dicho medicamento?
+
+\item La cantidad de masa de un determinado reactivo de una reacción química, $M$, en gramos, es función del tiempo, en segundo, y se rige mediante la siguiente ecuación diferencial:
+\[
+M'-(a+b)M=0
+\]
+donde $a$ y $b$ son constantes.
+Si inicialmente tenemos 20 gramos de reactivo, al cabo de 10 segundos tenemos 40 gramos, calcular:
+\begin{enumerate}
+\item La cantidad de reactivo para todo tiempo $t$.
+\item La cantidad de reactivo al cabo de medio minuto.
+\item ¿Cuando será la cantidad de reactivo 100 g?
+\end{enumerate}
+
+\item En una reacción química, un compuesto se transforma en otra sustancia a un ritmo proporcional al cuadrado de la cantidad no transformada.
+Si había inicialmente 20 gr de la sustancia original y tras 1 hora queda la mitad, ¿en qué momento se habrá transformado el 75\% de dicho compuesto?
+
+\item La cantidad de masa, $M$, expresada en Kg, de sustancias contaminantes en un depósito de aguas residuales, cumple la ecuación diferencial:
+\[
+\frac{dM}{dt}=-0.5M+1000
+\]
+donde $k$ es una constante y $t$ es el tiempo expresado en días (podemos imaginar que el depósito está conectado a una
+depuradora que elimina sustancia contaminante con un ritmo proporcional a la propia cantidad de contaminante, lo cual
+explicaría el sumando $-0.5M$, y que también hay un aporte constante de contaminante de 1000 kg/día, que puede provenir
+de un desagüe, lo cual explicaría el sumando constante $+1000$.
+
+Si la cantidad inicial de contaminante es de 10000 Kg:
+\begin{enumerate}
+\item ¿Cuál será la cantidad de contaminante para todo tiempo $t$?
+\item ¿Cuál será la cantidad de contaminante al cabo de una semana?
+\end{enumerate}
+
+\item El plasma sanguíneo se conserva a 4ºC. Para poder utilizarse en una transfusión el plasma tiene que alcanzar la temperatura del cuerpo (37ºC). Sabemos que se tardan 45 minutos en alcanzar dicha temperatura en un horno a 50ºC.
+¿Cuánto se tardará si aumentamos la temperatura del horno a 60º?
+
+\item Hallar las curvas tales que en cada punto $(x,y)$ la pendiente de la recta tangente sea igual al cubo de la abscisa en
+dicho punto.
+¿Cuál de estas curvas pasa por el origen?
+
+\item Obtener la ecuación de la curva que pasa por el punto $P=(1,1)$, tal que la pendiente de la tangente en cada punto coincida con el cuadrado de su ordenada.
+
+\item Al introducir glucosa por vía intravenosa a velocidad constante, el cambio de concentración global de glucosa con respecto al tiempo $c(t)$ se explica mediante la siguiente ecuación diferencial 
+\[
+\frac{dc}{dt}=\frac{G}{100V}-kc,
+\]
+donde $G$ es la velocidad constante a la que se suministra la glucosa, $V$ es el volumen total de la sangre en el cuerpo y $k$ es una constante positiva que depende del paciente.
+Se pide calcular $c(t)$.
+
+\item La temperatura $T$ de una habitación en un día de invierno varía con el tiempo de acuerdo a la ecuación:
+\[
+\frac{dT}{dt}=
+\begin{cases}
+40-T, & \mbox{si la calefacción está encendida;} \\
+-T, & \mbox{si la calefacción está apagada.}
+\end{cases}
+\]
+Suponiendo que la temperatura del aula es de 5ºC  a las 9:00 de la mañana, y que a esa hora se enciende la calefacción, pero que debido a una avería la calefacción permanece apagada de 11:00 a 12:00, ¿qué temperatura habrá en la habitación a las 13:00?
+
+\item Dos figuras de cerámicas del mismo material se ponen en un horno para su cocción a $1000^\circ$C. 
+Si en el instante en que se meten al horno la primera está a $40^\circ$C y la segunda a $5^\circ$C, y al minuto la temperatura de la primera ha aumentado hasta los $200^\circ$C, ¿cuales serán sus temperaturas a los 5 minutos?
+
+\item El carbono contenido en la materia viva incluye una ínfima proporción del isótopo radioactivo $C^{14}$, que proviene de los rayos cósmicos de la parte superior de la atmósfera.
+Gracias a un proceso de intercambio complejo, la materia viva mantiene una proporción constante de $C^{14}$ en su carbono total (esencialmente constituido por el isótopo estable $C^{12}$).
+Después de morir, ese intercambio cesa y la cantidad de carbono radioactivo disminuye: pierde $1/8000$ de su masa al año.
+Estos datos permiten determinar el año en que murió un individuo. 
+Se pide:
+\begin{enumerate}
+\item Si el análisis de los fragmentos de un esqueleto de un hombre de Neandertal mostró que la proporción de $C^{14}$ era de $6.24\%$ de la que hubiera tenido al estar vivo.
+¿Cuándo murió el individuo?
+\item Calcular la vida media del carbono $C^{14}$, es decir, el tiempo a partir del cual se ha desintegrado la mitad del carbono inicial.  
+\end{enumerate}
+
+\item Integrar las siguientes ecuaciones diferenciales lineales:
+\begin{enumerate}
+\item $y'-2y=4$.
+\item $y'-6xy=x$.
+\item $\frac{dz}{dt}+\frac{3z}{10+3t}=6$ con la condición inicial $z(2)=100$.
+\item $y'+y\cos x=\sen x\cos x$ con la condición inicial $y(0)=1$.
+\end{enumerate}
+
+\item Un tanque de 50 litros contiene inicialmente 10 litros de agua.
+En el instante inicial se vierte al tanque una disolución salina que contiene 100 gr de sal por cada litro de agua, a razón de 4 litros por minuto, mientras que la mezcla bien agitada abandona el tanque a un ritmo de 2 litros por minuto.
+¿Cuánto tiempo transcurrirá hasta que se llene el depósito? En dicho instante, ¿qué cantidad de sal habrá en el depósito?
+
+\item Una colonia de salmones vive tranquilamente en una zona costera.
+La tasa de natalidad es del 2\% por día y la de mortalidad del 1\% por día. 
+En el instante inicial, la colonia tiene 1000 salmones y ese día llega un tiburón a esa zona costera que se come 15 salmones todos los días.
+¿Cuánto tiempo tarda el tiburón en hacer desaparecer a la colonia de salmones?
+
+\item En una reacción química, una sustancia $A$ se transforma en otra $B$ con una velocidad del doble de la cantidad de
+sustancia $A$.
+Si en el instante inicial la cantidad de $A$ es de $5$ gr/dl, ¿qué cantidad de sustancia $A$ habrá a los 2 segundos? 
+
+Si en esa misma reacción, la sustancia $B$, a su vez, se transforma en otra $C$ a una velocidad del triple de la
+cantidad de $B$, sabiendo que al comienzo de la reacción la cantidad de sustancia $B$ era nula, ¿qué cantidad de $B$
+habrá a los 2 segundos?
+\end{enumerate}
 
 \end{document}
