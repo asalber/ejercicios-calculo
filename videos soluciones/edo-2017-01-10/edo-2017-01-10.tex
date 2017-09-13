@@ -1,0 +1,135 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=149,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[scale=1.5]{ccicons}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+%-------------------------------------------------------------------------------
+% COMMANDS
+%-------------------------------------------------------------------------------
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\tg}{\operatorname{tg}}
+\newcommand{\arcsen}{\operatorname{arcsen}}
+\newcommand{\arctg}{\operatorname{arctg}}
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Ecuaciones Diferenciales de Primer Orden}\\
+Titulaciones: & \structure{Farmacia, Biotecnología}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+{\color{darkgrey}\ccbyncsaeu}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\Large
+Un cultivo de bacterias crece al ritmo de la raíz cuadrada del número de bacterias en el cultivo.
+¿Cuánto se habrá incrementado el número de bacterias con respecto al número inicial tras una hora del comienzo del cultivo?
+¿Cuánto tiempo debe pasar para que el número de bacterias inicial se haya cuadruplicado?
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+Un cultivo de bacterias crece al ritmo de la raíz cuadrada del número de bacterias en el cultivo.
+¿Cuánto se habrá incrementado el número de bacterias con respecto al número inicial tras una hora del comienzo del cultivo?
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$t$=Tiempo transcurrido desde el inicio del cultivo\\
+$x(t)$=Número de bacterias en el instante $t$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.6\textwidth}
+¿Cuánto tiempo debe pasar para que el número de bacterias inicial se haya cuadruplicado?
+\end{column}
+\begin{column}[T]{0.4\textwidth}
+\structure{Datos}\\
+$t$=Tiempo transcurrido desde el inicio del cultivo\\
+$x(t)$=Número de bacterias en el instante $t$\\
+$x(t)=\left(\frac{t}{2}+C\right)^2$\\
+$x(0)=C^2$
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
