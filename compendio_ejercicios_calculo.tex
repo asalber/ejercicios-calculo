@@ -1,183 +1,255 @@
-% Autor: Alfredo Sánchez Alberca (asalber@gmail.com)
+%!TEX program = pdflatex
+% Author Alfredo Sánchez Alberca (asalber@ceu.es)
 
-\documentclass[a4paper,titlepage,dvips]{article}
+\documentclass[a4paper,titlepage]{article}
 %===============================================
-%PAQUETES
 \usepackage[spanish]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+
+% COLORS
+\usepackage[table]{xcolor}
+\definecolor{color1}{RGB}{5,161,230} % Light blue
+\definecolor{color2}{RGB}{238,50,36} % Red
+\definecolor{color3}{RGB}{0,205,0} % Light Green
+\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+\definecolor{blueceu}{RGB}{5,161,230} % Blue color of CEU logo
+\definecolor{greenceu}{RGB}{185,209,16} % Green color of CEU logo
+\definecolor{redceu}{RGB}{238,50,36} % Red color of CEU logo
+\definecolor{grayceu}{RGB}{111,107,83} % Gray color of CEU logo
+\definecolor{chaptergrey}{RGB}{5,161,230} % Blue color of CEU logo
+
+% MATH
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{macros}
+\usepackage{amsthm}
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arctg}{arctg}
+
+% GRAPHICS
 \usepackage{graphicx}
-\usepackage{eurosym}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{shapes, calc, decorations, quotes, angles, rightangles}
+\usepackage{tkz-euclide}
+
 \usepackage{multicol}
-\usepackage{fancybox}
-\usepackage{enumitem}
-\usepackage{probsoln-alf}
-\usepackage[usenames,dvipsnames]{pstricks}
-\usepackage{pst-all,pst-math,pst-plot,pst-infixplot,pst-xkey,pstricks-add}
-\usepackage[colorlinks=true]{hyperref}
-\hypersetup{pdfauthor={Alfredo S\'anchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de C\'alculo}} 
-\usepackage{url}
-\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+\usepackage[inline]{enumitem}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-
-\lhead{\textsc{\textcolor[rgb]{0.00,0.00,0.50}{Universidad San Pablo CEU}}} \rhead{\textsl{\textsf{\textcolor[rgb]{0.00,0.00,0.50}{Departamento de Métodos Cuantitativos}}}}
+\lhead{\textsc{\textcolor{blueceu}{Universidad CEU San Pablo}}}
+\rhead{\textsl{\textsf{\textcolor{blueceu}{Departamento de Matemática Aplicada y Estadística}}}}
 \renewcommand{\headrulewidth}{0pt}
+
+\usepackage{booktabs}
+
+
+% SECTIONS
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\Large\bfseries\color{color1}}
+
+
+% % SOLUTIONS
+% \newif\ifsolution
+% % \solutiontrue  % Comment to hide solutions
+%
+% \newtheoremstyle{solution} % Theorem style name
+% {-5pt} % Space above
+% {7pt} % Space below
+% {\normalfont} % Body font
+% {-28pt} % Indent amount
+% {\bf} % Theorem head font
+% {\kern-11.5pt} % Punctuation after theorem head
+% {19pt} % Space after theorem head
+% {\begin{tikzpicture}
+% \draw (0,0) node [fill=color2, xshift=4mm, inner
+% sep=2pt]{\includegraphics[scale=0.3]{img/bulb}};
+% \end{tikzpicture}}
+%
+% \theoremstyle{solution}
+% \newtheorem{solutionT}{Solution}
+%
+% \RequirePackage[framemethod=default]{mdframed}
+%
+% % Solution box
+% \newmdenv[skipabove=7pt,
+% skipbelow=10pt,
+% rightline=false,
+% leftline=true,
+% topline=false,
+% bottomline=false,
+% linecolor=color2,
+% backgroundcolor=black!5,
+% innerleftmargin=5pt,
+% innerrightmargin=5pt,
+% innertopmargin=4pt,
+% innerbottommargin=5pt,
+% leftmargin=0pt,
+% rightmargin=0pt,
+% linewidth=4pt]{solBox}
+%
+% \usepackage{comment}
+% \ifsolution
+%   \newenvironment{sol}{\ifsolution\begin{solBox}\begin{solutionT}}{\end{solutionT}\end{solBox}\fi}
+% \else
+%   \excludecomment{sol}
+% \fi
+
+% PDF
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo Sánchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de Cálculo} }
+\usepackage{url}
+
 \renewcommand{\floatpagefraction}{.8}
 \renewcommand{\textfraction}{.1}
 
-\makeatletter
-\let\savees@listquot\es@listquot
-\def\es@listquot{\protect\savees@listquot}
-\makeatletter
-
+% SOLUTIONS SETTINGS
+\usepackage{probsoln-alf}
 \reversemarginpar
-%\showshortanswers
-\showanswers
+\showshortanswers
+%\showanswers
 %\PSNrandseed{2007}
-
 
 \begin{document}
 \sloppy
 
-\begin{titlepage}
-\vspace*{5cm}
-\begin{center}
-{\huge \bf COMPENDIO DE EJERCICIOS DE CÁLCULO\par}
-\vspace{0.5cm}
-{\large \noindent \textbf{Autores}: \\
-   Santiago Angulo Díaz-Parreño (\url{sangulo@ceu.es})\\
-   Eduardo López Ramírez (\url{elopez@ceu.es})\\
-   José Rojo Montijano (\url{jrojo.eps@ceu.es})\\
-   Anselmo Romero Limón (\url{arlimon@ceu.es})\\
-   Alfredo Sánchez Alberca (\url{asalber@ceu.es})
+\title{\vskip 2cm
+\Huge \textbf{\textsf{\quad \textcolor{blueceu}{EJERCICIOS DE CÁLCULO}\quad}}\\
+   \vskip 1cm
+\Large \sffamily
+\begin{tabular}{rl}
+\textcolor{blueceu}{Asignatura:} & Matemáticas\\
+\textcolor{blueceu}{Curso:} & Primero\\
+\textcolor{blueceu}{Grado:} &  Todos\\
+\textcolor{blueceu}{Año:} & 2020-2021\\
+\textcolor{blueceu}{Autor:} & Alfredo S\'anchez Alberca (\url{asalber@ceu.es})
+\end{tabular}
 }
 
-\vspace{1cm}
- \includegraphics[scale=0.3]{img/logo_uspceu_01}
-\end{center}
-\end{titlepage}
+\author{}
+\date{\includegraphics[scale=0.3]{img/logo_uspceu_01}}
 
-\setcounter{tocdepth}{2}
+\maketitle
+\newpage
 \tableofcontents
 \newpage
 
-\section{Domínios e imágenes}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{dominios}
-\end{enumerate}
+% \section{Domínios e imágenes}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/dominios}
+% \end{enumerate}
 
-\section{Límites}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{limites}
-\end{enumerate}
+% \section{Límites}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/limites}
+% \end{enumerate}
 
-\section{Continuidad}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{continuidad}
-\end{enumerate}
+% \section{Continuidad}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/continuidad}
+% \end{enumerate}
 
 \section{Derivadas}
 \begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas}
+\selectallproblems{capitulos/derivadas}
 \end{enumerate}
 
 \section{Diferencial}
 \begin{enumerate}[leftmargin=*]
-\selectallproblems{diferencial}
+\selectallproblems{capitulos/diferencial}
 \end{enumerate}
 
-\section{Derivadas paramétricas}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas_parametricas}
-\end{enumerate}
+% \section{Derivadas paramétricas}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/derivadas_parametricas}
+% \end{enumerate}
 
-\section{Trayectorias}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas_trayectorias}
-\end{enumerate}
+% \section{Trayectorias}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/derivadas_trayectorias}
+% \end{enumerate}
 
-\section{Teorema de Rolle y del valor medio}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{rolle_valor_medio}
-\end{enumerate}
+% \section{Teorema de Rolle y del valor medio}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/rolle_valor_medio}
+% \end{enumerate}
 
 \section{Crecimiento, concavidad y extremos relativos}
 \begin{enumerate}[leftmargin=*]
-\selectallproblems{extremos}
+\selectallproblems{capitulos/extremos}
 \end{enumerate}
 
-\section{Polinomios de Taylor}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{taylor}
-\end{enumerate}
+% \section{Polinomios de Taylor}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/taylor}
+% \end{enumerate}
 
 \section{Derivadas parciales}
 \begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas_parciales}
+\selectallproblems{capitulos/derivadas_parciales}
 \end{enumerate}
 
-\section{Superficies}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas_superficies}
-\end{enumerate}
+% \section{Superficies}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/derivadas_superficies}
+% \end{enumerate}
 
-\section{Derivadas implícitas}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas_implicitas}
-\end{enumerate}
+% \section{Derivadas implícitas}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/derivadas_implicitas}
+% \end{enumerate}
 
-\section{Derivadas implícitas en varias variables}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{derivadas_parciales}
-\end{enumerate}
+% \section{Derivadas implícitas en varias variables}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/derivadas_parciales}
+% \end{enumerate}
 
-\section{Extremos en varias variables}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{extremos_n_variables}
-\end{enumerate}
+% \section{Extremos en varias variables}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/extremos_n_variables}
+% \end{enumerate}
 
-\section{Polinomios de Taylor en varias variables}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{taylor_n_variables}
-\end{enumerate}
+% \section{Polinomios de Taylor en varias variables}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/taylor_n_variables}
+% \end{enumerate}
 
-\section{Integrales}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{integrales}
-\end{enumerate}
+% \section{Integrales}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/integrales}
+% \end{enumerate}
 
-\section{Integrales impropias}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{integrales_impropias}
-\end{enumerate}
+% \section{Integrales impropias}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/integrales_impropias}
+% \end{enumerate}
 
-\section{Aplicaciones de las integrales}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{integrales_aplicaciones}
-\end{enumerate}
+% \section{Aplicaciones de las integrales}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/integrales_aplicaciones}
+% \end{enumerate}
 
 \section{Ecuaciones diferenciales ordinarias de variables separables}
 \begin{enumerate}[leftmargin=*]
-\selectallproblems{edo_separables}
+\selectallproblems{capitulos/edo_separables}
 \end{enumerate}
 
-\section{Ecuaciones diferenciales ordinarias homogéneas}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{edo_homogeneas}
-\end{enumerate}
+% \section{Ecuaciones diferenciales ordinarias homogéneas}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/edo_homogeneas}
+% \end{enumerate}
 
-\section{Ecuaciones diferenciales ordinarias lineales}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{edo_lineales}
-\end{enumerate}
+% \section{Ecuaciones diferenciales ordinarias lineales}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/edo_lineales}
+% \end{enumerate}
 
-\section{Medida y error}
-\begin{enumerate}[leftmargin=*]
-\selectallproblems{medida_error}
-\end{enumerate}
+% \section{Medida y error}
+% \begin{enumerate}[leftmargin=*]
+% \selectallproblems{capitulos/medida_error}
+% \end{enumerate}
 
 \vspace{2cm}
 

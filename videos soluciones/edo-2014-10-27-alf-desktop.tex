@@ -1,0 +1,100 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227} 
+\definecolor{greenceu}{RGB}{194,205,24} 
+\definecolor{redceu}{RGB}{238,50,36} 
+\definecolor{purpleceu}{RGB}{169,78,145} 
+\definecolor{greyceu}{RGB}{117,117,97} 
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246} 
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Ecuaciones diferenciales ordinarias}\\
+Titulaciones: & \structure{Química}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\Large
+El PB-209, isótopo radioactivo del plomo, se desintegra con una velocidad proporcional a la cantidad presente en cualquier
+momento, y tiene un periodo medio de vida de $3.3$ horas. 
+Si al principio había un gramo de plomo, ¿cuánto tiempo debe transcurrir para que se desintegre el $90\%$?
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.75\textwidth}
+El PB-209, isótopo radioactivo del plomo, se desintegra con una velocidad proporcional a la cantidad presente en cualquier
+momento, y tiene un periodo medio de vida de $3.3$ horas. 
+Si al principio había un gramo de plomo, ¿cuánto tiempo debe transcurrir para que se desintegre el $90\%$?
+\end{column}
+\begin{column}[T]{0.25\textwidth}
+\structure{Datos}\\
+Periodo semidesintegración\\
+$3.3$ horas
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\end{document}

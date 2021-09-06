@@ -1,0 +1,203 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=169,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+% Boxes
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newtcolorbox{datos}{
+  enhanced,
+  colback=blueceu!10, 
+  colframe=blueceu, 
+  fonttitle=\bfseries, 
+  left=3pt, 
+  right=3pt, 
+  boxrule=0.5pt,
+  code={\setstretch{1.4}},
+  title={Datos},
+}
+
+
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[scale=1.5]{ccicons}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+%-------------------------------------------------------------------------------
+% COMMANDS
+%-------------------------------------------------------------------------------
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\tg}{\operatorname{tg}}
+\newcommand{\arcsen}{\operatorname{arcsen}}
+\newcommand{\arctg}{\operatorname{arctg}}
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{2cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Derivadas en $n$ variables}\\
+Titulaciones: & \structure{Química, Farmacia, Biotecnología}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+{\color{darkgrey}\ccbyncsaeu}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\Large
+La función $f(x,y)=ye^{-x^2-\frac{1}{2}y^2}$, expresa la cantidad de una sustancia $z=f(x,y)$ en función de otras dos $x$ e $y$ en una reacción química.
+\begin{enumerate}
+  \item Calcular el valor máximo local de $z$ teniendo en cuenta que $x\geq 0$ e $y\geq 0$.
+  \item ¿Cuál será la variación de $z$ cuando $x=1$ e $y=0$, si comenzamos a aumentar la cantidad de $x$ al doble de ritmo de la de $y$?
+  \item Calcular el polinomio de Taylor de segundo grado de $f$ en el punto $(1,0)$.
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.75\textwidth}
+\begin{enumerate}
+\item Calcular el valor máximo local de $z=f(x,y)$ teniendo en cuenta que $x\geq 0$ e $y\geq 0$.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.25\textwidth}
+\begin{datos}
+$f(x,y)=ye^{-x^2-\frac{1}{2}y^2}$
+\end{datos}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.53\textwidth}
+\begin{enumerate}
+  \item Calcular el valor máximo local de $z=f(x,y)$ teniendo en cuenta que $x\geq 0$ e $y\geq 0$.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.47\textwidth}
+\begin{datos}
+$f(x,y)=ye^{-x^2-\frac{1}{2}y^2}$\\
+$\nabla f(x,y)=\left(-2xye^{-x^2-\frac{1}{2}y^2}, (1-y^2)e^{-x^2-\frac{1}{2}y^2}\right)$\\
+Puntos críticos: $(0,1)$
+\end{datos}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.53\textwidth}
+\begin{enumerate}
+  \item[2.] ¿Cuál será la variación de $z$ cuando $x=1$ e $y=0$, si comenzamos a aumentar la cantidad de $x$ al doble de ritmo de la de $y$?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.47\textwidth}
+\begin{datos}
+$f(x,y)=ye^{-x^2-\frac{1}{2}y^2}$\\
+$\nabla f(x,y)=\left(-2xye^{-x^2-\frac{1}{2}y^2}, (1-y^2)e^{-x^2-\frac{1}{2}y^2}\right)$\\
+Punto $P=(1,0)$\\
+Dirección $\mathbf{v}=(2,1)$
+\end{datos}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.42\textwidth}
+\begin{enumerate}
+  \item[3.] Calcular el polinomio de Taylor de segundo grado de $f$ en el punto $(1,0)$.
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.61\textwidth}
+\begin{datos}
+$f(x,y)=ye^{-x^2-\frac{1}{2}y^2}$\\
+$\nabla f(x,y)=\left(-2xye^{-x^2-\frac{1}{2}y^2}, (1-y^2)e^{-x^2-\frac{1}{2}y^2}\right)$\\
+$\nabla^2f(x,y)=\left(
+\begin{array}{cc}
+  (4x^2y-2y)e^{-x^2-\frac{1}{2}y^2} & (2xy^2-2x)e^{-x^2-\frac{1}{2}y^2}\\
+  (2xy^2-2x)e^{-x^2-\frac{1}{2}y^2} & (y^3-3y)e^{-x^2-\frac{1}{2}y^2}
+\end{array}
+\right)$\\
+Punto $P=(1,0)$
+\end{datos}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

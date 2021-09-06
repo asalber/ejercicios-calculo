@@ -56,9 +56,14 @@
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
 \usepackage{unicode-math}
-\setmathfont[math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{TeX Gyre Pagella Math}
+\setmathfont[math-style=ISO, bold-style=ISO]{TeX Gyre Pagella Math}
 % Creative common icons
-\usepackage[scale=1.5]{ccicons}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+    imagemodifier={-eu}
+]{doclicense}
 
 %-------------------------------------------------------------------------------
 % CONFIGURATION
@@ -73,10 +78,10 @@
 %-------------------------------------------------------------------------------
 % COMMANDS
 %-------------------------------------------------------------------------------
-\newcommand{\sen}{\operatorname{sen}}
-\newcommand{\tg}{\operatorname{tg}}
-\newcommand{\arcsen}{\operatorname{arcsen}}
-\newcommand{\arctg}{\operatorname{arctg}}
+% \newcommand{\sen}{\operatorname{sen}}
+% \newcommand{\tg}{\operatorname{tg}}
+% \newcommand{\arcsen}{\operatorname{arcsen}}
+% \newcommand{\arctg}{\operatorname{arctg}}
 
 %-------------------------------------------------------------------------------
 % DOCUMENT
@@ -99,12 +104,12 @@ Titulaciones: & \structure{Química, Farmacia, Biotecnología}
 \bigskip
 Alfredo Sánchez Alberca\\
 \url{asalber@ceu.es}\\
-\url{http://aprendeconalf.es}\\
+\url{https://aprendeconalf.es}\\
 
 \includegraphics[scale=0.2]{../img/logo_uspceu}
 
 \bigskip
-{\color{darkgrey}\ccbyncsaeu}
+\doclicenseIcon
 \end{center}
 \end{frame}
 

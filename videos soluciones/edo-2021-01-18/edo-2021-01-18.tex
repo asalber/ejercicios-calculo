@@ -1,0 +1,170 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es}
+% !TEX program = xelatex
+\documentclass[aspectratio=169,10pt,t]{beamer}
+%-------------------------------------------------------------------------------
+% GENERAL PACKAGES
+%-------------------------------------------------------------------------------
+% Language
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+% Maths
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227}
+\definecolor{greenceu}{RGB}{194,205,24}
+\definecolor{redceu}{RGB}{238,50,36}
+\definecolor{purpleceu}{RGB}{169,78,145}
+\definecolor{greyceu}{RGB}{117,117,97}
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246}
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+% Boxes
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newtcolorbox{datos}{
+  enhanced,
+  colback=blueceu!10, 
+  colframe=blueceu, 
+  fonttitle=\bfseries, 
+  left=3pt, 
+  right=3pt, 
+  boxrule=0.5pt,
+  code={\setstretch{1.2}},
+  title={Datos},
+}
+
+
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont[math-style=ISO, bold-style=ISO]{TeX Gyre Pagella Math}
+% Creative common icons
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+    imagemodifier={-eu}
+]{doclicense}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+%-------------------------------------------------------------------------------
+% COMMANDS
+%-------------------------------------------------------------------------------
+% \newcommand{\sen}{\operatorname{sen}}
+% \newcommand{\tg}{\operatorname{tg}}
+% \newcommand{\arcsen}{\operatorname{arcsen}}
+% \newcommand{\arctg}{\operatorname{arctg}}
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Ecuaciones diferenciales ordinarias}\\
+Titulaciones: & \structure{Farmacia y Biotecnología}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{https://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{../img/logo_uspceu}
+
+\bigskip
+\doclicenseIcon
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\Large
+Un medicamento se administra por vía intravenosa a una velocidad de 15 mg/hora. Al mismo tiempo, el cuerpo metaboliza el medicamento a una velocidad del 80\% de la cantidad presente en el cuerpo por hora. 
+
+\begin{enumerate}
+\item Si el medicamento se administra de forma indefinida y suponiendo que al principio no había nada de medicamento en el cuerpo, ¿cuál será la máxima cantidad de medicamento que habrá en el cuerpo?
+\item Si el medicamento deja de administrarse después de haber administrado 150 mg, ¿cuánto tiempo tiene que pasar desde ese momento hasta que la cantidad de medicamento en el cuerpo sea 10 mg?
+\end{enumerate}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+Un medicamento se administra por vía intravenosa a una velocidad de 15 mg/hora. Al mismo tiempo, el cuerpo metaboliza el medicamento a una velocidad del 80\% de la cantidad presente en el cuerpo por hora. 
+
+\begin{enumerate}
+\item Si el medicamento se administra de forma indefinida y suponiendo que al principio no había nada de medicamento en el cuerpo, ¿cuál será la máxima cantidad de medicamento que habrá en el cuerpo?
+\end{enumerate}
+\end{column}
+\quad
+\begin{column}[T]{0.35\textwidth}
+\begin{datos}
+$x(t)$: Cantidad de medicamento en el cuerpo en el instante $t$\\
+Velocidad entrada: $15$ mg/hora\\
+Velocidad metabolización: $0.8x$ mg/hora 
+\end{datos}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+\begin{enumerate}
+\item[2] Si el medicamento deja de administrarse después de haber administrado 150 mg, ¿cuánto tiempo tiene que pasar desde ese momento hasta que la cantidad de medicamento en el cuerpo sea 10 mg?
+\end{enumerate}
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\begin{datos}
+Cantidad de medicamento en el cuerpo mientras se administran 15 mg/hora.\\
+$x(t)=18.75-18.75e^{-0.8t}$\\
+Nuevas condiciones:\\
+Velocidad entrada: 0 mg/hora\\
+Velocidad metabolización: $0.8x$ mg/hora
+\end{datos}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

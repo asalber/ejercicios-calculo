@@ -1,0 +1,119 @@
+\documentclass[aspectratio=149,10pt,xcolor=dvipsnames,t]{beamer}
+%---------------------------------------------------------------------------
+% GENERAL PACKAGES
+%---------------------------------------------------------------------------
+\usepackage[utf8x]{inputenc} % Sets UTF8 codification
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel} % Sets spanish language
+\usepackage{amsmath} % Math symbols and environments
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage{url}
+\usepackage{textcomp}
+
+% Colors
+\definecolor{blueceu}{RGB}{0,164,227} 
+\definecolor{greenceu}{RGB}{194,205,24} 
+\definecolor{redceu}{RGB}{238,50,36} 
+\definecolor{purpleceu}{RGB}{169,78,145} 
+\definecolor{greyceu}{RGB}{117,117,97} 
+\definecolor{darkgrey}{RGB}{40,40,50}
+\definecolor{softblueceu}{RGB}{193,225,246} 
+\setbeamercolor{structure}{fg=blueceu}
+\setbeamercolor{normal text}{fg=darkgrey}
+\hypersetup{colorlinks, urlcolor=purpleceu}
+
+
+%---------------------------------------------------------------------------
+% FONTS
+%---------------------------------------------------------------------------
+\usepackage{mathpazo} % Palatino
+
+%---------------------------------------------------------------------------
+% CONFIGURATION
+%---------------------------------------------------------------------------
+\setbeamersize{text margin left=.5cm, text margin right=.5cm} % Defines margin sizes 
+\beamertemplatenavigationsymbolsempty % Hide navitation bar
+\usefonttheme[onlymath]{serif} % Math text in serif
+\setbeamertemplate{blocks}[rounded] % Blocks with rounded corners
+%\setbeamercolor{block title}{bg=RoyalBlue!10} % Color of block title
+%\setbeamercolor{block body}{bg=RoyalBlue!10} % Color of block body
+
+\begin{document}
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\vspace{1.5cm}
+
+\begin{center}
+\structure{\LARGE {\textbf{Ejercicios de Cálculo}}}
+\bigskip
+
+\large
+\begin{tabular}{rl}
+Temas: & \structure{Derivadas implícitas}\\
+Titulaciones: & \structure{Todas}
+\end{tabular}
+
+\bigskip
+Alfredo Sánchez Alberca\\
+\url{asalber@ceu.es}\\
+\url{http://aprendeconalf.es}\\
+
+\includegraphics[scale=0.2]{img/logo_uspceu}
+
+\biskip
+\includegraphics[scale=0.07]{img/cc-logo}
+\includegraphics[scale=0.2]{img/cc-by}
+\includegraphics[scale=0.2]{img/cc-e}
+\includegraphics[scale=0.2]{img/cc-c}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------SLIDE----
+\begin{frame}[c]
+\Large
+La ecuación $x^2+5y=ye^{y(x-2)}$ representa a una curva en el plano $XY$.
+Hallar la ecuación de la recta normal a dicha curva en el punto de abscisa $x=2$.
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.7\textwidth}
+La ecuación $x^2+5y=ye^{y(x-2)}$ representa a una curva en el plano $XY$.
+Hallar la ecuación de la recta normal a dicha curva en el punto de abscisa $x=2$.
+\end{column}
+\begin{column}[T]{0.3\textwidth}
+\structure{Datos}\\
+$x^2+5y=ye^{y(x-2)}$\\
+$y=f(x)$\\
+Punto $P=(2,f(2))$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------SLIDE----
+\begin{frame}
+\begin{columns}
+\begin{column}[T]{0.65\textwidth}
+La ecuación $x^2+5y=ye^{y(x-2)}$ representa a una curva en el plano $XY$.
+Hallar la ecuación de la recta normal a dicha curva en el punto de abscisa $x=2$.
+\end{column}
+\begin{column}[T]{0.35\textwidth}
+\structure{Datos}\\
+$f(x,y)=x^2+5y-ye^{y(x-2)}=0$\\
+Punto $P=(2,-1)$\\
+$\frac{\partial f}{\partial x} = 2x-y^2e^{y(x-2)}$\\
+$\frac{\partial f}{\partial y} = 5-e^{y(x-2)}(1+y(x-2))$
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\end{document}
